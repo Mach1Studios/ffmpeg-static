@@ -1,0 +1,5 @@
+Name: soxr-lsr
+Description: High quality, one-dimensional sample-rate conversion library (with libsamplerate-like bindings)
+Version: 0.1.2
+Libs: -L/Users/dylanmarcus/git/ffmpeg-static/target/lib -lsoxr-lsr
+Cflags: -I/Users/dylanmarcus/git/ffmpeg-static/target/include

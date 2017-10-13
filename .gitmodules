@@ -1,0 +1,3 @@
+[submodule "build/FFmpeg-n3.2.4"]
+	path = build/FFmpeg-n3.2.4
+	url = /Users/dylanmarcus/git/FFmpeg

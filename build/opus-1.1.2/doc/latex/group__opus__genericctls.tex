@@ -1,0 +1,121 @@
+\hypertarget{group__opus__genericctls}{}\section{Generic C\+T\+Ls}
+\label{group__opus__genericctls}\index{Generic C\+T\+Ls@{Generic C\+T\+Ls}}
+
+
+These macros are used with the {\ttfamily opus\+\_\+decoder\+\_\+ctl} and {\ttfamily opus\+\_\+encoder\+\_\+ctl} calls to generate a particular request.  
+
+
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__opus__genericctls_gadc74e4fa8bcdf9994187d52d92207337}{O\+P\+U\+S\+\_\+\+R\+E\+S\+E\+T\+\_\+\+S\+T\+A\+TE}
+\begin{DoxyCompactList}\small\item\em Resets the codec state to be equivalent to a freshly initialized state. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__genericctls_ga1108a508aa475f964d247c1b04d26d89}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+F\+I\+N\+A\+L\+\_\+\+R\+A\+N\+GE}(x)
+\begin{DoxyCompactList}\small\item\em Gets the final state of the codec\textquotesingle{}s entropy coder. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__genericctls_ga29db1d9b5e670debec54d1163ad2ec62}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH}(x)
+\begin{DoxyCompactList}\small\item\em Gets the encoder\textquotesingle{}s configured bandpass or the decoder\textquotesingle{}s last bandpass. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__genericctls_gac8ad425424211faae6a0fbfb7c28bb51}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+R\+A\+TE}(x)
+\begin{DoxyCompactList}\small\item\em Gets the sampling rate the encoder or decoder was initialized with. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+These macros are used with the {\ttfamily opus\+\_\+decoder\+\_\+ctl} and {\ttfamily opus\+\_\+encoder\+\_\+ctl} calls to generate a particular request. 
+
+When called on an {\ttfamily Opus\+Decoder} they apply to that particular decoder instance. When called on an {\ttfamily Opus\+Encoder} they apply to the corresponding setting on that encoder instance, if present.
+
+Some usage examples\+:
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{int} ret;
+\hyperlink{opus__types_8h_aa4d309d6f80b99dbabebc8f98879ab9a}{opus\_int32} pitch;
+ret = \hyperlink{group__opus__decoder_ga2d492844b4f66e7f34d85870f13d4846}{opus\_decoder\_ctl}(dec\_ctx, \hyperlink{group__opus__decoderctls_gaa89fc25eb35fc31a02b508562dd83820}{OPUS\_GET\_PITCH}(&pitch));
+\textcolor{keywordflow}{if} (ret == \hyperlink{group__opus__errorcodes_gaa44cf8a185e1b5cb940ef63eb4f02d21}{OPUS\_OK}) \textcolor{keywordflow}{return} ret;
+
+\hyperlink{group__opus__encoder_ga164cbb0425238961919adf1db67949df}{opus\_encoder\_ctl}(enc\_ctx, \hyperlink{group__opus__genericctls_gadc74e4fa8bcdf9994187d52d92207337}{OPUS\_RESET\_STATE});
+\hyperlink{group__opus__decoder_ga2d492844b4f66e7f34d85870f13d4846}{opus\_decoder\_ctl}(dec\_ctx, \hyperlink{group__opus__genericctls_gadc74e4fa8bcdf9994187d52d92207337}{OPUS\_RESET\_STATE});
+
+\hyperlink{opus__types_8h_aa4d309d6f80b99dbabebc8f98879ab9a}{opus\_int32} enc\_bw, dec\_bw;
+\hyperlink{group__opus__encoder_ga164cbb0425238961919adf1db67949df}{opus\_encoder\_ctl}(enc\_ctx, \hyperlink{group__opus__genericctls_ga29db1d9b5e670debec54d1163ad2ec62}{OPUS\_GET\_BANDWIDTH}(&enc\_bw));
+\hyperlink{group__opus__decoder_ga2d492844b4f66e7f34d85870f13d4846}{opus\_decoder\_ctl}(dec\_ctx, \hyperlink{group__opus__genericctls_ga29db1d9b5e670debec54d1163ad2ec62}{OPUS\_GET\_BANDWIDTH}(&dec\_bw));
+\textcolor{keywordflow}{if} (enc\_bw != dec\_bw) \{
+  printf(\textcolor{stringliteral}{"packet bandwidth mismatch!\(\backslash\)n"});
+\}
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoder}{Opus Encoder}, \hyperlink{group__opus__decoder_ga2d492844b4f66e7f34d85870f13d4846}{opus\+\_\+decoder\+\_\+ctl}, \hyperlink{group__opus__encoder_ga164cbb0425238961919adf1db67949df}{opus\+\_\+encoder\+\_\+ctl}, \hyperlink{group__opus__decoderctls}{Decoder related C\+T\+Ls}, \hyperlink{group__opus__encoderctls}{Encoder related C\+T\+Ls} 
+\end{DoxySeeAlso}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__opus__genericctls_ga29db1d9b5e670debec54d1163ad2ec62}\label{group__opus__genericctls_ga29db1d9b5e670debec54d1163ad2ec62}} 
+\index{Generic C\+T\+Ls@{Generic C\+T\+Ls}!O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH}}
+\index{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH}!Generic C\+T\+Ls@{Generic C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH}{OPUS\_GET\_BANDWIDTH}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Gets the encoder\textquotesingle{}s configured bandpass or the decoder\textquotesingle{}s last bandpass. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoderctls_ga0178dabe5526d5b0667d81489cc93791}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em x} & {\ttfamily opus\+\_\+int32 $\ast$}\+: Returns one of the following values\+: 
+\begin{DoxyDescription}
+\item[\hyperlink{group__opus__ctlvalues_ga1c5b3244b018ff4548d2d6bffa418472}{O\+P\+U\+S\+\_\+\+A\+U\+TO} ](default) 
+\item[\hyperlink{group__opus__ctlvalues_ga607dd310958b9c7d545d005e4572d47f}{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+N\+A\+R\+R\+O\+W\+B\+A\+ND} ]4 k\+Hz passband 
+\item[\hyperlink{group__opus__ctlvalues_ga53a2aff4dc0ee23682927ca568c422a3}{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+M\+E\+D\+I\+U\+M\+B\+A\+ND} ]6 k\+Hz passband 
+\item[\hyperlink{group__opus__ctlvalues_gac698e5d1281a3632251d2a4ead48afb9}{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+W\+I\+D\+E\+B\+A\+ND} ]8 k\+Hz passband 
+\item[\hyperlink{group__opus__ctlvalues_ga41f86df35af0033a7361895da88671c1}{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+S\+U\+P\+E\+R\+W\+I\+D\+E\+B\+A\+ND}]12 k\+Hz passband 
+\item[\hyperlink{group__opus__ctlvalues_ga74cb052d8ec36cbcc9708c417558ebdd}{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+F\+U\+L\+L\+B\+A\+ND} ]20 k\+Hz passband 
+\end{DoxyDescription}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__genericctls_ga1108a508aa475f964d247c1b04d26d89}\label{group__opus__genericctls_ga1108a508aa475f964d247c1b04d26d89}} 
+\index{Generic C\+T\+Ls@{Generic C\+T\+Ls}!O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+F\+I\+N\+A\+L\+\_\+\+R\+A\+N\+GE@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+F\+I\+N\+A\+L\+\_\+\+R\+A\+N\+GE}}
+\index{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+F\+I\+N\+A\+L\+\_\+\+R\+A\+N\+GE@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+F\+I\+N\+A\+L\+\_\+\+R\+A\+N\+GE}!Generic C\+T\+Ls@{Generic C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+F\+I\+N\+A\+L\+\_\+\+R\+A\+N\+GE}{OPUS\_GET\_FINAL\_RANGE}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+F\+I\+N\+A\+L\+\_\+\+R\+A\+N\+GE(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Gets the final state of the codec\textquotesingle{}s entropy coder. 
+
+This is used for testing purposes, The encoder and decoder state should be identical after coding a payload (assuming no data corruption or software bugs)
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em x} & {\ttfamily opus\+\_\+uint32 $\ast$}\+: Entropy coder state \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__genericctls_gac8ad425424211faae6a0fbfb7c28bb51}\label{group__opus__genericctls_gac8ad425424211faae6a0fbfb7c28bb51}} 
+\index{Generic C\+T\+Ls@{Generic C\+T\+Ls}!O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+R\+A\+TE@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+R\+A\+TE}}
+\index{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+R\+A\+TE@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+R\+A\+TE}!Generic C\+T\+Ls@{Generic C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+R\+A\+TE}{OPUS\_GET\_SAMPLE\_RATE}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+R\+A\+TE(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Gets the sampling rate the encoder or decoder was initialized with. 
+
+This simply returns the {\ttfamily Fs} value passed to \hyperlink{group__opus__encoder_ga515db1c267a7421dacaad3610f79eb79}{opus\+\_\+encoder\+\_\+init()} or \hyperlink{group__opus__decoder_ga939156d1f561c4273d5c62fa9c235a01}{opus\+\_\+decoder\+\_\+init()}. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em x} & {\ttfamily opus\+\_\+int32 $\ast$}\+: Sampling rate of encoder or decoder. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__genericctls_gadc74e4fa8bcdf9994187d52d92207337}\label{group__opus__genericctls_gadc74e4fa8bcdf9994187d52d92207337}} 
+\index{Generic C\+T\+Ls@{Generic C\+T\+Ls}!O\+P\+U\+S\+\_\+\+R\+E\+S\+E\+T\+\_\+\+S\+T\+A\+TE@{O\+P\+U\+S\+\_\+\+R\+E\+S\+E\+T\+\_\+\+S\+T\+A\+TE}}
+\index{O\+P\+U\+S\+\_\+\+R\+E\+S\+E\+T\+\_\+\+S\+T\+A\+TE@{O\+P\+U\+S\+\_\+\+R\+E\+S\+E\+T\+\_\+\+S\+T\+A\+TE}!Generic C\+T\+Ls@{Generic C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+R\+E\+S\+E\+T\+\_\+\+S\+T\+A\+TE}{OPUS\_RESET\_STATE}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+R\+E\+S\+E\+T\+\_\+\+S\+T\+A\+TE}
+
+
+
+Resets the codec state to be equivalent to a freshly initialized state. 
+
+This should be called when switching streams in order to prevent the back to back decoding from giving different results from one at a time decoding. 

@@ -1,0 +1,153 @@
+\hypertarget{opus__defines_8h}{}\section{opus\+\_\+defines.\+h File Reference}
+\label{opus__defines_8h}\index{opus\+\_\+defines.\+h@{opus\+\_\+defines.\+h}}
+
+
+Opus reference implementation constants.  
+
+
+{\ttfamily \#include \char`\"{}opus\+\_\+types.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__opus__errorcodes_gaa44cf8a185e1b5cb940ef63eb4f02d21}{O\+P\+U\+S\+\_\+\+OK}
+\begin{DoxyCompactList}\small\item\em No error. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__errorcodes_gaf2d43e479455a1a3b6874e5faf4e827d}{O\+P\+U\+S\+\_\+\+B\+A\+D\+\_\+\+A\+RG}
+\begin{DoxyCompactList}\small\item\em One or more invalid/out of range arguments. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__errorcodes_gacd897c05563ec04a67d8e92ba29f3d4f}{O\+P\+U\+S\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+T\+O\+O\+\_\+\+S\+M\+A\+LL}
+\begin{DoxyCompactList}\small\item\em Not enough bytes allocated in the buffer. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__errorcodes_gae1f952c366ebd380df9efa1842635a0b}{O\+P\+U\+S\+\_\+\+I\+N\+T\+E\+R\+N\+A\+L\+\_\+\+E\+R\+R\+OR}
+\begin{DoxyCompactList}\small\item\em An internal error was detected. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__errorcodes_ga46fc9dd493fb8e291bd8e838f0988bb7}{O\+P\+U\+S\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+P\+A\+C\+K\+ET}
+\begin{DoxyCompactList}\small\item\em The compressed data passed is corrupted. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__errorcodes_ga3b8d73b0f44b8b925ff40fd7c02b14a0}{O\+P\+U\+S\+\_\+\+U\+N\+I\+M\+P\+L\+E\+M\+E\+N\+T\+ED}
+\begin{DoxyCompactList}\small\item\em Invalid/unsupported request number. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__errorcodes_ga54416ec79619179d688918f25e9b20e3}{O\+P\+U\+S\+\_\+\+I\+N\+V\+A\+L\+I\+D\+\_\+\+S\+T\+A\+TE}
+\begin{DoxyCompactList}\small\item\em An encoder or decoder structure is invalid or already freed. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__errorcodes_ga92fae6b1de2ac16b8d96561f9a8fb8b9}{O\+P\+U\+S\+\_\+\+A\+L\+L\+O\+C\+\_\+\+F\+A\+IL}
+\begin{DoxyCompactList}\small\item\em Memory allocation has failed. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_ga1c5b3244b018ff4548d2d6bffa418472}{O\+P\+U\+S\+\_\+\+A\+U\+TO}
+\begin{DoxyCompactList}\small\item\em Auto/default setting. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_gaeadbaa3b4b9e15d39cd1d6e7d91519e5}{O\+P\+U\+S\+\_\+\+B\+I\+T\+R\+A\+T\+E\+\_\+\+M\+AX}
+\begin{DoxyCompactList}\small\item\em Maximum bitrate. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_ga07884aa018303a419d1f7acb2f3fa669}{O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+V\+O\+IP}
+\begin{DoxyCompactList}\small\item\em Best for most Vo\+I\+P/videoconference applications where listening quality and intelligibility matter most. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_ga5909f7cb35c04f1110026c6889edd345}{O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+A\+U\+D\+IO}
+\begin{DoxyCompactList}\small\item\em Best for broadcast/high-\/fidelity application where the decoded audio should be as close as possible to the input. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_ga592232fb39db60c1369989c5c5d19a07}{O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+R\+E\+S\+T\+R\+I\+C\+T\+E\+D\+\_\+\+L\+O\+W\+D\+E\+L\+AY}
+\begin{DoxyCompactList}\small\item\em Only use when lowest-\/achievable latency is what matters most. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_ga085a116fed816373d3b9eae28df49404}{O\+P\+U\+S\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+V\+O\+I\+CE}~3001
+\begin{DoxyCompactList}\small\item\em Signal being encoded is voice. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_gaa0c228c664b6d426f4c213e3a5350889}{O\+P\+U\+S\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+M\+U\+S\+IC}~3002
+\begin{DoxyCompactList}\small\item\em Signal being encoded is music. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_ga607dd310958b9c7d545d005e4572d47f}{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+N\+A\+R\+R\+O\+W\+B\+A\+ND}
+\begin{DoxyCompactList}\small\item\em 4 k\+Hz bandpass \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_ga53a2aff4dc0ee23682927ca568c422a3}{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+M\+E\+D\+I\+U\+M\+B\+A\+ND}
+\begin{DoxyCompactList}\small\item\em 6 k\+Hz bandpass \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_gac698e5d1281a3632251d2a4ead48afb9}{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+W\+I\+D\+E\+B\+A\+ND}
+\begin{DoxyCompactList}\small\item\em 8 k\+Hz bandpass \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_ga41f86df35af0033a7361895da88671c1}{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+S\+U\+P\+E\+R\+W\+I\+D\+E\+B\+A\+ND}
+\begin{DoxyCompactList}\small\item\em 12 k\+Hz bandpass \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_ga74cb052d8ec36cbcc9708c417558ebdd}{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+F\+U\+L\+L\+B\+A\+ND}
+\begin{DoxyCompactList}\small\item\em 20 k\+Hz bandpass \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_ga0371f264203138ca92a3705c9c0ac39d}{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+\+A\+RG}~5000
+\begin{DoxyCompactList}\small\item\em Select frame size from the argument (default) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_ga4696f62216f4afb1493471bb4c25baea}{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+2\+\_\+5\+\_\+\+MS}~5001
+\begin{DoxyCompactList}\small\item\em Use 2.\+5 ms frames. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_gab2e88add9d69a0828ca23efc7bbb41be}{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+5\+\_\+\+MS}~5002
+\begin{DoxyCompactList}\small\item\em Use 5 ms frames. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_ga39d5606c61c4cd21e6ae2f1259a1f15f}{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+10\+\_\+\+MS}~5003
+\begin{DoxyCompactList}\small\item\em Use 10 ms frames. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_gacfce47959bdaa8581fdc68cec3be2bfb}{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+20\+\_\+\+MS}~5004
+\begin{DoxyCompactList}\small\item\em Use 20 ms frames. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_ga268935a23f6d8a8ae6bb3d11ac6ae172}{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+40\+\_\+\+MS}~5005
+\begin{DoxyCompactList}\small\item\em Use 40 ms frames. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_gac8178be7f02dc908c022cc3bb5c6c252}{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+60\+\_\+\+MS}~5006
+\begin{DoxyCompactList}\small\item\em Use 60 ms frames. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga3483877bf1687a75dd4a1de6f85f291c}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+C\+O\+M\+P\+L\+E\+X\+I\+TY}(x)
+\begin{DoxyCompactList}\small\item\em Configures the encoder\textquotesingle{}s computational complexity. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga89755ee721a38d964c7630a920eb27d2}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+C\+O\+M\+P\+L\+E\+X\+I\+TY}(x)
+\begin{DoxyCompactList}\small\item\em Gets the encoder\textquotesingle{}s complexity configuration. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga0bb51947e355b33d0cb358463b5101a7}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+B\+I\+T\+R\+A\+TE}(x)
+\begin{DoxyCompactList}\small\item\em Configures the bitrate in the encoder. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga1427a5560cbc7e9a59f986d89c05082c}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+B\+I\+T\+R\+A\+TE}(x)
+\begin{DoxyCompactList}\small\item\em Gets the encoder\textquotesingle{}s bitrate configuration. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga34d09ae06cab7e1a6c49876249b67892}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+V\+BR}(x)
+\begin{DoxyCompactList}\small\item\em Enables or disables variable bitrate (V\+BR) in the encoder. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga58feba30c167962305ec268e6abe8c08}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+V\+BR}(x)
+\begin{DoxyCompactList}\small\item\em Determine if variable bitrate (V\+BR) is enabled in the encoder. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_gab1b534a4fe55373f1be407ad4b2b22bd}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+V\+B\+R\+\_\+\+C\+O\+N\+S\+T\+R\+A\+I\+NT}(x)
+\begin{DoxyCompactList}\small\item\em Enables or disables constrained V\+BR in the encoder. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_gab35fa5691ba0dd932031b7839c47513c}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+V\+B\+R\+\_\+\+C\+O\+N\+S\+T\+R\+A\+I\+NT}(x)
+\begin{DoxyCompactList}\small\item\em Determine if constrained V\+BR is enabled in the encoder. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga8450a745bd919a8de522afec115f3b5f}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+C\+H\+A\+N\+N\+E\+LS}(x)
+\begin{DoxyCompactList}\small\item\em Configures mono/stereo forcing in the encoder. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga21f010167c5dfa1b53f20c46d473e86a}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+C\+H\+A\+N\+N\+E\+LS}(x)
+\begin{DoxyCompactList}\small\item\em Gets the encoder\textquotesingle{}s forced channel configuration. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga4f88288e89c595c07c61db316cc45289}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+M\+A\+X\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH}(x)
+\begin{DoxyCompactList}\small\item\em Configures the maximum bandpass that the encoder will select automatically. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_gaa3b5736de64792e1144ce12dfb87613c}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+M\+A\+X\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH}(x)
+\begin{DoxyCompactList}\small\item\em Gets the encoder\textquotesingle{}s configured maximum allowed bandpass. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga0178dabe5526d5b0667d81489cc93791}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH}(x)
+\begin{DoxyCompactList}\small\item\em Sets the encoder\textquotesingle{}s bandpass to a specific value. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_gaaa87ccee4ae46aa6c9528e03c5122b89}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+S\+I\+G\+N\+AL}(x)
+\begin{DoxyCompactList}\small\item\em Configures the type of signal being encoded. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga640d434de535e2d2caec991c347303a4}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+S\+I\+G\+N\+AL}(x)
+\begin{DoxyCompactList}\small\item\em Gets the encoder\textquotesingle{}s configured signal type. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga18fa17dae52ff8f3eaea314204bf1a36}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+ON}(x)
+\begin{DoxyCompactList}\small\item\em Configures the encoder\textquotesingle{}s intended application. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga062ebbc209caf6832fe4a309a459fd4c}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+ON}(x)
+\begin{DoxyCompactList}\small\item\em Gets the encoder\textquotesingle{}s configured application. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_gaf81b9e01501910adc67195ebb42b4a54}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+L\+O\+O\+K\+A\+H\+E\+AD}(x)
+\begin{DoxyCompactList}\small\item\em Gets the total samples of delay added by the entire codec. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga5b67dc832aa46c1c2f35752c46380545}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+I\+N\+B\+A\+N\+D\+\_\+\+F\+EC}(x)
+\begin{DoxyCompactList}\small\item\em Configures the encoder\textquotesingle{}s use of inband forward error correction (F\+EC). \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_gaf792b27a6277ddf786413dbf472d0ac8}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+I\+N\+B\+A\+N\+D\+\_\+\+F\+EC}(x)
+\begin{DoxyCompactList}\small\item\em Gets encoder\textquotesingle{}s configured use of inband forward error correction. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_gafda1c951dea919ba54432cd03827f1a9}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+O\+S\+S\+\_\+\+P\+E\+RC}(x)
+\begin{DoxyCompactList}\small\item\em Configures the encoder\textquotesingle{}s expected packet loss percentage. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_gaa79261c6a55444993fca8d3a3a29d519}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+O\+S\+S\+\_\+\+P\+E\+RC}(x)
+\begin{DoxyCompactList}\small\item\em Gets the encoder\textquotesingle{}s configured packet loss percentage. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga4f053b2db8c5162293213aabfe123773}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+D\+TX}(x)
+\begin{DoxyCompactList}\small\item\em Configures the encoder\textquotesingle{}s use of discontinuous transmission (D\+TX). \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_gaafbb44454e9f57232b85e4e087337ded}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+D\+TX}(x)
+\begin{DoxyCompactList}\small\item\em Gets encoder\textquotesingle{}s configured use of discontinuous transmission. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_gaa23940eb477ff617edc14b8d66e104c0}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+L\+S\+B\+\_\+\+D\+E\+P\+TH}(x)
+\begin{DoxyCompactList}\small\item\em Configures the depth of signal being encoded. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_gab5ecdfbbbabfaefc2f2ca79cf4a3b08f}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+L\+S\+B\+\_\+\+D\+E\+P\+TH}(x)
+\begin{DoxyCompactList}\small\item\em Gets the encoder\textquotesingle{}s configured signal depth. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_gab3764c1b899b2bbe435e1168d3e24b6e}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+E\+X\+P\+E\+R\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+D\+U\+R\+A\+T\+I\+ON}(x)
+\begin{DoxyCompactList}\small\item\em Configures the encoder\textquotesingle{}s use of variable duration frames. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_gab22cbb0bccdd29f58a858c0b3c10756a}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+E\+X\+P\+E\+R\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+D\+U\+R\+A\+T\+I\+ON}(x)
+\begin{DoxyCompactList}\small\item\em Gets the encoder\textquotesingle{}s configured use of variable duration frames. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga0a73d613f6d9d601b32535fd37f58482}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+O\+N\+\_\+\+D\+I\+S\+A\+B\+L\+ED}(x)
+\begin{DoxyCompactList}\small\item\em If set to 1, disables almost all use of prediction, making frames almost completely independent. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga6f174467d0e244917d1cc736f9033f1d}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+O\+N\+\_\+\+D\+I\+S\+A\+B\+L\+ED}(x)
+\begin{DoxyCompactList}\small\item\em Gets the encoder\textquotesingle{}s configured prediction status. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__genericctls_gadc74e4fa8bcdf9994187d52d92207337}{O\+P\+U\+S\+\_\+\+R\+E\+S\+E\+T\+\_\+\+S\+T\+A\+TE}
+\begin{DoxyCompactList}\small\item\em Resets the codec state to be equivalent to a freshly initialized state. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__genericctls_ga1108a508aa475f964d247c1b04d26d89}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+F\+I\+N\+A\+L\+\_\+\+R\+A\+N\+GE}(x)
+\begin{DoxyCompactList}\small\item\em Gets the final state of the codec\textquotesingle{}s entropy coder. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__genericctls_ga29db1d9b5e670debec54d1163ad2ec62}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH}(x)
+\begin{DoxyCompactList}\small\item\em Gets the encoder\textquotesingle{}s configured bandpass or the decoder\textquotesingle{}s last bandpass. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__genericctls_gac8ad425424211faae6a0fbfb7c28bb51}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+S\+A\+M\+P\+L\+E\+\_\+\+R\+A\+TE}(x)
+\begin{DoxyCompactList}\small\item\em Gets the sampling rate the encoder or decoder was initialized with. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__decoderctls_ga8ddb6fa694efa2c7e95ef51addc70dac}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+G\+A\+IN}(x)
+\begin{DoxyCompactList}\small\item\em Configures decoder gain adjustment. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__decoderctls_ga00ca8b4bd753a837f143ebd8ed63d247}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+G\+A\+IN}(x)
+\begin{DoxyCompactList}\small\item\em Gets the decoder\textquotesingle{}s configured gain adjustment. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__decoderctls_ga8f3d070f56b75f2a7af54e5776b387fa}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+L\+A\+S\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+D\+U\+R\+A\+T\+I\+ON}(x)
+\begin{DoxyCompactList}\small\item\em Gets the duration (in samples) of the last packet successfully decoded or concealed. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__decoderctls_gaa89fc25eb35fc31a02b508562dd83820}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+P\+I\+T\+CH}(x)
+\begin{DoxyCompactList}\small\item\em Gets the pitch of the last decoded frame, if available. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{group__opus__libinfo_gafad3bac5a05dc7c3477a5765eb5e1873}{opus\+\_\+strerror} (int error)
+\begin{DoxyCompactList}\small\item\em Converts an opus error code into a human readable string. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{group__opus__libinfo_ga3cd7aa16259a46f37a44d2e823b131e5}{opus\+\_\+get\+\_\+version\+\_\+string} (void)
+\begin{DoxyCompactList}\small\item\em Gets the libopus version string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Opus reference implementation constants. 
+

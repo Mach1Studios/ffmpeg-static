@@ -1,0 +1,773 @@
+\hypertarget{group__opus__encoderctls}{}\section{Encoder related C\+T\+Ls}
+\label{group__opus__encoderctls}\index{Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}}
+
+
+These are convenience macros for use with the {\ttfamily opus\+\_\+encode\+\_\+ctl} interface.  
+
+
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__opus__encoderctls_ga3483877bf1687a75dd4a1de6f85f291c}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+C\+O\+M\+P\+L\+E\+X\+I\+TY}(x)
+\begin{DoxyCompactList}\small\item\em Configures the encoder\textquotesingle{}s computational complexity. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga89755ee721a38d964c7630a920eb27d2}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+C\+O\+M\+P\+L\+E\+X\+I\+TY}(x)
+\begin{DoxyCompactList}\small\item\em Gets the encoder\textquotesingle{}s complexity configuration. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga0bb51947e355b33d0cb358463b5101a7}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+B\+I\+T\+R\+A\+TE}(x)
+\begin{DoxyCompactList}\small\item\em Configures the bitrate in the encoder. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga1427a5560cbc7e9a59f986d89c05082c}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+B\+I\+T\+R\+A\+TE}(x)
+\begin{DoxyCompactList}\small\item\em Gets the encoder\textquotesingle{}s bitrate configuration. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga34d09ae06cab7e1a6c49876249b67892}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+V\+BR}(x)
+\begin{DoxyCompactList}\small\item\em Enables or disables variable bitrate (V\+BR) in the encoder. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga58feba30c167962305ec268e6abe8c08}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+V\+BR}(x)
+\begin{DoxyCompactList}\small\item\em Determine if variable bitrate (V\+BR) is enabled in the encoder. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_gab1b534a4fe55373f1be407ad4b2b22bd}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+V\+B\+R\+\_\+\+C\+O\+N\+S\+T\+R\+A\+I\+NT}(x)
+\begin{DoxyCompactList}\small\item\em Enables or disables constrained V\+BR in the encoder. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_gab35fa5691ba0dd932031b7839c47513c}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+V\+B\+R\+\_\+\+C\+O\+N\+S\+T\+R\+A\+I\+NT}(x)
+\begin{DoxyCompactList}\small\item\em Determine if constrained V\+BR is enabled in the encoder. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga8450a745bd919a8de522afec115f3b5f}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+C\+H\+A\+N\+N\+E\+LS}(x)
+\begin{DoxyCompactList}\small\item\em Configures mono/stereo forcing in the encoder. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga21f010167c5dfa1b53f20c46d473e86a}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+C\+H\+A\+N\+N\+E\+LS}(x)
+\begin{DoxyCompactList}\small\item\em Gets the encoder\textquotesingle{}s forced channel configuration. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga4f88288e89c595c07c61db316cc45289}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+M\+A\+X\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH}(x)
+\begin{DoxyCompactList}\small\item\em Configures the maximum bandpass that the encoder will select automatically. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_gaa3b5736de64792e1144ce12dfb87613c}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+M\+A\+X\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH}(x)
+\begin{DoxyCompactList}\small\item\em Gets the encoder\textquotesingle{}s configured maximum allowed bandpass. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga0178dabe5526d5b0667d81489cc93791}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH}(x)
+\begin{DoxyCompactList}\small\item\em Sets the encoder\textquotesingle{}s bandpass to a specific value. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_gaaa87ccee4ae46aa6c9528e03c5122b89}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+S\+I\+G\+N\+AL}(x)
+\begin{DoxyCompactList}\small\item\em Configures the type of signal being encoded. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga640d434de535e2d2caec991c347303a4}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+S\+I\+G\+N\+AL}(x)
+\begin{DoxyCompactList}\small\item\em Gets the encoder\textquotesingle{}s configured signal type. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga18fa17dae52ff8f3eaea314204bf1a36}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+ON}(x)
+\begin{DoxyCompactList}\small\item\em Configures the encoder\textquotesingle{}s intended application. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga062ebbc209caf6832fe4a309a459fd4c}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+ON}(x)
+\begin{DoxyCompactList}\small\item\em Gets the encoder\textquotesingle{}s configured application. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_gaf81b9e01501910adc67195ebb42b4a54}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+L\+O\+O\+K\+A\+H\+E\+AD}(x)
+\begin{DoxyCompactList}\small\item\em Gets the total samples of delay added by the entire codec. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga5b67dc832aa46c1c2f35752c46380545}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+I\+N\+B\+A\+N\+D\+\_\+\+F\+EC}(x)
+\begin{DoxyCompactList}\small\item\em Configures the encoder\textquotesingle{}s use of inband forward error correction (F\+EC). \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_gaf792b27a6277ddf786413dbf472d0ac8}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+I\+N\+B\+A\+N\+D\+\_\+\+F\+EC}(x)
+\begin{DoxyCompactList}\small\item\em Gets encoder\textquotesingle{}s configured use of inband forward error correction. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_gafda1c951dea919ba54432cd03827f1a9}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+O\+S\+S\+\_\+\+P\+E\+RC}(x)
+\begin{DoxyCompactList}\small\item\em Configures the encoder\textquotesingle{}s expected packet loss percentage. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_gaa79261c6a55444993fca8d3a3a29d519}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+O\+S\+S\+\_\+\+P\+E\+RC}(x)
+\begin{DoxyCompactList}\small\item\em Gets the encoder\textquotesingle{}s configured packet loss percentage. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga4f053b2db8c5162293213aabfe123773}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+D\+TX}(x)
+\begin{DoxyCompactList}\small\item\em Configures the encoder\textquotesingle{}s use of discontinuous transmission (D\+TX). \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_gaafbb44454e9f57232b85e4e087337ded}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+D\+TX}(x)
+\begin{DoxyCompactList}\small\item\em Gets encoder\textquotesingle{}s configured use of discontinuous transmission. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_gaa23940eb477ff617edc14b8d66e104c0}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+L\+S\+B\+\_\+\+D\+E\+P\+TH}(x)
+\begin{DoxyCompactList}\small\item\em Configures the depth of signal being encoded. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_gab5ecdfbbbabfaefc2f2ca79cf4a3b08f}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+L\+S\+B\+\_\+\+D\+E\+P\+TH}(x)
+\begin{DoxyCompactList}\small\item\em Gets the encoder\textquotesingle{}s configured signal depth. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_gab3764c1b899b2bbe435e1168d3e24b6e}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+E\+X\+P\+E\+R\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+D\+U\+R\+A\+T\+I\+ON}(x)
+\begin{DoxyCompactList}\small\item\em Configures the encoder\textquotesingle{}s use of variable duration frames. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_gab22cbb0bccdd29f58a858c0b3c10756a}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+E\+X\+P\+E\+R\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+D\+U\+R\+A\+T\+I\+ON}(x)
+\begin{DoxyCompactList}\small\item\em Gets the encoder\textquotesingle{}s configured use of variable duration frames. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga0a73d613f6d9d601b32535fd37f58482}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+O\+N\+\_\+\+D\+I\+S\+A\+B\+L\+ED}(x)
+\begin{DoxyCompactList}\small\item\em If set to 1, disables almost all use of prediction, making frames almost completely independent. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__encoderctls_ga6f174467d0e244917d1cc736f9033f1d}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+O\+N\+\_\+\+D\+I\+S\+A\+B\+L\+ED}(x)
+\begin{DoxyCompactList}\small\item\em Gets the encoder\textquotesingle{}s configured prediction status. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+These are convenience macros for use with the {\ttfamily opus\+\_\+encode\+\_\+ctl} interface. 
+
+They are used to generate the appropriate series of arguments for that call, passing the correct type, size and so on as expected for each particular request.
+
+Some usage examples\+:
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{int} ret;
+ret = \hyperlink{group__opus__encoder_ga164cbb0425238961919adf1db67949df}{opus\_encoder\_ctl}(enc\_ctx, \hyperlink{group__opus__encoderctls_ga0178dabe5526d5b0667d81489cc93791}{OPUS\_SET\_BANDWIDTH}(
+      \hyperlink{group__opus__ctlvalues_ga1c5b3244b018ff4548d2d6bffa418472}{OPUS\_AUTO}));
+\textcolor{keywordflow}{if} (ret != \hyperlink{group__opus__errorcodes_gaa44cf8a185e1b5cb940ef63eb4f02d21}{OPUS\_OK}) \textcolor{keywordflow}{return} ret;
+
+\hyperlink{opus__types_8h_aa4d309d6f80b99dbabebc8f98879ab9a}{opus\_int32} rate;
+\hyperlink{group__opus__encoder_ga164cbb0425238961919adf1db67949df}{opus\_encoder\_ctl}(enc\_ctx, \hyperlink{group__opus__genericctls_ga29db1d9b5e670debec54d1163ad2ec62}{OPUS\_GET\_BANDWIDTH}(&rate));
+
+\hyperlink{group__opus__encoder_ga164cbb0425238961919adf1db67949df}{opus\_encoder\_ctl}(enc\_ctx, \hyperlink{group__opus__genericctls_gadc74e4fa8bcdf9994187d52d92207337}{OPUS\_RESET\_STATE});
+\end{DoxyCode}
+
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__genericctls}{Generic C\+T\+Ls}, \hyperlink{group__opus__encoder}{Opus Encoder} 
+\end{DoxySeeAlso}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__opus__encoderctls_ga062ebbc209caf6832fe4a309a459fd4c}\label{group__opus__encoderctls_ga062ebbc209caf6832fe4a309a459fd4c}} 
+\index{Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+ON@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+ON}}
+\index{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+ON@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+ON}!Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+ON}{OPUS\_GET\_APPLICATION}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Gets the encoder\textquotesingle{}s configured application. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoderctls_ga18fa17dae52ff8f3eaea314204bf1a36}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+ON} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em x} & {\ttfamily opus\+\_\+int32 $\ast$}\+: Returns one of the following values\+: 
+\begin{DoxyDescription}
+\item[\hyperlink{group__opus__ctlvalues_ga07884aa018303a419d1f7acb2f3fa669}{O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+V\+O\+IP} ]Process signal for improved speech intelligibility. 
+\item[\hyperlink{group__opus__ctlvalues_ga5909f7cb35c04f1110026c6889edd345}{O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+A\+U\+D\+IO} ]Favor faithfulness to the original input. 
+\item[\hyperlink{group__opus__ctlvalues_ga592232fb39db60c1369989c5c5d19a07}{O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+R\+E\+S\+T\+R\+I\+C\+T\+E\+D\+\_\+\+L\+O\+W\+D\+E\+L\+AY} ]Configure the minimum possible coding delay by disabling certain modes of operation. 
+\end{DoxyDescription}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__encoderctls_ga1427a5560cbc7e9a59f986d89c05082c}\label{group__opus__encoderctls_ga1427a5560cbc7e9a59f986d89c05082c}} 
+\index{Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+B\+I\+T\+R\+A\+TE@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+B\+I\+T\+R\+A\+TE}}
+\index{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+B\+I\+T\+R\+A\+TE@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+B\+I\+T\+R\+A\+TE}!Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+B\+I\+T\+R\+A\+TE}{OPUS\_GET\_BITRATE}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+B\+I\+T\+R\+A\+TE(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Gets the encoder\textquotesingle{}s bitrate configuration. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoderctls_ga0bb51947e355b33d0cb358463b5101a7}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+B\+I\+T\+R\+A\+TE} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em x} & {\ttfamily opus\+\_\+int32 $\ast$}\+: Returns the bitrate in bits per second. The default is determined based on the number of channels and the input sampling rate. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__encoderctls_ga89755ee721a38d964c7630a920eb27d2}\label{group__opus__encoderctls_ga89755ee721a38d964c7630a920eb27d2}} 
+\index{Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+C\+O\+M\+P\+L\+E\+X\+I\+TY@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+C\+O\+M\+P\+L\+E\+X\+I\+TY}}
+\index{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+C\+O\+M\+P\+L\+E\+X\+I\+TY@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+C\+O\+M\+P\+L\+E\+X\+I\+TY}!Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+C\+O\+M\+P\+L\+E\+X\+I\+TY}{OPUS\_GET\_COMPLEXITY}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+C\+O\+M\+P\+L\+E\+X\+I\+TY(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Gets the encoder\textquotesingle{}s complexity configuration. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoderctls_ga3483877bf1687a75dd4a1de6f85f291c}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+C\+O\+M\+P\+L\+E\+X\+I\+TY} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em x} & {\ttfamily opus\+\_\+int32 $\ast$}\+: Returns a value in the range 0-\/10, inclusive. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__encoderctls_gaafbb44454e9f57232b85e4e087337ded}\label{group__opus__encoderctls_gaafbb44454e9f57232b85e4e087337ded}} 
+\index{Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+D\+TX@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+D\+TX}}
+\index{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+D\+TX@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+D\+TX}!Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+D\+TX}{OPUS\_GET\_DTX}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+D\+TX(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Gets encoder\textquotesingle{}s configured use of discontinuous transmission. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoderctls_ga4f053b2db8c5162293213aabfe123773}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+D\+TX} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em x} & {\ttfamily opus\+\_\+int32 $\ast$}\+: Returns one of the following values\+: 
+\begin{DoxyDescription}
+\item[0]D\+TX disabled (default). 
+\item[1]D\+TX enabled. 
+\end{DoxyDescription}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__encoderctls_gab22cbb0bccdd29f58a858c0b3c10756a}\label{group__opus__encoderctls_gab22cbb0bccdd29f58a858c0b3c10756a}} 
+\index{Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+E\+X\+P\+E\+R\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+D\+U\+R\+A\+T\+I\+ON@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+E\+X\+P\+E\+R\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+D\+U\+R\+A\+T\+I\+ON}}
+\index{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+E\+X\+P\+E\+R\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+D\+U\+R\+A\+T\+I\+ON@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+E\+X\+P\+E\+R\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+D\+U\+R\+A\+T\+I\+ON}!Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+E\+X\+P\+E\+R\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+D\+U\+R\+A\+T\+I\+ON}{OPUS\_GET\_EXPERT\_FRAME\_DURATION}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+E\+X\+P\+E\+R\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+D\+U\+R\+A\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Gets the encoder\textquotesingle{}s configured use of variable duration frames. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoderctls_gab3764c1b899b2bbe435e1168d3e24b6e}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+E\+X\+P\+E\+R\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+D\+U\+R\+A\+T\+I\+ON} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em x} & {\ttfamily opus\+\_\+int32 $\ast$}\+: Returns one of the following values\+: 
+\begin{DoxyDescription}
+\item[O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+\+A\+RG]Select frame size from the argument (default). 
+\item[O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+2\+\_\+5\+\_\+\+MS]Use 2.\+5 ms frames. 
+\item[O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+5\+\_\+\+MS]Use 5 ms frames. 
+\item[O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+10\+\_\+\+MS]Use 10 ms frames. 
+\item[O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+20\+\_\+\+MS]Use 20 ms frames. 
+\item[O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+40\+\_\+\+MS]Use 40 ms frames. 
+\item[O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+60\+\_\+\+MS]Use 60 ms frames. 
+\item[O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+\+V\+A\+R\+I\+A\+B\+LE]Optimize the frame size dynamically. 
+\end{DoxyDescription}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__encoderctls_ga21f010167c5dfa1b53f20c46d473e86a}\label{group__opus__encoderctls_ga21f010167c5dfa1b53f20c46d473e86a}} 
+\index{Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+C\+H\+A\+N\+N\+E\+LS@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+C\+H\+A\+N\+N\+E\+LS}}
+\index{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+C\+H\+A\+N\+N\+E\+LS@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+C\+H\+A\+N\+N\+E\+LS}!Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+C\+H\+A\+N\+N\+E\+LS}{OPUS\_GET\_FORCE\_CHANNELS}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+C\+H\+A\+N\+N\+E\+LS(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Gets the encoder\textquotesingle{}s forced channel configuration. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoderctls_ga8450a745bd919a8de522afec115f3b5f}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+C\+H\+A\+N\+N\+E\+LS} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em x} & {\ttfamily opus\+\_\+int32 $\ast$}\+: 
+\begin{DoxyDescription}
+\item[\hyperlink{group__opus__ctlvalues_ga1c5b3244b018ff4548d2d6bffa418472}{O\+P\+U\+S\+\_\+\+A\+U\+TO}]Not forced (default) 
+\item[1 ]Forced mono 
+\item[2 ]Forced stereo 
+\end{DoxyDescription}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__encoderctls_gaf792b27a6277ddf786413dbf472d0ac8}\label{group__opus__encoderctls_gaf792b27a6277ddf786413dbf472d0ac8}} 
+\index{Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+I\+N\+B\+A\+N\+D\+\_\+\+F\+EC@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+I\+N\+B\+A\+N\+D\+\_\+\+F\+EC}}
+\index{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+I\+N\+B\+A\+N\+D\+\_\+\+F\+EC@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+I\+N\+B\+A\+N\+D\+\_\+\+F\+EC}!Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+I\+N\+B\+A\+N\+D\+\_\+\+F\+EC}{OPUS\_GET\_INBAND\_FEC}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+I\+N\+B\+A\+N\+D\+\_\+\+F\+EC(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Gets encoder\textquotesingle{}s configured use of inband forward error correction. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoderctls_ga5b67dc832aa46c1c2f35752c46380545}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+I\+N\+B\+A\+N\+D\+\_\+\+F\+EC} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em x} & {\ttfamily opus\+\_\+int32 $\ast$}\+: Returns one of the following values\+: 
+\begin{DoxyDescription}
+\item[0]Inband F\+EC disabled (default). 
+\item[1]Inband F\+EC enabled. 
+\end{DoxyDescription}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__encoderctls_gaf81b9e01501910adc67195ebb42b4a54}\label{group__opus__encoderctls_gaf81b9e01501910adc67195ebb42b4a54}} 
+\index{Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+L\+O\+O\+K\+A\+H\+E\+AD@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+L\+O\+O\+K\+A\+H\+E\+AD}}
+\index{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+L\+O\+O\+K\+A\+H\+E\+AD@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+L\+O\+O\+K\+A\+H\+E\+AD}!Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+L\+O\+O\+K\+A\+H\+E\+AD}{OPUS\_GET\_LOOKAHEAD}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+L\+O\+O\+K\+A\+H\+E\+AD(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Gets the total samples of delay added by the entire codec. 
+
+This can be queried by the encoder and then the provided number of samples can be skipped on from the start of the decoder\textquotesingle{}s output to provide time aligned input and output. From the perspective of a decoding application the real data begins this many samples late.
+
+The decoder contribution to this delay is identical for all decoders, but the encoder portion of the delay may vary from implementation to implementation, version to version, or even depend on the encoder\textquotesingle{}s initial configuration. Applications needing delay compensation should call this C\+TL rather than hard-\/coding a value. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em x} & {\ttfamily opus\+\_\+int32 $\ast$}\+: Number of lookahead samples \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__encoderctls_gab5ecdfbbbabfaefc2f2ca79cf4a3b08f}\label{group__opus__encoderctls_gab5ecdfbbbabfaefc2f2ca79cf4a3b08f}} 
+\index{Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+L\+S\+B\+\_\+\+D\+E\+P\+TH@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+L\+S\+B\+\_\+\+D\+E\+P\+TH}}
+\index{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+L\+S\+B\+\_\+\+D\+E\+P\+TH@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+L\+S\+B\+\_\+\+D\+E\+P\+TH}!Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+L\+S\+B\+\_\+\+D\+E\+P\+TH}{OPUS\_GET\_LSB\_DEPTH}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+L\+S\+B\+\_\+\+D\+E\+P\+TH(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Gets the encoder\textquotesingle{}s configured signal depth. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoderctls_gaa23940eb477ff617edc14b8d66e104c0}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+L\+S\+B\+\_\+\+D\+E\+P\+TH} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em x} & {\ttfamily opus\+\_\+int32 $\ast$}\+: Input precision in bits, between 8 and 24 (default\+: 24). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__encoderctls_gaa3b5736de64792e1144ce12dfb87613c}\label{group__opus__encoderctls_gaa3b5736de64792e1144ce12dfb87613c}} 
+\index{Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+M\+A\+X\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+M\+A\+X\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH}}
+\index{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+M\+A\+X\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+M\+A\+X\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH}!Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+M\+A\+X\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH}{OPUS\_GET\_MAX\_BANDWIDTH}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+M\+A\+X\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Gets the encoder\textquotesingle{}s configured maximum allowed bandpass. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoderctls_ga4f88288e89c595c07c61db316cc45289}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+M\+A\+X\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em x} & {\ttfamily opus\+\_\+int32 $\ast$}\+: Allowed values\+: 
+\begin{DoxyDescription}
+\item[\hyperlink{group__opus__ctlvalues_ga607dd310958b9c7d545d005e4572d47f}{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+N\+A\+R\+R\+O\+W\+B\+A\+ND} ]4 k\+Hz passband 
+\item[\hyperlink{group__opus__ctlvalues_ga53a2aff4dc0ee23682927ca568c422a3}{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+M\+E\+D\+I\+U\+M\+B\+A\+ND} ]6 k\+Hz passband 
+\item[\hyperlink{group__opus__ctlvalues_gac698e5d1281a3632251d2a4ead48afb9}{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+W\+I\+D\+E\+B\+A\+ND} ]8 k\+Hz passband 
+\item[\hyperlink{group__opus__ctlvalues_ga41f86df35af0033a7361895da88671c1}{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+S\+U\+P\+E\+R\+W\+I\+D\+E\+B\+A\+ND}]12 k\+Hz passband 
+\item[\hyperlink{group__opus__ctlvalues_ga74cb052d8ec36cbcc9708c417558ebdd}{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+F\+U\+L\+L\+B\+A\+ND} ]20 k\+Hz passband (default) 
+\end{DoxyDescription}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__encoderctls_gaa79261c6a55444993fca8d3a3a29d519}\label{group__opus__encoderctls_gaa79261c6a55444993fca8d3a3a29d519}} 
+\index{Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+O\+S\+S\+\_\+\+P\+E\+RC@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+O\+S\+S\+\_\+\+P\+E\+RC}}
+\index{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+O\+S\+S\+\_\+\+P\+E\+RC@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+O\+S\+S\+\_\+\+P\+E\+RC}!Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+O\+S\+S\+\_\+\+P\+E\+RC}{OPUS\_GET\_PACKET\_LOSS\_PERC}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+O\+S\+S\+\_\+\+P\+E\+RC(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Gets the encoder\textquotesingle{}s configured packet loss percentage. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoderctls_gafda1c951dea919ba54432cd03827f1a9}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+O\+S\+S\+\_\+\+P\+E\+RC} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em x} & {\ttfamily opus\+\_\+int32 $\ast$}\+: Returns the configured loss percentage in the range 0-\/100, inclusive (default\+: 0). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__encoderctls_ga6f174467d0e244917d1cc736f9033f1d}\label{group__opus__encoderctls_ga6f174467d0e244917d1cc736f9033f1d}} 
+\index{Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+O\+N\+\_\+\+D\+I\+S\+A\+B\+L\+ED@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+O\+N\+\_\+\+D\+I\+S\+A\+B\+L\+ED}}
+\index{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+O\+N\+\_\+\+D\+I\+S\+A\+B\+L\+ED@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+O\+N\+\_\+\+D\+I\+S\+A\+B\+L\+ED}!Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+O\+N\+\_\+\+D\+I\+S\+A\+B\+L\+ED}{OPUS\_GET\_PREDICTION\_DISABLED}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+O\+N\+\_\+\+D\+I\+S\+A\+B\+L\+ED(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Gets the encoder\textquotesingle{}s configured prediction status. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoderctls_ga0a73d613f6d9d601b32535fd37f58482}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+O\+N\+\_\+\+D\+I\+S\+A\+B\+L\+ED} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em x} & {\ttfamily opus\+\_\+int32 $\ast$}\+: Returns one of the following values\+: 
+\begin{DoxyDescription}
+\item[0]Prediction enabled (default). 
+\item[1]Prediction disabled. 
+\end{DoxyDescription}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__encoderctls_ga640d434de535e2d2caec991c347303a4}\label{group__opus__encoderctls_ga640d434de535e2d2caec991c347303a4}} 
+\index{Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+S\+I\+G\+N\+AL@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+S\+I\+G\+N\+AL}}
+\index{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+S\+I\+G\+N\+AL@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+S\+I\+G\+N\+AL}!Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+S\+I\+G\+N\+AL}{OPUS\_GET\_SIGNAL}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+S\+I\+G\+N\+AL(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Gets the encoder\textquotesingle{}s configured signal type. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoderctls_gaaa87ccee4ae46aa6c9528e03c5122b89}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+S\+I\+G\+N\+AL} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em x} & {\ttfamily opus\+\_\+int32 $\ast$}\+: Returns one of the following values\+: 
+\begin{DoxyDescription}
+\item[\hyperlink{group__opus__ctlvalues_ga1c5b3244b018ff4548d2d6bffa418472}{O\+P\+U\+S\+\_\+\+A\+U\+TO} ](default) 
+\item[\hyperlink{group__opus__ctlvalues_ga085a116fed816373d3b9eae28df49404}{O\+P\+U\+S\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+V\+O\+I\+CE}]Bias thresholds towards choosing L\+PC or Hybrid modes. 
+\item[\hyperlink{group__opus__ctlvalues_gaa0c228c664b6d426f4c213e3a5350889}{O\+P\+U\+S\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+M\+U\+S\+IC}]Bias thresholds towards choosing M\+D\+CT modes. 
+\end{DoxyDescription}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__encoderctls_ga58feba30c167962305ec268e6abe8c08}\label{group__opus__encoderctls_ga58feba30c167962305ec268e6abe8c08}} 
+\index{Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+V\+BR@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+V\+BR}}
+\index{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+V\+BR@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+V\+BR}!Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+V\+BR}{OPUS\_GET\_VBR}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+V\+BR(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Determine if variable bitrate (V\+BR) is enabled in the encoder. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoderctls_ga34d09ae06cab7e1a6c49876249b67892}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+V\+BR} 
+
+\hyperlink{group__opus__encoderctls_gab35fa5691ba0dd932031b7839c47513c}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+V\+B\+R\+\_\+\+C\+O\+N\+S\+T\+R\+A\+I\+NT} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em x} & {\ttfamily opus\+\_\+int32 $\ast$}\+: Returns one of the following values\+: 
+\begin{DoxyDescription}
+\item[0]Hard C\+BR. 
+\item[1]V\+BR (default). The exact type of V\+BR may be retrieved via \hyperlink{group__opus__encoderctls_gab35fa5691ba0dd932031b7839c47513c}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+V\+B\+R\+\_\+\+C\+O\+N\+S\+T\+R\+A\+I\+NT}. 
+\end{DoxyDescription}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__encoderctls_gab35fa5691ba0dd932031b7839c47513c}\label{group__opus__encoderctls_gab35fa5691ba0dd932031b7839c47513c}} 
+\index{Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+V\+B\+R\+\_\+\+C\+O\+N\+S\+T\+R\+A\+I\+NT@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+V\+B\+R\+\_\+\+C\+O\+N\+S\+T\+R\+A\+I\+NT}}
+\index{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+V\+B\+R\+\_\+\+C\+O\+N\+S\+T\+R\+A\+I\+NT@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+V\+B\+R\+\_\+\+C\+O\+N\+S\+T\+R\+A\+I\+NT}!Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+V\+B\+R\+\_\+\+C\+O\+N\+S\+T\+R\+A\+I\+NT}{OPUS\_GET\_VBR\_CONSTRAINT}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+V\+B\+R\+\_\+\+C\+O\+N\+S\+T\+R\+A\+I\+NT(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Determine if constrained V\+BR is enabled in the encoder. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoderctls_gab1b534a4fe55373f1be407ad4b2b22bd}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+V\+B\+R\+\_\+\+C\+O\+N\+S\+T\+R\+A\+I\+NT} 
+
+\hyperlink{group__opus__encoderctls_ga58feba30c167962305ec268e6abe8c08}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+V\+BR} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em x} & {\ttfamily opus\+\_\+int32 $\ast$}\+: Returns one of the following values\+: 
+\begin{DoxyDescription}
+\item[0]Unconstrained V\+BR. 
+\item[1]Constrained V\+BR (default). 
+\end{DoxyDescription}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__encoderctls_ga18fa17dae52ff8f3eaea314204bf1a36}\label{group__opus__encoderctls_ga18fa17dae52ff8f3eaea314204bf1a36}} 
+\index{Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+ON@{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+ON}}
+\index{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+ON@{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+ON}!Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+ON}{OPUS\_SET\_APPLICATION}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Configures the encoder\textquotesingle{}s intended application. 
+
+The initial value is a mandatory argument to the encoder\+\_\+create function. \begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoderctls_ga062ebbc209caf6832fe4a309a459fd4c}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+ON} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & {\ttfamily opus\+\_\+int32}\+: Returns one of the following values\+: 
+\begin{DoxyDescription}
+\item[\hyperlink{group__opus__ctlvalues_ga07884aa018303a419d1f7acb2f3fa669}{O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+V\+O\+IP} ]Process signal for improved speech intelligibility. 
+\item[\hyperlink{group__opus__ctlvalues_ga5909f7cb35c04f1110026c6889edd345}{O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+A\+U\+D\+IO} ]Favor faithfulness to the original input. 
+\item[\hyperlink{group__opus__ctlvalues_ga592232fb39db60c1369989c5c5d19a07}{O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+R\+E\+S\+T\+R\+I\+C\+T\+E\+D\+\_\+\+L\+O\+W\+D\+E\+L\+AY} ]Configure the minimum possible coding delay by disabling certain modes of operation. 
+\end{DoxyDescription}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__encoderctls_ga0178dabe5526d5b0667d81489cc93791}\label{group__opus__encoderctls_ga0178dabe5526d5b0667d81489cc93791}} 
+\index{Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH@{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH}}
+\index{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH@{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH}!Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH}{OPUS\_SET\_BANDWIDTH}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Sets the encoder\textquotesingle{}s bandpass to a specific value. 
+
+This prevents the encoder from automatically selecting the bandpass based on the available bitrate. If an application knows the bandpass of the input audio it is providing, it should normally use \hyperlink{group__opus__encoderctls_ga4f88288e89c595c07c61db316cc45289}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+M\+A\+X\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH} instead, which still gives the encoder the freedom to reduce the bandpass when the bitrate becomes too low, for better overall quality. \begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__genericctls_ga29db1d9b5e670debec54d1163ad2ec62}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & {\ttfamily opus\+\_\+int32}\+: Allowed values\+: 
+\begin{DoxyDescription}
+\item[\hyperlink{group__opus__ctlvalues_ga1c5b3244b018ff4548d2d6bffa418472}{O\+P\+U\+S\+\_\+\+A\+U\+TO} ](default) 
+\item[\hyperlink{group__opus__ctlvalues_ga607dd310958b9c7d545d005e4572d47f}{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+N\+A\+R\+R\+O\+W\+B\+A\+ND} ]4 k\+Hz passband 
+\item[\hyperlink{group__opus__ctlvalues_ga53a2aff4dc0ee23682927ca568c422a3}{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+M\+E\+D\+I\+U\+M\+B\+A\+ND} ]6 k\+Hz passband 
+\item[\hyperlink{group__opus__ctlvalues_gac698e5d1281a3632251d2a4ead48afb9}{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+W\+I\+D\+E\+B\+A\+ND} ]8 k\+Hz passband 
+\item[\hyperlink{group__opus__ctlvalues_ga41f86df35af0033a7361895da88671c1}{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+S\+U\+P\+E\+R\+W\+I\+D\+E\+B\+A\+ND}]12 k\+Hz passband 
+\item[\hyperlink{group__opus__ctlvalues_ga74cb052d8ec36cbcc9708c417558ebdd}{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+F\+U\+L\+L\+B\+A\+ND} ]20 k\+Hz passband 
+\end{DoxyDescription}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__encoderctls_ga0bb51947e355b33d0cb358463b5101a7}\label{group__opus__encoderctls_ga0bb51947e355b33d0cb358463b5101a7}} 
+\index{Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+B\+I\+T\+R\+A\+TE@{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+B\+I\+T\+R\+A\+TE}}
+\index{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+B\+I\+T\+R\+A\+TE@{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+B\+I\+T\+R\+A\+TE}!Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+B\+I\+T\+R\+A\+TE}{OPUS\_SET\_BITRATE}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+B\+I\+T\+R\+A\+TE(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Configures the bitrate in the encoder. 
+
+Rates from 500 to 512000 bits per second are meaningful, as well as the special values \hyperlink{group__opus__ctlvalues_ga1c5b3244b018ff4548d2d6bffa418472}{O\+P\+U\+S\+\_\+\+A\+U\+TO} and \hyperlink{group__opus__ctlvalues_gaeadbaa3b4b9e15d39cd1d6e7d91519e5}{O\+P\+U\+S\+\_\+\+B\+I\+T\+R\+A\+T\+E\+\_\+\+M\+AX}. The value \hyperlink{group__opus__ctlvalues_gaeadbaa3b4b9e15d39cd1d6e7d91519e5}{O\+P\+U\+S\+\_\+\+B\+I\+T\+R\+A\+T\+E\+\_\+\+M\+AX} can be used to cause the codec to use as much rate as it can, which is useful for controlling the rate by adjusting the output buffer size. \begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoderctls_ga1427a5560cbc7e9a59f986d89c05082c}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+B\+I\+T\+R\+A\+TE} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & {\ttfamily opus\+\_\+int32}\+: Bitrate in bits per second. The default is determined based on the number of channels and the input sampling rate. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__encoderctls_ga3483877bf1687a75dd4a1de6f85f291c}\label{group__opus__encoderctls_ga3483877bf1687a75dd4a1de6f85f291c}} 
+\index{Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+C\+O\+M\+P\+L\+E\+X\+I\+TY@{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+C\+O\+M\+P\+L\+E\+X\+I\+TY}}
+\index{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+C\+O\+M\+P\+L\+E\+X\+I\+TY@{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+C\+O\+M\+P\+L\+E\+X\+I\+TY}!Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+C\+O\+M\+P\+L\+E\+X\+I\+TY}{OPUS\_SET\_COMPLEXITY}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+C\+O\+M\+P\+L\+E\+X\+I\+TY(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Configures the encoder\textquotesingle{}s computational complexity. 
+
+The supported range is 0-\/10 inclusive with 10 representing the highest complexity. \begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoderctls_ga89755ee721a38d964c7630a920eb27d2}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+C\+O\+M\+P\+L\+E\+X\+I\+TY} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & {\ttfamily opus\+\_\+int32}\+: Allowed values\+: 0-\/10, inclusive. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__encoderctls_ga4f053b2db8c5162293213aabfe123773}\label{group__opus__encoderctls_ga4f053b2db8c5162293213aabfe123773}} 
+\index{Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+D\+TX@{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+D\+TX}}
+\index{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+D\+TX@{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+D\+TX}!Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+D\+TX}{OPUS\_SET\_DTX}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+D\+TX(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Configures the encoder\textquotesingle{}s use of discontinuous transmission (D\+TX). 
+
+\begin{DoxyNote}{Note}
+This is only applicable to the L\+PC layer 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoderctls_gaafbb44454e9f57232b85e4e087337ded}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+D\+TX} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & {\ttfamily opus\+\_\+int32}\+: Allowed values\+: 
+\begin{DoxyDescription}
+\item[0]Disable D\+TX (default). 
+\item[1]Enabled D\+TX. 
+\end{DoxyDescription}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__encoderctls_gab3764c1b899b2bbe435e1168d3e24b6e}\label{group__opus__encoderctls_gab3764c1b899b2bbe435e1168d3e24b6e}} 
+\index{Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+E\+X\+P\+E\+R\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+D\+U\+R\+A\+T\+I\+ON@{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+E\+X\+P\+E\+R\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+D\+U\+R\+A\+T\+I\+ON}}
+\index{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+E\+X\+P\+E\+R\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+D\+U\+R\+A\+T\+I\+ON@{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+E\+X\+P\+E\+R\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+D\+U\+R\+A\+T\+I\+ON}!Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+E\+X\+P\+E\+R\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+D\+U\+R\+A\+T\+I\+ON}{OPUS\_SET\_EXPERT\_FRAME\_DURATION}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+E\+X\+P\+E\+R\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+D\+U\+R\+A\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Configures the encoder\textquotesingle{}s use of variable duration frames. 
+
+When variable duration is enabled, the encoder is free to use a shorter frame size than the one requested in the opus\+\_\+encode$\ast$() call. It is then the user\textquotesingle{}s responsibility to verify how much audio was encoded by checking the ToC byte of the encoded packet. The part of the audio that was not encoded needs to be resent to the encoder for the next call. Do not use this option unless you {\bfseries really} know what you are doing. \begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoderctls_gab22cbb0bccdd29f58a858c0b3c10756a}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+E\+X\+P\+E\+R\+T\+\_\+\+F\+R\+A\+M\+E\+\_\+\+D\+U\+R\+A\+T\+I\+ON} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & {\ttfamily opus\+\_\+int32}\+: Allowed values\+: 
+\begin{DoxyDescription}
+\item[O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+\+A\+RG]Select frame size from the argument (default). 
+\item[O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+2\+\_\+5\+\_\+\+MS]Use 2.\+5 ms frames. 
+\item[O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+5\+\_\+\+MS]Use 5 ms frames. 
+\item[O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+10\+\_\+\+MS]Use 10 ms frames. 
+\item[O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+20\+\_\+\+MS]Use 20 ms frames. 
+\item[O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+40\+\_\+\+MS]Use 40 ms frames. 
+\item[O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+60\+\_\+\+MS]Use 60 ms frames. 
+\item[O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+\+V\+A\+R\+I\+A\+B\+LE]Optimize the frame size dynamically. 
+\end{DoxyDescription}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__encoderctls_ga8450a745bd919a8de522afec115f3b5f}\label{group__opus__encoderctls_ga8450a745bd919a8de522afec115f3b5f}} 
+\index{Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+C\+H\+A\+N\+N\+E\+LS@{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+C\+H\+A\+N\+N\+E\+LS}}
+\index{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+C\+H\+A\+N\+N\+E\+LS@{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+C\+H\+A\+N\+N\+E\+LS}!Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+C\+H\+A\+N\+N\+E\+LS}{OPUS\_SET\_FORCE\_CHANNELS}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+C\+H\+A\+N\+N\+E\+LS(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Configures mono/stereo forcing in the encoder. 
+
+This can force the encoder to produce packets encoded as either mono or stereo, regardless of the format of the input audio. This is useful when the caller knows that the input signal is currently a mono source embedded in a stereo stream. \begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoderctls_ga21f010167c5dfa1b53f20c46d473e86a}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+F\+O\+R\+C\+E\+\_\+\+C\+H\+A\+N\+N\+E\+LS} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & {\ttfamily opus\+\_\+int32}\+: Allowed values\+: 
+\begin{DoxyDescription}
+\item[\hyperlink{group__opus__ctlvalues_ga1c5b3244b018ff4548d2d6bffa418472}{O\+P\+U\+S\+\_\+\+A\+U\+TO}]Not forced (default) 
+\item[1 ]Forced mono 
+\item[2 ]Forced stereo 
+\end{DoxyDescription}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__encoderctls_ga5b67dc832aa46c1c2f35752c46380545}\label{group__opus__encoderctls_ga5b67dc832aa46c1c2f35752c46380545}} 
+\index{Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+I\+N\+B\+A\+N\+D\+\_\+\+F\+EC@{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+I\+N\+B\+A\+N\+D\+\_\+\+F\+EC}}
+\index{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+I\+N\+B\+A\+N\+D\+\_\+\+F\+EC@{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+I\+N\+B\+A\+N\+D\+\_\+\+F\+EC}!Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+I\+N\+B\+A\+N\+D\+\_\+\+F\+EC}{OPUS\_SET\_INBAND\_FEC}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+I\+N\+B\+A\+N\+D\+\_\+\+F\+EC(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Configures the encoder\textquotesingle{}s use of inband forward error correction (F\+EC). 
+
+\begin{DoxyNote}{Note}
+This is only applicable to the L\+PC layer 
+\end{DoxyNote}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoderctls_gaf792b27a6277ddf786413dbf472d0ac8}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+I\+N\+B\+A\+N\+D\+\_\+\+F\+EC} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & {\ttfamily opus\+\_\+int32}\+: Allowed values\+: 
+\begin{DoxyDescription}
+\item[0]Disable inband F\+EC (default). 
+\item[1]Enable inband F\+EC. 
+\end{DoxyDescription}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__encoderctls_gaa23940eb477ff617edc14b8d66e104c0}\label{group__opus__encoderctls_gaa23940eb477ff617edc14b8d66e104c0}} 
+\index{Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+L\+S\+B\+\_\+\+D\+E\+P\+TH@{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+L\+S\+B\+\_\+\+D\+E\+P\+TH}}
+\index{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+L\+S\+B\+\_\+\+D\+E\+P\+TH@{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+L\+S\+B\+\_\+\+D\+E\+P\+TH}!Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+L\+S\+B\+\_\+\+D\+E\+P\+TH}{OPUS\_SET\_LSB\_DEPTH}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+L\+S\+B\+\_\+\+D\+E\+P\+TH(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Configures the depth of signal being encoded. 
+
+This is a hint which helps the encoder identify silence and near-\/silence. It represents the number of significant bits of linear intensity below which the signal contains ignorable quantization or other noise.
+
+For example, \hyperlink{group__opus__encoderctls_gaa23940eb477ff617edc14b8d66e104c0}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+L\+S\+B\+\_\+\+D\+E\+P\+T\+H(14)} would be an appropriate setting for G.\+711 u-\/law input. \hyperlink{group__opus__encoderctls_gaa23940eb477ff617edc14b8d66e104c0}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+L\+S\+B\+\_\+\+D\+E\+P\+T\+H(16)} would be appropriate for 16-\/bit linear pcm input with \hyperlink{group__opus__encoder_ga4ae9905859cd241ef4bb5c59cd5e5309}{opus\+\_\+encode\+\_\+float()}.
+
+When using \hyperlink{group__opus__encoder_gad2d6bf6a9ffb6674879d7605ed073e25}{opus\+\_\+encode()} instead of \hyperlink{group__opus__encoder_ga4ae9905859cd241ef4bb5c59cd5e5309}{opus\+\_\+encode\+\_\+float()}, or when libopus is compiled for fixed-\/point, the encoder uses the minimum of the value set here and the value 16.
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoderctls_gab5ecdfbbbabfaefc2f2ca79cf4a3b08f}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+L\+S\+B\+\_\+\+D\+E\+P\+TH} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & {\ttfamily opus\+\_\+int32}\+: Input precision in bits, between 8 and 24 (default\+: 24). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__encoderctls_ga4f88288e89c595c07c61db316cc45289}\label{group__opus__encoderctls_ga4f88288e89c595c07c61db316cc45289}} 
+\index{Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+M\+A\+X\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH@{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+M\+A\+X\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH}}
+\index{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+M\+A\+X\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH@{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+M\+A\+X\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH}!Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+M\+A\+X\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH}{OPUS\_SET\_MAX\_BANDWIDTH}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+M\+A\+X\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Configures the maximum bandpass that the encoder will select automatically. 
+
+Applications should normally use this instead of \hyperlink{group__opus__encoderctls_ga0178dabe5526d5b0667d81489cc93791}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH} (leaving that set to the default, \hyperlink{group__opus__ctlvalues_ga1c5b3244b018ff4548d2d6bffa418472}{O\+P\+U\+S\+\_\+\+A\+U\+TO}). This allows the application to set an upper bound based on the type of input it is providing, but still gives the encoder the freedom to reduce the bandpass when the bitrate becomes too low, for better overall quality. \begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoderctls_gaa3b5736de64792e1144ce12dfb87613c}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+M\+A\+X\+\_\+\+B\+A\+N\+D\+W\+I\+D\+TH} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & {\ttfamily opus\+\_\+int32}\+: Allowed values\+: 
+\begin{DoxyDescription}
+\item[O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+N\+A\+R\+R\+O\+W\+B\+A\+ND ]4 k\+Hz passband 
+\item[O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+M\+E\+D\+I\+U\+M\+B\+A\+ND ]6 k\+Hz passband 
+\item[O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+W\+I\+D\+E\+B\+A\+ND ]8 k\+Hz passband 
+\item[O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+S\+U\+P\+E\+R\+W\+I\+D\+E\+B\+A\+ND]12 k\+Hz passband 
+\item[O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+F\+U\+L\+L\+B\+A\+ND ]20 k\+Hz passband (default) 
+\end{DoxyDescription}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__encoderctls_gafda1c951dea919ba54432cd03827f1a9}\label{group__opus__encoderctls_gafda1c951dea919ba54432cd03827f1a9}} 
+\index{Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+O\+S\+S\+\_\+\+P\+E\+RC@{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+O\+S\+S\+\_\+\+P\+E\+RC}}
+\index{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+O\+S\+S\+\_\+\+P\+E\+RC@{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+O\+S\+S\+\_\+\+P\+E\+RC}!Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+O\+S\+S\+\_\+\+P\+E\+RC}{OPUS\_SET\_PACKET\_LOSS\_PERC}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+O\+S\+S\+\_\+\+P\+E\+RC(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Configures the encoder\textquotesingle{}s expected packet loss percentage. 
+
+Higher values trigger progressively more loss resistant behavior in the encoder at the expense of quality at a given bitrate in the absence of packet loss, but greater quality under loss. \begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoderctls_gaa79261c6a55444993fca8d3a3a29d519}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+L\+O\+S\+S\+\_\+\+P\+E\+RC} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & {\ttfamily opus\+\_\+int32}\+: Loss percentage in the range 0-\/100, inclusive (default\+: 0). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__encoderctls_ga0a73d613f6d9d601b32535fd37f58482}\label{group__opus__encoderctls_ga0a73d613f6d9d601b32535fd37f58482}} 
+\index{Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+O\+N\+\_\+\+D\+I\+S\+A\+B\+L\+ED@{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+O\+N\+\_\+\+D\+I\+S\+A\+B\+L\+ED}}
+\index{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+O\+N\+\_\+\+D\+I\+S\+A\+B\+L\+ED@{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+O\+N\+\_\+\+D\+I\+S\+A\+B\+L\+ED}!Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+O\+N\+\_\+\+D\+I\+S\+A\+B\+L\+ED}{OPUS\_SET\_PREDICTION\_DISABLED}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+O\+N\+\_\+\+D\+I\+S\+A\+B\+L\+ED(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+If set to 1, disables almost all use of prediction, making frames almost completely independent. 
+
+This reduces quality. \begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoderctls_ga6f174467d0e244917d1cc736f9033f1d}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+P\+R\+E\+D\+I\+C\+T\+I\+O\+N\+\_\+\+D\+I\+S\+A\+B\+L\+ED} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & {\ttfamily opus\+\_\+int32}\+: Allowed values\+: 
+\begin{DoxyDescription}
+\item[0]Enable prediction (default). 
+\item[1]Disable prediction. 
+\end{DoxyDescription}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__encoderctls_gaaa87ccee4ae46aa6c9528e03c5122b89}\label{group__opus__encoderctls_gaaa87ccee4ae46aa6c9528e03c5122b89}} 
+\index{Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+S\+I\+G\+N\+AL@{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+S\+I\+G\+N\+AL}}
+\index{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+S\+I\+G\+N\+AL@{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+S\+I\+G\+N\+AL}!Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+S\+I\+G\+N\+AL}{OPUS\_SET\_SIGNAL}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+S\+I\+G\+N\+AL(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Configures the type of signal being encoded. 
+
+This is a hint which helps the encoder\textquotesingle{}s mode selection. \begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoderctls_ga640d434de535e2d2caec991c347303a4}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+S\+I\+G\+N\+AL} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & {\ttfamily opus\+\_\+int32}\+: Allowed values\+: 
+\begin{DoxyDescription}
+\item[\hyperlink{group__opus__ctlvalues_ga1c5b3244b018ff4548d2d6bffa418472}{O\+P\+U\+S\+\_\+\+A\+U\+TO} ](default) 
+\item[\hyperlink{group__opus__ctlvalues_ga085a116fed816373d3b9eae28df49404}{O\+P\+U\+S\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+V\+O\+I\+CE}]Bias thresholds towards choosing L\+PC or Hybrid modes. 
+\item[\hyperlink{group__opus__ctlvalues_gaa0c228c664b6d426f4c213e3a5350889}{O\+P\+U\+S\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+M\+U\+S\+IC}]Bias thresholds towards choosing M\+D\+CT modes. 
+\end{DoxyDescription}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__encoderctls_ga34d09ae06cab7e1a6c49876249b67892}\label{group__opus__encoderctls_ga34d09ae06cab7e1a6c49876249b67892}} 
+\index{Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+V\+BR@{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+V\+BR}}
+\index{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+V\+BR@{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+V\+BR}!Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+V\+BR}{OPUS\_SET\_VBR}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+V\+BR(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Enables or disables variable bitrate (V\+BR) in the encoder. 
+
+The configured bitrate may not be met exactly because frames must be an integer number of bytes in length. \begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoderctls_ga58feba30c167962305ec268e6abe8c08}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+V\+BR} 
+
+\hyperlink{group__opus__encoderctls_gab1b534a4fe55373f1be407ad4b2b22bd}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+V\+B\+R\+\_\+\+C\+O\+N\+S\+T\+R\+A\+I\+NT} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & {\ttfamily opus\+\_\+int32}\+: Allowed values\+: 
+\begin{DoxyDescription}
+\item[0]Hard C\+BR. For L\+P\+C/hybrid modes at very low bit-\/rate, this can cause noticeable quality degradation. 
+\item[1]V\+BR (default). The exact type of V\+BR is controlled by \hyperlink{group__opus__encoderctls_gab1b534a4fe55373f1be407ad4b2b22bd}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+V\+B\+R\+\_\+\+C\+O\+N\+S\+T\+R\+A\+I\+NT}. 
+\end{DoxyDescription}\\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__encoderctls_gab1b534a4fe55373f1be407ad4b2b22bd}\label{group__opus__encoderctls_gab1b534a4fe55373f1be407ad4b2b22bd}} 
+\index{Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+V\+B\+R\+\_\+\+C\+O\+N\+S\+T\+R\+A\+I\+NT@{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+V\+B\+R\+\_\+\+C\+O\+N\+S\+T\+R\+A\+I\+NT}}
+\index{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+V\+B\+R\+\_\+\+C\+O\+N\+S\+T\+R\+A\+I\+NT@{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+V\+B\+R\+\_\+\+C\+O\+N\+S\+T\+R\+A\+I\+NT}!Encoder related C\+T\+Ls@{Encoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+V\+B\+R\+\_\+\+C\+O\+N\+S\+T\+R\+A\+I\+NT}{OPUS\_SET\_VBR\_CONSTRAINT}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+V\+B\+R\+\_\+\+C\+O\+N\+S\+T\+R\+A\+I\+NT(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Enables or disables constrained V\+BR in the encoder. 
+
+This setting is ignored when the encoder is in C\+BR mode. \begin{DoxyWarning}{Warning}
+Only the M\+D\+CT mode of Opus currently heeds the constraint. Speech mode ignores it completely, hybrid mode may fail to obey it if the L\+PC layer uses more bitrate than the constraint would have permitted. 
+\end{DoxyWarning}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoderctls_gab35fa5691ba0dd932031b7839c47513c}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+V\+B\+R\+\_\+\+C\+O\+N\+S\+T\+R\+A\+I\+NT} 
+
+\hyperlink{group__opus__encoderctls_ga34d09ae06cab7e1a6c49876249b67892}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+V\+BR} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & {\ttfamily opus\+\_\+int32}\+: Allowed values\+: 
+\begin{DoxyDescription}
+\item[0]Unconstrained V\+BR. 
+\item[1]Constrained V\+BR (default). This creates a maximum of one frame of buffering delay assuming a transport with a serialization speed of the nominal bitrate. 
+\end{DoxyDescription}\\
+\hline
+\end{DoxyParams}

@@ -1,0 +1,73 @@
+2.5.1
+depth: fix AVX2 conversion from half to byte/word (introduced in 2.1)
+
+2.5
+api: images larger than 16384x16384 rejected on 32-bit (2Gx2G on 64-bit)
+depth: SSE2 and AVX2 error diffusion implementation
+resize: AVX2 integer resize implementation
+x86: fix crash with AVX CPU on non-AVX OS
+
+2.4
+colorspace: add support for IEC 61966-2-1 (sRGB)
+colorspace: transfer function conversion conforms to ITU-R BT.2100
+
+2.3 (API 2.2)
+api: add 'allow_approximate_gamma' flag to zimg_graph_builder_params
+colorspace: add support for SMPTE ST.2084 (Dolby PQ) and ARIB STD-B67 (HLG)
+colorspace: add support for SMPTE ST.432-1 (P3-D65)
+colorspace: SSE2 and AVX2 LUT-based transfer function implementation
+
+2.2.1:
+resize: fix crash on horizontal resize with negative shift amount
+resize: fix illegal instruction on SSE2 horizontal resize with MSVC (introduced in 2.2)
+
+2.2 (API 2.1):
+api: add fields to zimg_image_format for image active region
+colorspace: add separate error messages for ill-formed colorspace definition
+resize: fix crash on negative or zero lanczos tap count
+resize: improve performance on SSE2 horizontal resize
+
+2.1:
+graph: optimize resizing to 4:4:4/RGB target
+graph: optimize resizing with different output pixel type
+x86: AVX and AVX2 code paths
+x86: fast half-precision support
+vszimg: deprecated and removed
+
+2.0.4:
+graph: fix possible infinite loop when converting integer to float
+
+2.0.3:
+api: fix handling of unrecognized colorspaces
+
+2.0.2:
+graph: fix crash when resizing in only one direction
+
+2.0.1:
+colorspace: fix incorrect gamut processing
+graph: fix possible buffer overflow on certain widths
+
+2.0 (API 2.0):
+api: new simplified API for all-in-one conversions
+api: remove zimg_set_cpu
+api: add zimg_get_version_info and zimg_get_api_version
+colorspace: add YCgCo matrix
+depth: clamp integer output to bit depth limit (e.g. 10-bit => 0-1023)
+depth: fix incorrect strength of random dither
+resize: clamp integer output to bit depth limit
+resize: fix incorrect output for point filter
+vszimg: new resize.X compatible syntax
+vszimg: support for color to greyscale conversion
+
+1.1.1:
+fix border handling in SSE2 horizontal resize
+
+1.1:
+cache-efficient 2d resizer
+rewrite horizontal resize kernels
+fix incorrect strength of ordered dither
+fix inaccurate error diffusion dither
+fix integer underflow in SSE2 dither
+
+1.0:
+initial release

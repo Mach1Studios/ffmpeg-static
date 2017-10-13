@@ -1,0 +1,242 @@
+\hypertarget{group__opus__ctlvalues}{}\section{Pre-\/defined values for C\+TL interface}
+\label{group__opus__ctlvalues}\index{Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__opus__ctlvalues_ga1c5b3244b018ff4548d2d6bffa418472}{O\+P\+U\+S\+\_\+\+A\+U\+TO}
+\begin{DoxyCompactList}\small\item\em Auto/default setting. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_gaeadbaa3b4b9e15d39cd1d6e7d91519e5}{O\+P\+U\+S\+\_\+\+B\+I\+T\+R\+A\+T\+E\+\_\+\+M\+AX}
+\begin{DoxyCompactList}\small\item\em Maximum bitrate. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_ga07884aa018303a419d1f7acb2f3fa669}{O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+V\+O\+IP}
+\begin{DoxyCompactList}\small\item\em Best for most Vo\+I\+P/videoconference applications where listening quality and intelligibility matter most. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_ga5909f7cb35c04f1110026c6889edd345}{O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+A\+U\+D\+IO}
+\begin{DoxyCompactList}\small\item\em Best for broadcast/high-\/fidelity application where the decoded audio should be as close as possible to the input. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_ga592232fb39db60c1369989c5c5d19a07}{O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+R\+E\+S\+T\+R\+I\+C\+T\+E\+D\+\_\+\+L\+O\+W\+D\+E\+L\+AY}
+\begin{DoxyCompactList}\small\item\em Only use when lowest-\/achievable latency is what matters most. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_ga085a116fed816373d3b9eae28df49404}{O\+P\+U\+S\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+V\+O\+I\+CE}~3001
+\begin{DoxyCompactList}\small\item\em Signal being encoded is voice. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_gaa0c228c664b6d426f4c213e3a5350889}{O\+P\+U\+S\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+M\+U\+S\+IC}~3002
+\begin{DoxyCompactList}\small\item\em Signal being encoded is music. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_ga607dd310958b9c7d545d005e4572d47f}{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+N\+A\+R\+R\+O\+W\+B\+A\+ND}
+\begin{DoxyCompactList}\small\item\em 4 k\+Hz bandpass \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_ga53a2aff4dc0ee23682927ca568c422a3}{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+M\+E\+D\+I\+U\+M\+B\+A\+ND}
+\begin{DoxyCompactList}\small\item\em 6 k\+Hz bandpass \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_gac698e5d1281a3632251d2a4ead48afb9}{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+W\+I\+D\+E\+B\+A\+ND}
+\begin{DoxyCompactList}\small\item\em 8 k\+Hz bandpass \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_ga41f86df35af0033a7361895da88671c1}{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+S\+U\+P\+E\+R\+W\+I\+D\+E\+B\+A\+ND}
+\begin{DoxyCompactList}\small\item\em 12 k\+Hz bandpass \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_ga74cb052d8ec36cbcc9708c417558ebdd}{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+F\+U\+L\+L\+B\+A\+ND}
+\begin{DoxyCompactList}\small\item\em 20 k\+Hz bandpass \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_ga0371f264203138ca92a3705c9c0ac39d}{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+\+A\+RG}~5000
+\begin{DoxyCompactList}\small\item\em Select frame size from the argument (default) \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_ga4696f62216f4afb1493471bb4c25baea}{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+2\+\_\+5\+\_\+\+MS}~5001
+\begin{DoxyCompactList}\small\item\em Use 2.\+5 ms frames. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_gab2e88add9d69a0828ca23efc7bbb41be}{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+5\+\_\+\+MS}~5002
+\begin{DoxyCompactList}\small\item\em Use 5 ms frames. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_ga39d5606c61c4cd21e6ae2f1259a1f15f}{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+10\+\_\+\+MS}~5003
+\begin{DoxyCompactList}\small\item\em Use 10 ms frames. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_gacfce47959bdaa8581fdc68cec3be2bfb}{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+20\+\_\+\+MS}~5004
+\begin{DoxyCompactList}\small\item\em Use 20 ms frames. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_ga268935a23f6d8a8ae6bb3d11ac6ae172}{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+40\+\_\+\+MS}~5005
+\begin{DoxyCompactList}\small\item\em Use 40 ms frames. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__ctlvalues_gac8178be7f02dc908c022cc3bb5c6c252}{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+60\+\_\+\+MS}~5006
+\begin{DoxyCompactList}\small\item\em Use 60 ms frames. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__genericctls}{Generic C\+T\+Ls}, \hyperlink{group__opus__encoderctls}{Encoder related C\+T\+Ls} 
+\end{DoxySeeAlso}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__opus__ctlvalues_ga5909f7cb35c04f1110026c6889edd345}\label{group__opus__ctlvalues_ga5909f7cb35c04f1110026c6889edd345}} 
+\index{Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}!O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+A\+U\+D\+IO@{O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+A\+U\+D\+IO}}
+\index{O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+A\+U\+D\+IO@{O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+A\+U\+D\+IO}!Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+A\+U\+D\+IO}{OPUS\_APPLICATION\_AUDIO}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+A\+U\+D\+IO}
+
+
+
+Best for broadcast/high-\/fidelity application where the decoded audio should be as close as possible to the input. 
+
+\mbox{\Hypertarget{group__opus__ctlvalues_ga592232fb39db60c1369989c5c5d19a07}\label{group__opus__ctlvalues_ga592232fb39db60c1369989c5c5d19a07}} 
+\index{Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}!O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+R\+E\+S\+T\+R\+I\+C\+T\+E\+D\+\_\+\+L\+O\+W\+D\+E\+L\+AY@{O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+R\+E\+S\+T\+R\+I\+C\+T\+E\+D\+\_\+\+L\+O\+W\+D\+E\+L\+AY}}
+\index{O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+R\+E\+S\+T\+R\+I\+C\+T\+E\+D\+\_\+\+L\+O\+W\+D\+E\+L\+AY@{O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+R\+E\+S\+T\+R\+I\+C\+T\+E\+D\+\_\+\+L\+O\+W\+D\+E\+L\+AY}!Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+R\+E\+S\+T\+R\+I\+C\+T\+E\+D\+\_\+\+L\+O\+W\+D\+E\+L\+AY}{OPUS\_APPLICATION\_RESTRICTED\_LOWDELAY}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+R\+E\+S\+T\+R\+I\+C\+T\+E\+D\+\_\+\+L\+O\+W\+D\+E\+L\+AY}
+
+
+
+Only use when lowest-\/achievable latency is what matters most. 
+
+Voice-\/optimized modes cannot be used. \mbox{\Hypertarget{group__opus__ctlvalues_ga07884aa018303a419d1f7acb2f3fa669}\label{group__opus__ctlvalues_ga07884aa018303a419d1f7acb2f3fa669}} 
+\index{Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}!O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+V\+O\+IP@{O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+V\+O\+IP}}
+\index{O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+V\+O\+IP@{O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+V\+O\+IP}!Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+V\+O\+IP}{OPUS\_APPLICATION\_VOIP}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+V\+O\+IP}
+
+
+
+Best for most Vo\+I\+P/videoconference applications where listening quality and intelligibility matter most. 
+
+\mbox{\Hypertarget{group__opus__ctlvalues_ga1c5b3244b018ff4548d2d6bffa418472}\label{group__opus__ctlvalues_ga1c5b3244b018ff4548d2d6bffa418472}} 
+\index{Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}!O\+P\+U\+S\+\_\+\+A\+U\+TO@{O\+P\+U\+S\+\_\+\+A\+U\+TO}}
+\index{O\+P\+U\+S\+\_\+\+A\+U\+TO@{O\+P\+U\+S\+\_\+\+A\+U\+TO}!Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+A\+U\+TO}{OPUS\_AUTO}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+A\+U\+TO}
+
+
+
+Auto/default setting. 
+
+\mbox{\Hypertarget{group__opus__ctlvalues_ga74cb052d8ec36cbcc9708c417558ebdd}\label{group__opus__ctlvalues_ga74cb052d8ec36cbcc9708c417558ebdd}} 
+\index{Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}!O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+F\+U\+L\+L\+B\+A\+ND@{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+F\+U\+L\+L\+B\+A\+ND}}
+\index{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+F\+U\+L\+L\+B\+A\+ND@{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+F\+U\+L\+L\+B\+A\+ND}!Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+F\+U\+L\+L\+B\+A\+ND}{OPUS\_BANDWIDTH\_FULLBAND}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+F\+U\+L\+L\+B\+A\+ND}
+
+
+
+20 k\+Hz bandpass 
+
+\mbox{\Hypertarget{group__opus__ctlvalues_ga53a2aff4dc0ee23682927ca568c422a3}\label{group__opus__ctlvalues_ga53a2aff4dc0ee23682927ca568c422a3}} 
+\index{Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}!O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+M\+E\+D\+I\+U\+M\+B\+A\+ND@{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+M\+E\+D\+I\+U\+M\+B\+A\+ND}}
+\index{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+M\+E\+D\+I\+U\+M\+B\+A\+ND@{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+M\+E\+D\+I\+U\+M\+B\+A\+ND}!Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+M\+E\+D\+I\+U\+M\+B\+A\+ND}{OPUS\_BANDWIDTH\_MEDIUMBAND}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+M\+E\+D\+I\+U\+M\+B\+A\+ND}
+
+
+
+6 k\+Hz bandpass 
+
+\mbox{\Hypertarget{group__opus__ctlvalues_ga607dd310958b9c7d545d005e4572d47f}\label{group__opus__ctlvalues_ga607dd310958b9c7d545d005e4572d47f}} 
+\index{Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}!O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+N\+A\+R\+R\+O\+W\+B\+A\+ND@{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+N\+A\+R\+R\+O\+W\+B\+A\+ND}}
+\index{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+N\+A\+R\+R\+O\+W\+B\+A\+ND@{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+N\+A\+R\+R\+O\+W\+B\+A\+ND}!Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+N\+A\+R\+R\+O\+W\+B\+A\+ND}{OPUS\_BANDWIDTH\_NARROWBAND}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+N\+A\+R\+R\+O\+W\+B\+A\+ND}
+
+
+
+4 k\+Hz bandpass 
+
+\mbox{\Hypertarget{group__opus__ctlvalues_ga41f86df35af0033a7361895da88671c1}\label{group__opus__ctlvalues_ga41f86df35af0033a7361895da88671c1}} 
+\index{Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}!O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+S\+U\+P\+E\+R\+W\+I\+D\+E\+B\+A\+ND@{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+S\+U\+P\+E\+R\+W\+I\+D\+E\+B\+A\+ND}}
+\index{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+S\+U\+P\+E\+R\+W\+I\+D\+E\+B\+A\+ND@{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+S\+U\+P\+E\+R\+W\+I\+D\+E\+B\+A\+ND}!Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+S\+U\+P\+E\+R\+W\+I\+D\+E\+B\+A\+ND}{OPUS\_BANDWIDTH\_SUPERWIDEBAND}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+S\+U\+P\+E\+R\+W\+I\+D\+E\+B\+A\+ND}
+
+
+
+12 k\+Hz bandpass 
+
+\mbox{\Hypertarget{group__opus__ctlvalues_gac698e5d1281a3632251d2a4ead48afb9}\label{group__opus__ctlvalues_gac698e5d1281a3632251d2a4ead48afb9}} 
+\index{Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}!O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+W\+I\+D\+E\+B\+A\+ND@{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+W\+I\+D\+E\+B\+A\+ND}}
+\index{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+W\+I\+D\+E\+B\+A\+ND@{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+W\+I\+D\+E\+B\+A\+ND}!Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+W\+I\+D\+E\+B\+A\+ND}{OPUS\_BANDWIDTH\_WIDEBAND}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+B\+A\+N\+D\+W\+I\+D\+T\+H\+\_\+\+W\+I\+D\+E\+B\+A\+ND}
+
+
+
+8 k\+Hz bandpass 
+
+\mbox{\Hypertarget{group__opus__ctlvalues_gaeadbaa3b4b9e15d39cd1d6e7d91519e5}\label{group__opus__ctlvalues_gaeadbaa3b4b9e15d39cd1d6e7d91519e5}} 
+\index{Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}!O\+P\+U\+S\+\_\+\+B\+I\+T\+R\+A\+T\+E\+\_\+\+M\+AX@{O\+P\+U\+S\+\_\+\+B\+I\+T\+R\+A\+T\+E\+\_\+\+M\+AX}}
+\index{O\+P\+U\+S\+\_\+\+B\+I\+T\+R\+A\+T\+E\+\_\+\+M\+AX@{O\+P\+U\+S\+\_\+\+B\+I\+T\+R\+A\+T\+E\+\_\+\+M\+AX}!Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+B\+I\+T\+R\+A\+T\+E\+\_\+\+M\+AX}{OPUS\_BITRATE\_MAX}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+B\+I\+T\+R\+A\+T\+E\+\_\+\+M\+AX}
+
+
+
+Maximum bitrate. 
+
+\mbox{\Hypertarget{group__opus__ctlvalues_ga39d5606c61c4cd21e6ae2f1259a1f15f}\label{group__opus__ctlvalues_ga39d5606c61c4cd21e6ae2f1259a1f15f}} 
+\index{Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}!O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+10\+\_\+\+MS@{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+10\+\_\+\+MS}}
+\index{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+10\+\_\+\+MS@{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+10\+\_\+\+MS}!Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+10\+\_\+\+MS}{OPUS\_FRAMESIZE\_10\_MS}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+10\+\_\+\+MS~5003}
+
+
+
+Use 10 ms frames. 
+
+\mbox{\Hypertarget{group__opus__ctlvalues_gacfce47959bdaa8581fdc68cec3be2bfb}\label{group__opus__ctlvalues_gacfce47959bdaa8581fdc68cec3be2bfb}} 
+\index{Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}!O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+20\+\_\+\+MS@{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+20\+\_\+\+MS}}
+\index{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+20\+\_\+\+MS@{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+20\+\_\+\+MS}!Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+20\+\_\+\+MS}{OPUS\_FRAMESIZE\_20\_MS}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+20\+\_\+\+MS~5004}
+
+
+
+Use 20 ms frames. 
+
+\mbox{\Hypertarget{group__opus__ctlvalues_ga4696f62216f4afb1493471bb4c25baea}\label{group__opus__ctlvalues_ga4696f62216f4afb1493471bb4c25baea}} 
+\index{Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}!O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+2\+\_\+5\+\_\+\+MS@{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+2\+\_\+5\+\_\+\+MS}}
+\index{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+2\+\_\+5\+\_\+\+MS@{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+2\+\_\+5\+\_\+\+MS}!Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+2\+\_\+5\+\_\+\+MS}{OPUS\_FRAMESIZE\_2\_5\_MS}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+2\+\_\+5\+\_\+\+MS~5001}
+
+
+
+Use 2.\+5 ms frames. 
+
+\mbox{\Hypertarget{group__opus__ctlvalues_ga268935a23f6d8a8ae6bb3d11ac6ae172}\label{group__opus__ctlvalues_ga268935a23f6d8a8ae6bb3d11ac6ae172}} 
+\index{Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}!O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+40\+\_\+\+MS@{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+40\+\_\+\+MS}}
+\index{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+40\+\_\+\+MS@{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+40\+\_\+\+MS}!Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+40\+\_\+\+MS}{OPUS\_FRAMESIZE\_40\_MS}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+40\+\_\+\+MS~5005}
+
+
+
+Use 40 ms frames. 
+
+\mbox{\Hypertarget{group__opus__ctlvalues_gab2e88add9d69a0828ca23efc7bbb41be}\label{group__opus__ctlvalues_gab2e88add9d69a0828ca23efc7bbb41be}} 
+\index{Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}!O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+5\+\_\+\+MS@{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+5\+\_\+\+MS}}
+\index{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+5\+\_\+\+MS@{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+5\+\_\+\+MS}!Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+5\+\_\+\+MS}{OPUS\_FRAMESIZE\_5\_MS}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+5\+\_\+\+MS~5002}
+
+
+
+Use 5 ms frames. 
+
+\mbox{\Hypertarget{group__opus__ctlvalues_gac8178be7f02dc908c022cc3bb5c6c252}\label{group__opus__ctlvalues_gac8178be7f02dc908c022cc3bb5c6c252}} 
+\index{Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}!O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+60\+\_\+\+MS@{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+60\+\_\+\+MS}}
+\index{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+60\+\_\+\+MS@{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+60\+\_\+\+MS}!Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+60\+\_\+\+MS}{OPUS\_FRAMESIZE\_60\_MS}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+60\+\_\+\+MS~5006}
+
+
+
+Use 60 ms frames. 
+
+\mbox{\Hypertarget{group__opus__ctlvalues_ga0371f264203138ca92a3705c9c0ac39d}\label{group__opus__ctlvalues_ga0371f264203138ca92a3705c9c0ac39d}} 
+\index{Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}!O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+\+A\+RG@{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+\+A\+RG}}
+\index{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+\+A\+RG@{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+\+A\+RG}!Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+\+A\+RG}{OPUS\_FRAMESIZE\_ARG}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+F\+R\+A\+M\+E\+S\+I\+Z\+E\+\_\+\+A\+RG~5000}
+
+
+
+Select frame size from the argument (default) 
+
+\mbox{\Hypertarget{group__opus__ctlvalues_gaa0c228c664b6d426f4c213e3a5350889}\label{group__opus__ctlvalues_gaa0c228c664b6d426f4c213e3a5350889}} 
+\index{Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}!O\+P\+U\+S\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+M\+U\+S\+IC@{O\+P\+U\+S\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+M\+U\+S\+IC}}
+\index{O\+P\+U\+S\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+M\+U\+S\+IC@{O\+P\+U\+S\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+M\+U\+S\+IC}!Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+M\+U\+S\+IC}{OPUS\_SIGNAL\_MUSIC}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+M\+U\+S\+IC~3002}
+
+
+
+Signal being encoded is music. 
+
+\mbox{\Hypertarget{group__opus__ctlvalues_ga085a116fed816373d3b9eae28df49404}\label{group__opus__ctlvalues_ga085a116fed816373d3b9eae28df49404}} 
+\index{Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}!O\+P\+U\+S\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+V\+O\+I\+CE@{O\+P\+U\+S\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+V\+O\+I\+CE}}
+\index{O\+P\+U\+S\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+V\+O\+I\+CE@{O\+P\+U\+S\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+V\+O\+I\+CE}!Pre-\/defined values for C\+T\+L interface@{Pre-\/defined values for C\+T\+L interface}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+V\+O\+I\+CE}{OPUS\_SIGNAL\_VOICE}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+V\+O\+I\+CE~3001}
+
+
+
+Signal being encoded is voice. 
+

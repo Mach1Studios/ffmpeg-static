@@ -1,0 +1,14 @@
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+includedir=@includedir@
+
+Name: zimg
+Description: Scaling, colorspace conversion, and dithering library
+Version: @VERSION@
+
+# If building a static library against a C++ runtime other than libstdc++,
+# define STL_LIBS when running configure.
+Libs: -L${libdir} -lzimg
+Libs.private: @STL_LIBS@
+Cflags: -I${includedir}

@@ -1,0 +1,290 @@
+\hypertarget{group__opus__encoder}{}\section{Opus Encoder}
+\label{group__opus__encoder}\index{Opus Encoder@{Opus Encoder}}
+
+
+This page describes the process and functions used to encode Opus.  
+
+
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group__opus__encoder_gaf461a3ef2f10c2fe8b994a176f06c9bd}{Opus\+Encoder} \hyperlink{group__opus__encoder_gaf461a3ef2f10c2fe8b994a176f06c9bd}{Opus\+Encoder}
+\begin{DoxyCompactList}\small\item\em Opus encoder state. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{group__opus__encoder_gaefeb7dc1d6e3b59dea5ea674c86e9c18}{opus\+\_\+encoder\+\_\+get\+\_\+size} (int channels)
+\begin{DoxyCompactList}\small\item\em Gets the size of an {\ttfamily Opus\+Encoder} structure. \end{DoxyCompactList}\item 
+\hyperlink{group__opus__encoder_gaf461a3ef2f10c2fe8b994a176f06c9bd}{Opus\+Encoder} $\ast$ \hyperlink{group__opus__encoder_gaa89264fd93c9da70362a0c9b96b9ca88}{opus\+\_\+encoder\+\_\+create} (\hyperlink{opus__types_8h_aa4d309d6f80b99dbabebc8f98879ab9a}{opus\+\_\+int32} Fs, int channels, int application, int $\ast$error)
+\begin{DoxyCompactList}\small\item\em Allocates and initializes an encoder state. \end{DoxyCompactList}\item 
+int \hyperlink{group__opus__encoder_ga515db1c267a7421dacaad3610f79eb79}{opus\+\_\+encoder\+\_\+init} (\hyperlink{group__opus__encoder_gaf461a3ef2f10c2fe8b994a176f06c9bd}{Opus\+Encoder} $\ast$st, \hyperlink{opus__types_8h_aa4d309d6f80b99dbabebc8f98879ab9a}{opus\+\_\+int32} Fs, int channels, int application)
+\begin{DoxyCompactList}\small\item\em Initializes a previously allocated encoder state The memory pointed to by st must be at least the size returned by \hyperlink{group__opus__encoder_gaefeb7dc1d6e3b59dea5ea674c86e9c18}{opus\+\_\+encoder\+\_\+get\+\_\+size()}. \end{DoxyCompactList}\item 
+\hyperlink{opus__types_8h_aa4d309d6f80b99dbabebc8f98879ab9a}{opus\+\_\+int32} \hyperlink{group__opus__encoder_gad2d6bf6a9ffb6674879d7605ed073e25}{opus\+\_\+encode} (\hyperlink{group__opus__encoder_gaf461a3ef2f10c2fe8b994a176f06c9bd}{Opus\+Encoder} $\ast$st, const \hyperlink{opus__types_8h_acc9ed7cf60479eb81f9648c6ec27dc26}{opus\+\_\+int16} $\ast$pcm, int frame\+\_\+size, unsigned char $\ast$data, \hyperlink{opus__types_8h_aa4d309d6f80b99dbabebc8f98879ab9a}{opus\+\_\+int32} max\+\_\+data\+\_\+bytes)
+\begin{DoxyCompactList}\small\item\em Encodes an Opus frame. \end{DoxyCompactList}\item 
+\hyperlink{opus__types_8h_aa4d309d6f80b99dbabebc8f98879ab9a}{opus\+\_\+int32} \hyperlink{group__opus__encoder_ga4ae9905859cd241ef4bb5c59cd5e5309}{opus\+\_\+encode\+\_\+float} (\hyperlink{group__opus__encoder_gaf461a3ef2f10c2fe8b994a176f06c9bd}{Opus\+Encoder} $\ast$st, const float $\ast$pcm, int frame\+\_\+size, unsigned char $\ast$data, \hyperlink{opus__types_8h_aa4d309d6f80b99dbabebc8f98879ab9a}{opus\+\_\+int32} max\+\_\+data\+\_\+bytes)
+\begin{DoxyCompactList}\small\item\em Encodes an Opus frame from floating point input. \end{DoxyCompactList}\item 
+void \hyperlink{group__opus__encoder_ga5f4c05b4b51cdffec5a55dbf17bbfa1c}{opus\+\_\+encoder\+\_\+destroy} (\hyperlink{group__opus__encoder_gaf461a3ef2f10c2fe8b994a176f06c9bd}{Opus\+Encoder} $\ast$st)
+\begin{DoxyCompactList}\small\item\em Frees an {\ttfamily Opus\+Encoder} allocated by \hyperlink{group__opus__encoder_gaa89264fd93c9da70362a0c9b96b9ca88}{opus\+\_\+encoder\+\_\+create()}. \end{DoxyCompactList}\item 
+int \hyperlink{group__opus__encoder_ga164cbb0425238961919adf1db67949df}{opus\+\_\+encoder\+\_\+ctl} (\hyperlink{group__opus__encoder_gaf461a3ef2f10c2fe8b994a176f06c9bd}{Opus\+Encoder} $\ast$st, int request,...)
+\begin{DoxyCompactList}\small\item\em Perform a C\+TL function on an Opus encoder. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This page describes the process and functions used to encode Opus. 
+
+Since Opus is a stateful codec, the encoding process starts with creating an encoder state. This can be done with\+:
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{int}          error;
+\hyperlink{group__opus__encoder_gaf461a3ef2f10c2fe8b994a176f06c9bd}{OpusEncoder} *enc;
+enc = \hyperlink{group__opus__encoder_gaa89264fd93c9da70362a0c9b96b9ca88}{opus\_encoder\_create}(Fs, channels, application, &error);
+\end{DoxyCode}
+
+
+From this point, {\ttfamily enc} can be used for encoding an audio stream. An encoder state {\bfseries must} {\bfseries not} be used for more than one stream at the same time. Similarly, the encoder state {\bfseries must} {\bfseries not} be re-\/initialized for each frame.
+
+While \hyperlink{group__opus__encoder_gaa89264fd93c9da70362a0c9b96b9ca88}{opus\+\_\+encoder\+\_\+create()} allocates memory for the state, it\textquotesingle{}s also possible to initialize pre-\/allocated memory\+:
+
+
+\begin{DoxyCode}
+\textcolor{keywordtype}{int}          size;
+\textcolor{keywordtype}{int}          error;
+\hyperlink{group__opus__encoder_gaf461a3ef2f10c2fe8b994a176f06c9bd}{OpusEncoder} *enc;
+size = \hyperlink{group__opus__encoder_gaefeb7dc1d6e3b59dea5ea674c86e9c18}{opus\_encoder\_get\_size}(channels);
+enc = malloc(size);
+error = \hyperlink{group__opus__encoder_ga515db1c267a7421dacaad3610f79eb79}{opus\_encoder\_init}(enc, Fs, channels, application);
+\end{DoxyCode}
+
+
+where \hyperlink{group__opus__encoder_gaefeb7dc1d6e3b59dea5ea674c86e9c18}{opus\+\_\+encoder\+\_\+get\+\_\+size()} returns the required size for the encoder state. Note that future versions of this code may change the size, so no assuptions should be made about it.
+
+The encoder state is always continuous in memory and only a shallow copy is sufficient to copy it (e.\+g. memcpy())
+
+It is possible to change some of the encoder\textquotesingle{}s settings using the \hyperlink{group__opus__encoder_ga164cbb0425238961919adf1db67949df}{opus\+\_\+encoder\+\_\+ctl()} interface. All these settings already default to the recommended value, so they should only be changed when necessary. The most common settings one may want to change are\+:
+
+
+\begin{DoxyCode}
+\hyperlink{group__opus__encoder_ga164cbb0425238961919adf1db67949df}{opus\_encoder\_ctl}(enc, \hyperlink{group__opus__encoderctls_ga0bb51947e355b33d0cb358463b5101a7}{OPUS\_SET\_BITRATE}(bitrate));
+\hyperlink{group__opus__encoder_ga164cbb0425238961919adf1db67949df}{opus\_encoder\_ctl}(enc, \hyperlink{group__opus__encoderctls_ga3483877bf1687a75dd4a1de6f85f291c}{OPUS\_SET\_COMPLEXITY}(complexity));
+\hyperlink{group__opus__encoder_ga164cbb0425238961919adf1db67949df}{opus\_encoder\_ctl}(enc, \hyperlink{group__opus__encoderctls_gaaa87ccee4ae46aa6c9528e03c5122b89}{OPUS\_SET\_SIGNAL}(signal\_type));
+\end{DoxyCode}
+
+
+where
+
+\begin{DoxyItemize}
+\item bitrate is in bits per second (b/s) \item complexity is a value from 1 to 10, where 1 is the lowest complexity and 10 is the highest \item signal\+\_\+type is either O\+P\+U\+S\+\_\+\+A\+U\+TO (default), O\+P\+U\+S\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+V\+O\+I\+CE, or O\+P\+U\+S\+\_\+\+S\+I\+G\+N\+A\+L\+\_\+\+M\+U\+S\+IC\end{DoxyItemize}
+See \hyperlink{group__opus__encoderctls}{Encoder related C\+T\+Ls} and \hyperlink{group__opus__genericctls}{Generic C\+T\+Ls} for a complete list of parameters that can be set or queried. Most parameters can be set or changed at any time during a stream.
+
+To encode a frame, \hyperlink{group__opus__encoder_gad2d6bf6a9ffb6674879d7605ed073e25}{opus\+\_\+encode()} or \hyperlink{group__opus__encoder_ga4ae9905859cd241ef4bb5c59cd5e5309}{opus\+\_\+encode\+\_\+float()} must be called with exactly one frame (2.\+5, 5, 10, 20, 40 or 60 ms) of audio data\+: 
+\begin{DoxyCode}
+len = \hyperlink{group__opus__encoder_gad2d6bf6a9ffb6674879d7605ed073e25}{opus\_encode}(enc, audio\_frame, frame\_size, packet, max\_packet);
+\end{DoxyCode}
+
+
+where 
+\begin{DoxyItemize}
+\item audio\+\_\+frame is the audio data in opus\+\_\+int16 (or float for \hyperlink{group__opus__encoder_ga4ae9905859cd241ef4bb5c59cd5e5309}{opus\+\_\+encode\+\_\+float()}) 
+\item frame\+\_\+size is the duration of the frame in samples (per channel) 
+\item packet is the byte array to which the compressed data is written 
+\item max\+\_\+packet is the maximum number of bytes that can be written in the packet (4000 bytes is recommended). Do not use max\+\_\+packet to control V\+BR target bitrate, instead use the \hyperlink{group__opus__encoderctls_ga0bb51947e355b33d0cb358463b5101a7}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+B\+I\+T\+R\+A\+TE} C\+TL. 
+\end{DoxyItemize}
+
+\hyperlink{group__opus__encoder_gad2d6bf6a9ffb6674879d7605ed073e25}{opus\+\_\+encode()} and \hyperlink{group__opus__encoder_ga4ae9905859cd241ef4bb5c59cd5e5309}{opus\+\_\+encode\+\_\+float()} return the number of bytes actually written to the packet. The return value {\bfseries can be negative}, which indicates that an error has occurred. If the return value is 1 byte, then the packet does not need to be transmitted (D\+TX).
+
+Once the encoder state if no longer needed, it can be destroyed with
+
+
+\begin{DoxyCode}
+\hyperlink{group__opus__encoder_ga5f4c05b4b51cdffec5a55dbf17bbfa1c}{opus\_encoder\_destroy}(enc);
+\end{DoxyCode}
+
+
+If the encoder was created with \hyperlink{group__opus__encoder_ga515db1c267a7421dacaad3610f79eb79}{opus\+\_\+encoder\+\_\+init()} rather than \hyperlink{group__opus__encoder_gaa89264fd93c9da70362a0c9b96b9ca88}{opus\+\_\+encoder\+\_\+create()}, then no action is required aside from potentially freeing the memory that was manually allocated for it (calling free(enc) for the example above) 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group__opus__encoder_gaf461a3ef2f10c2fe8b994a176f06c9bd}\label{group__opus__encoder_gaf461a3ef2f10c2fe8b994a176f06c9bd}} 
+\index{Opus Encoder@{Opus Encoder}!Opus\+Encoder@{Opus\+Encoder}}
+\index{Opus\+Encoder@{Opus\+Encoder}!Opus Encoder@{Opus Encoder}}
+\subsubsection{\texorpdfstring{Opus\+Encoder}{OpusEncoder}}
+{\footnotesize\ttfamily typedef struct \hyperlink{group__opus__encoder_gaf461a3ef2f10c2fe8b994a176f06c9bd}{Opus\+Encoder} \hyperlink{group__opus__encoder_gaf461a3ef2f10c2fe8b994a176f06c9bd}{Opus\+Encoder}}
+
+
+
+Opus encoder state. 
+
+This contains the complete state of an Opus encoder. It is position independent and can be freely copied. \begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoder_gaa89264fd93c9da70362a0c9b96b9ca88}{opus\+\_\+encoder\+\_\+create},\hyperlink{group__opus__encoder_ga515db1c267a7421dacaad3610f79eb79}{opus\+\_\+encoder\+\_\+init} 
+\end{DoxySeeAlso}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__opus__encoder_gad2d6bf6a9ffb6674879d7605ed073e25}\label{group__opus__encoder_gad2d6bf6a9ffb6674879d7605ed073e25}} 
+\index{Opus Encoder@{Opus Encoder}!opus\+\_\+encode@{opus\+\_\+encode}}
+\index{opus\+\_\+encode@{opus\+\_\+encode}!Opus Encoder@{Opus Encoder}}
+\subsubsection{\texorpdfstring{opus\+\_\+encode()}{opus\_encode()}}
+{\footnotesize\ttfamily \hyperlink{opus__types_8h_aa4d309d6f80b99dbabebc8f98879ab9a}{opus\+\_\+int32} opus\+\_\+encode (\begin{DoxyParamCaption}\item[{\hyperlink{group__opus__encoder_gaf461a3ef2f10c2fe8b994a176f06c9bd}{Opus\+Encoder} $\ast$}]{st,  }\item[{const \hyperlink{opus__types_8h_acc9ed7cf60479eb81f9648c6ec27dc26}{opus\+\_\+int16} $\ast$}]{pcm,  }\item[{int}]{frame\+\_\+size,  }\item[{unsigned char $\ast$}]{data,  }\item[{\hyperlink{opus__types_8h_aa4d309d6f80b99dbabebc8f98879ab9a}{opus\+\_\+int32}}]{max\+\_\+data\+\_\+bytes }\end{DoxyParamCaption})}
+
+
+
+Encodes an Opus frame. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em st} & {\ttfamily Opus\+Encoder$\ast$}\+: Encoder state \\
+\hline
+\mbox{\tt in}  & {\em pcm} & {\ttfamily opus\+\_\+int16$\ast$}\+: Input signal (interleaved if 2 channels). length is frame\+\_\+size$\ast$channels$\ast$sizeof(opus\+\_\+int16) \\
+\hline
+\mbox{\tt in}  & {\em frame\+\_\+size} & {\ttfamily int}\+: Number of samples per channel in the input signal. This must be an Opus frame size for the encoder\textquotesingle{}s sampling rate. For example, at 48 k\+Hz the permitted values are 120, 240, 480, 960, 1920, and 2880. Passing in a duration of less than 10 ms (480 samples at 48 k\+Hz) will prevent the encoder from using the L\+PC or hybrid modes. \\
+\hline
+\mbox{\tt out}  & {\em data} & {\ttfamily unsigned char$\ast$}\+: Output payload. This must contain storage for at least {\itshape max\+\_\+data\+\_\+bytes}. \\
+\hline
+\mbox{\tt in}  & {\em max\+\_\+data\+\_\+bytes} & {\ttfamily opus\+\_\+int32}\+: Size of the allocated memory for the output payload. This may be used to impose an upper limit on the instant bitrate, but should not be used as the only bitrate control. Use \hyperlink{group__opus__encoderctls_ga0bb51947e355b33d0cb358463b5101a7}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+B\+I\+T\+R\+A\+TE} to control the bitrate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length of the encoded packet (in bytes) on success or a negative error code (see \hyperlink{group__opus__errorcodes}{Error codes}) on failure. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__opus__encoder_ga4ae9905859cd241ef4bb5c59cd5e5309}\label{group__opus__encoder_ga4ae9905859cd241ef4bb5c59cd5e5309}} 
+\index{Opus Encoder@{Opus Encoder}!opus\+\_\+encode\+\_\+float@{opus\+\_\+encode\+\_\+float}}
+\index{opus\+\_\+encode\+\_\+float@{opus\+\_\+encode\+\_\+float}!Opus Encoder@{Opus Encoder}}
+\subsubsection{\texorpdfstring{opus\+\_\+encode\+\_\+float()}{opus\_encode\_float()}}
+{\footnotesize\ttfamily \hyperlink{opus__types_8h_aa4d309d6f80b99dbabebc8f98879ab9a}{opus\+\_\+int32} opus\+\_\+encode\+\_\+float (\begin{DoxyParamCaption}\item[{\hyperlink{group__opus__encoder_gaf461a3ef2f10c2fe8b994a176f06c9bd}{Opus\+Encoder} $\ast$}]{st,  }\item[{const float $\ast$}]{pcm,  }\item[{int}]{frame\+\_\+size,  }\item[{unsigned char $\ast$}]{data,  }\item[{\hyperlink{opus__types_8h_aa4d309d6f80b99dbabebc8f98879ab9a}{opus\+\_\+int32}}]{max\+\_\+data\+\_\+bytes }\end{DoxyParamCaption})}
+
+
+
+Encodes an Opus frame from floating point input. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em st} & {\ttfamily Opus\+Encoder$\ast$}\+: Encoder state \\
+\hline
+\mbox{\tt in}  & {\em pcm} & {\ttfamily float$\ast$}\+: Input in float format (interleaved if 2 channels), with a normal range of +/-\/1.0. Samples with a range beyond +/-\/1.0 are supported but will be clipped by decoders using the integer A\+PI and should only be used if it is known that the far end supports extended dynamic range. length is frame\+\_\+size$\ast$channels$\ast$sizeof(float) \\
+\hline
+\mbox{\tt in}  & {\em frame\+\_\+size} & {\ttfamily int}\+: Number of samples per channel in the input signal. This must be an Opus frame size for the encoder\textquotesingle{}s sampling rate. For example, at 48 k\+Hz the permitted values are 120, 240, 480, 960, 1920, and 2880. Passing in a duration of less than 10 ms (480 samples at 48 k\+Hz) will prevent the encoder from using the L\+PC or hybrid modes. \\
+\hline
+\mbox{\tt out}  & {\em data} & {\ttfamily unsigned char$\ast$}\+: Output payload. This must contain storage for at least {\itshape max\+\_\+data\+\_\+bytes}. \\
+\hline
+\mbox{\tt in}  & {\em max\+\_\+data\+\_\+bytes} & {\ttfamily opus\+\_\+int32}\+: Size of the allocated memory for the output payload. This may be used to impose an upper limit on the instant bitrate, but should not be used as the only bitrate control. Use \hyperlink{group__opus__encoderctls_ga0bb51947e355b33d0cb358463b5101a7}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+B\+I\+T\+R\+A\+TE} to control the bitrate. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length of the encoded packet (in bytes) on success or a negative error code (see \hyperlink{group__opus__errorcodes}{Error codes}) on failure. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__opus__encoder_gaa89264fd93c9da70362a0c9b96b9ca88}\label{group__opus__encoder_gaa89264fd93c9da70362a0c9b96b9ca88}} 
+\index{Opus Encoder@{Opus Encoder}!opus\+\_\+encoder\+\_\+create@{opus\+\_\+encoder\+\_\+create}}
+\index{opus\+\_\+encoder\+\_\+create@{opus\+\_\+encoder\+\_\+create}!Opus Encoder@{Opus Encoder}}
+\subsubsection{\texorpdfstring{opus\+\_\+encoder\+\_\+create()}{opus\_encoder\_create()}}
+{\footnotesize\ttfamily \hyperlink{group__opus__encoder_gaf461a3ef2f10c2fe8b994a176f06c9bd}{Opus\+Encoder}$\ast$ opus\+\_\+encoder\+\_\+create (\begin{DoxyParamCaption}\item[{\hyperlink{opus__types_8h_aa4d309d6f80b99dbabebc8f98879ab9a}{opus\+\_\+int32}}]{Fs,  }\item[{int}]{channels,  }\item[{int}]{application,  }\item[{int $\ast$}]{error }\end{DoxyParamCaption})}
+
+
+
+Allocates and initializes an encoder state. 
+
+There are three coding modes\+:
+
+\hyperlink{group__opus__ctlvalues_ga07884aa018303a419d1f7acb2f3fa669}{O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+V\+O\+IP} gives best quality at a given bitrate for voice signals. It enhances the input signal by high-\/pass filtering and emphasizing formants and harmonics. Optionally it includes in-\/band forward error correction to protect against packet loss. Use this mode for typical Vo\+IP applications. Because of the enhancement, even at high bitrates the output may sound different from the input.
+
+\hyperlink{group__opus__ctlvalues_ga5909f7cb35c04f1110026c6889edd345}{O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+A\+U\+D\+IO} gives best quality at a given bitrate for most non-\/voice signals like music. Use this mode for music and mixed (music/voice) content, broadcast, and applications requiring less than 15 ms of coding delay.
+
+\hyperlink{group__opus__ctlvalues_ga592232fb39db60c1369989c5c5d19a07}{O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+R\+E\+S\+T\+R\+I\+C\+T\+E\+D\+\_\+\+L\+O\+W\+D\+E\+L\+AY} configures low-\/delay mode that disables the speech-\/optimized mode in exchange for slightly reduced delay. This mode can only be set on an newly initialized or freshly reset encoder because it changes the codec delay.
+
+This is useful when the caller knows that the speech-\/optimized modes will not be needed (use with caution). 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Fs} & {\ttfamily opus\+\_\+int32}\+: Sampling rate of input signal (Hz) This must be one of 8000, 12000, 16000, 24000, or 48000. \\
+\hline
+\mbox{\tt in}  & {\em channels} & {\ttfamily int}\+: Number of channels (1 or 2) in input signal \\
+\hline
+\mbox{\tt in}  & {\em application} & {\ttfamily int}\+: Coding mode (\hyperlink{group__opus__ctlvalues_ga07884aa018303a419d1f7acb2f3fa669}{O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+V\+O\+IP}/\hyperlink{group__opus__ctlvalues_ga5909f7cb35c04f1110026c6889edd345}{O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+A\+U\+D\+IO}/\hyperlink{group__opus__ctlvalues_ga592232fb39db60c1369989c5c5d19a07}{O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+R\+E\+S\+T\+R\+I\+C\+T\+E\+D\+\_\+\+L\+O\+W\+D\+E\+L\+AY}) \\
+\hline
+\mbox{\tt out}  & {\em error} & {\ttfamily int$\ast$}\+: \hyperlink{group__opus__errorcodes}{Error codes} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Regardless of the sampling rate and number channels selected, the Opus encoder can switch to a lower audio bandwidth or number of channels if the bitrate selected is too low. This also means that it is safe to always use 48 k\+Hz stereo input and let the encoder optimize the encoding. 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__opus__encoder_ga164cbb0425238961919adf1db67949df}\label{group__opus__encoder_ga164cbb0425238961919adf1db67949df}} 
+\index{Opus Encoder@{Opus Encoder}!opus\+\_\+encoder\+\_\+ctl@{opus\+\_\+encoder\+\_\+ctl}}
+\index{opus\+\_\+encoder\+\_\+ctl@{opus\+\_\+encoder\+\_\+ctl}!Opus Encoder@{Opus Encoder}}
+\subsubsection{\texorpdfstring{opus\+\_\+encoder\+\_\+ctl()}{opus\_encoder\_ctl()}}
+{\footnotesize\ttfamily int opus\+\_\+encoder\+\_\+ctl (\begin{DoxyParamCaption}\item[{\hyperlink{group__opus__encoder_gaf461a3ef2f10c2fe8b994a176f06c9bd}{Opus\+Encoder} $\ast$}]{st,  }\item[{int}]{request,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Perform a C\+TL function on an Opus encoder. 
+
+Generally the request and subsequent arguments are generated by a convenience macro. 
+\begin{DoxyParams}{Parameters}
+{\em st} & {\ttfamily Opus\+Encoder$\ast$}\+: Encoder state. \\
+\hline
+{\em request} & This and all remaining parameters should be replaced by one of the convenience macros in \hyperlink{group__opus__genericctls}{Generic C\+T\+Ls} or \hyperlink{group__opus__encoderctls}{Encoder related C\+T\+Ls}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__genericctls}{Generic C\+T\+Ls} 
+
+\hyperlink{group__opus__encoderctls}{Encoder related C\+T\+Ls} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__opus__encoder_ga5f4c05b4b51cdffec5a55dbf17bbfa1c}\label{group__opus__encoder_ga5f4c05b4b51cdffec5a55dbf17bbfa1c}} 
+\index{Opus Encoder@{Opus Encoder}!opus\+\_\+encoder\+\_\+destroy@{opus\+\_\+encoder\+\_\+destroy}}
+\index{opus\+\_\+encoder\+\_\+destroy@{opus\+\_\+encoder\+\_\+destroy}!Opus Encoder@{Opus Encoder}}
+\subsubsection{\texorpdfstring{opus\+\_\+encoder\+\_\+destroy()}{opus\_encoder\_destroy()}}
+{\footnotesize\ttfamily void opus\+\_\+encoder\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{group__opus__encoder_gaf461a3ef2f10c2fe8b994a176f06c9bd}{Opus\+Encoder} $\ast$}]{st }\end{DoxyParamCaption})}
+
+
+
+Frees an {\ttfamily Opus\+Encoder} allocated by \hyperlink{group__opus__encoder_gaa89264fd93c9da70362a0c9b96b9ca88}{opus\+\_\+encoder\+\_\+create()}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em st} & {\ttfamily Opus\+Encoder$\ast$}\+: State to be freed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__encoder_gaefeb7dc1d6e3b59dea5ea674c86e9c18}\label{group__opus__encoder_gaefeb7dc1d6e3b59dea5ea674c86e9c18}} 
+\index{Opus Encoder@{Opus Encoder}!opus\+\_\+encoder\+\_\+get\+\_\+size@{opus\+\_\+encoder\+\_\+get\+\_\+size}}
+\index{opus\+\_\+encoder\+\_\+get\+\_\+size@{opus\+\_\+encoder\+\_\+get\+\_\+size}!Opus Encoder@{Opus Encoder}}
+\subsubsection{\texorpdfstring{opus\+\_\+encoder\+\_\+get\+\_\+size()}{opus\_encoder\_get\_size()}}
+{\footnotesize\ttfamily int opus\+\_\+encoder\+\_\+get\+\_\+size (\begin{DoxyParamCaption}\item[{int}]{channels }\end{DoxyParamCaption})}
+
+
+
+Gets the size of an {\ttfamily Opus\+Encoder} structure. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em channels} & {\ttfamily int}\+: Number of channels. This must be 1 or 2. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The size in bytes. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__opus__encoder_ga515db1c267a7421dacaad3610f79eb79}\label{group__opus__encoder_ga515db1c267a7421dacaad3610f79eb79}} 
+\index{Opus Encoder@{Opus Encoder}!opus\+\_\+encoder\+\_\+init@{opus\+\_\+encoder\+\_\+init}}
+\index{opus\+\_\+encoder\+\_\+init@{opus\+\_\+encoder\+\_\+init}!Opus Encoder@{Opus Encoder}}
+\subsubsection{\texorpdfstring{opus\+\_\+encoder\+\_\+init()}{opus\_encoder\_init()}}
+{\footnotesize\ttfamily int opus\+\_\+encoder\+\_\+init (\begin{DoxyParamCaption}\item[{\hyperlink{group__opus__encoder_gaf461a3ef2f10c2fe8b994a176f06c9bd}{Opus\+Encoder} $\ast$}]{st,  }\item[{\hyperlink{opus__types_8h_aa4d309d6f80b99dbabebc8f98879ab9a}{opus\+\_\+int32}}]{Fs,  }\item[{int}]{channels,  }\item[{int}]{application }\end{DoxyParamCaption})}
+
+
+
+Initializes a previously allocated encoder state The memory pointed to by st must be at least the size returned by \hyperlink{group__opus__encoder_gaefeb7dc1d6e3b59dea5ea674c86e9c18}{opus\+\_\+encoder\+\_\+get\+\_\+size()}. 
+
+This is intended for applications which use their own allocator instead of malloc. \begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoder_gaa89264fd93c9da70362a0c9b96b9ca88}{opus\+\_\+encoder\+\_\+create()},\hyperlink{group__opus__encoder_gaefeb7dc1d6e3b59dea5ea674c86e9c18}{opus\+\_\+encoder\+\_\+get\+\_\+size()} To reset a previously initialized state, use the \hyperlink{group__opus__genericctls_gadc74e4fa8bcdf9994187d52d92207337}{O\+P\+U\+S\+\_\+\+R\+E\+S\+E\+T\+\_\+\+S\+T\+A\+TE} C\+TL. 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em st} & {\ttfamily Opus\+Encoder$\ast$}\+: Encoder state \\
+\hline
+\mbox{\tt in}  & {\em Fs} & {\ttfamily opus\+\_\+int32}\+: Sampling rate of input signal (Hz) This must be one of 8000, 12000, 16000, 24000, or 48000. \\
+\hline
+\mbox{\tt in}  & {\em channels} & {\ttfamily int}\+: Number of channels (1 or 2) in input signal \\
+\hline
+\mbox{\tt in}  & {\em application} & {\ttfamily int}\+: Coding mode (O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+V\+O\+I\+P/\+O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+A\+U\+D\+I\+O/\+O\+P\+U\+S\+\_\+\+A\+P\+P\+L\+I\+C\+A\+T\+I\+O\+N\+\_\+\+R\+E\+S\+T\+R\+I\+C\+T\+E\+D\+\_\+\+L\+O\+W\+D\+E\+L\+AY) \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em \hyperlink{group__opus__errorcodes_gaa44cf8a185e1b5cb940ef63eb4f02d21}{O\+P\+U\+S\+\_\+\+OK}} & Success or \hyperlink{group__opus__errorcodes}{Error codes} \\
+\hline
+\end{DoxyRetVals}

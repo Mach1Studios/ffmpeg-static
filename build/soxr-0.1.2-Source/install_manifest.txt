@@ -1,0 +1,9 @@
+/Users/dylanmarcus/git/ffmpeg-static/target/share/doc/libsoxr/README
+/Users/dylanmarcus/git/ffmpeg-static/target/share/doc/libsoxr/LICENCE
+/Users/dylanmarcus/git/ffmpeg-static/target/share/doc/libsoxr/NEWS
+/Users/dylanmarcus/git/ffmpeg-static/target/lib/pkgconfig/soxr.pc
+/Users/dylanmarcus/git/ffmpeg-static/target/lib/pkgconfig/soxr-lsr.pc
+/Users/dylanmarcus/git/ffmpeg-static/target/lib/libsoxr.a
+/Users/dylanmarcus/git/ffmpeg-static/target/include/soxr.h
+/Users/dylanmarcus/git/ffmpeg-static/target/lib/libsoxr-lsr.a
+/Users/dylanmarcus/git/ffmpeg-static/target/include/soxr-lsr.h

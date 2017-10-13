@@ -1,0 +1,77 @@
+\hypertarget{opus__custom_8h}{}\section{opus\+\_\+custom.\+h File Reference}
+\label{opus__custom_8h}\index{opus\+\_\+custom.\+h@{opus\+\_\+custom.\+h}}
+
+
+Opus-\/\+Custom reference implementation A\+PI.  
+
+
+{\ttfamily \#include \char`\"{}opus\+\_\+defines.\+h\char`\"{}}\newline
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{opus__custom_8h_a92c66b86b701421b674984559e79bbf0}{O\+P\+U\+S\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+E\+X\+P\+O\+RT}
+\item 
+\#define \hyperlink{opus__custom_8h_a83ea1aac7766a02abc5c666516b2e622}{O\+P\+U\+S\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+IC}
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group__opus__custom_ga7abe6a7afc599667950251c987feb439}{Opus\+Custom\+Encoder} \hyperlink{group__opus__custom_ga7abe6a7afc599667950251c987feb439}{Opus\+Custom\+Encoder}
+\begin{DoxyCompactList}\small\item\em Contains the state of an encoder. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{group__opus__custom_gacae60f89c5ce7aeea69503451b9e2e6f}{Opus\+Custom\+Decoder} \hyperlink{group__opus__custom_gacae60f89c5ce7aeea69503451b9e2e6f}{Opus\+Custom\+Decoder}
+\begin{DoxyCompactList}\small\item\em State of the decoder. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{group__opus__custom_gaf33847c711195b9edef896b73c96ec4f}{Opus\+Custom\+Mode} \hyperlink{group__opus__custom_gaf33847c711195b9edef896b73c96ec4f}{Opus\+Custom\+Mode}
+\begin{DoxyCompactList}\small\item\em The mode contains all the information necessary to create an encoder. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__opus__custom_gaf33847c711195b9edef896b73c96ec4f}{Opus\+Custom\+Mode} $\ast$ \hyperlink{group__opus__custom_ga8d6683d0b9f2990a8f54d8bafe4f4027}{opus\+\_\+custom\+\_\+mode\+\_\+create} (\hyperlink{opus__types_8h_aa4d309d6f80b99dbabebc8f98879ab9a}{opus\+\_\+int32} Fs, int frame\+\_\+size, int $\ast$error)
+\begin{DoxyCompactList}\small\item\em Creates a new mode struct. \end{DoxyCompactList}\item 
+void \hyperlink{group__opus__custom_ga1333ad19db2acd8edf558ac6365741de}{opus\+\_\+custom\+\_\+mode\+\_\+destroy} (\hyperlink{group__opus__custom_gaf33847c711195b9edef896b73c96ec4f}{Opus\+Custom\+Mode} $\ast$mode)
+\begin{DoxyCompactList}\small\item\em Destroys a mode struct. \end{DoxyCompactList}\item 
+int \hyperlink{group__opus__custom_ga42f50e7f2942144c18c321f00f358ba0}{opus\+\_\+custom\+\_\+encoder\+\_\+get\+\_\+size} (const \hyperlink{group__opus__custom_gaf33847c711195b9edef896b73c96ec4f}{Opus\+Custom\+Mode} $\ast$mode, int channels)
+\begin{DoxyCompactList}\small\item\em Gets the size of an Opus\+Custom\+Encoder structure. \end{DoxyCompactList}\item 
+\hyperlink{group__opus__custom_ga7abe6a7afc599667950251c987feb439}{Opus\+Custom\+Encoder} $\ast$ \hyperlink{group__opus__custom_ga5aa778f7b0d93b397c1c0fb04b59eb02}{opus\+\_\+custom\+\_\+encoder\+\_\+create} (const \hyperlink{group__opus__custom_gaf33847c711195b9edef896b73c96ec4f}{Opus\+Custom\+Mode} $\ast$mode, int channels, int $\ast$error)
+\begin{DoxyCompactList}\small\item\em Creates a new encoder state. \end{DoxyCompactList}\item 
+void \hyperlink{group__opus__custom_ga5ed5b55bccdc141632d8ba65b8228e7d}{opus\+\_\+custom\+\_\+encoder\+\_\+destroy} (\hyperlink{group__opus__custom_ga7abe6a7afc599667950251c987feb439}{Opus\+Custom\+Encoder} $\ast$st)
+\begin{DoxyCompactList}\small\item\em Destroys a an encoder state. \end{DoxyCompactList}\item 
+int \hyperlink{group__opus__custom_ga9403d7a1fc09a0e49692a7f93decee21}{opus\+\_\+custom\+\_\+encode\+\_\+float} (\hyperlink{group__opus__custom_ga7abe6a7afc599667950251c987feb439}{Opus\+Custom\+Encoder} $\ast$st, const float $\ast$pcm, int frame\+\_\+size, unsigned char $\ast$compressed, int max\+Compressed\+Bytes)
+\begin{DoxyCompactList}\small\item\em Encodes a frame of audio. \end{DoxyCompactList}\item 
+int \hyperlink{group__opus__custom_ga21d6b0c4106ed5777a8632eed97d4cdc}{opus\+\_\+custom\+\_\+encode} (\hyperlink{group__opus__custom_ga7abe6a7afc599667950251c987feb439}{Opus\+Custom\+Encoder} $\ast$st, const \hyperlink{opus__types_8h_acc9ed7cf60479eb81f9648c6ec27dc26}{opus\+\_\+int16} $\ast$pcm, int frame\+\_\+size, unsigned char $\ast$compressed, int max\+Compressed\+Bytes)
+\begin{DoxyCompactList}\small\item\em Encodes a frame of audio. \end{DoxyCompactList}\item 
+int \hyperlink{group__opus__custom_gacf3d854e681cae3b693ee56b54459226}{opus\+\_\+custom\+\_\+encoder\+\_\+ctl} (\hyperlink{group__opus__custom_ga7abe6a7afc599667950251c987feb439}{Opus\+Custom\+Encoder} $\ast$O\+P\+U\+S\+\_\+\+R\+E\+S\+T\+R\+I\+CT st, int request,...)
+\begin{DoxyCompactList}\small\item\em Perform a C\+TL function on an Opus custom encoder. \end{DoxyCompactList}\item 
+int \hyperlink{group__opus__custom_gabe5d6f5f85dcad3ce8b88fe4b2642d2b}{opus\+\_\+custom\+\_\+decoder\+\_\+get\+\_\+size} (const \hyperlink{group__opus__custom_gaf33847c711195b9edef896b73c96ec4f}{Opus\+Custom\+Mode} $\ast$mode, int channels)
+\begin{DoxyCompactList}\small\item\em Gets the size of an Opus\+Custom\+Decoder structure. \end{DoxyCompactList}\item 
+int \hyperlink{group__opus__custom_gad4cb362035313c8f77c24cd29dd0932b}{opus\+\_\+custom\+\_\+decoder\+\_\+init} (\hyperlink{group__opus__custom_gacae60f89c5ce7aeea69503451b9e2e6f}{Opus\+Custom\+Decoder} $\ast$st, const \hyperlink{group__opus__custom_gaf33847c711195b9edef896b73c96ec4f}{Opus\+Custom\+Mode} $\ast$mode, int channels)
+\begin{DoxyCompactList}\small\item\em Initializes a previously allocated decoder state The memory pointed to by st must be the size returned by opus\+\_\+custom\+\_\+decoder\+\_\+get\+\_\+size. \end{DoxyCompactList}\item 
+\hyperlink{group__opus__custom_gacae60f89c5ce7aeea69503451b9e2e6f}{Opus\+Custom\+Decoder} $\ast$ \hyperlink{group__opus__custom_ga16e5e655999536285638cac5e80673db}{opus\+\_\+custom\+\_\+decoder\+\_\+create} (const \hyperlink{group__opus__custom_gaf33847c711195b9edef896b73c96ec4f}{Opus\+Custom\+Mode} $\ast$mode, int channels, int $\ast$error)
+\begin{DoxyCompactList}\small\item\em Creates a new decoder state. \end{DoxyCompactList}\item 
+void \hyperlink{group__opus__custom_ga0e59e6389bd6478e9c3be48aff4459e1}{opus\+\_\+custom\+\_\+decoder\+\_\+destroy} (\hyperlink{group__opus__custom_gacae60f89c5ce7aeea69503451b9e2e6f}{Opus\+Custom\+Decoder} $\ast$st)
+\begin{DoxyCompactList}\small\item\em Destroys a an decoder state. \end{DoxyCompactList}\item 
+int \hyperlink{group__opus__custom_gac2c34002d4f546a535125e2780c81656}{opus\+\_\+custom\+\_\+decode\+\_\+float} (\hyperlink{group__opus__custom_gacae60f89c5ce7aeea69503451b9e2e6f}{Opus\+Custom\+Decoder} $\ast$st, const unsigned char $\ast$data, int len, float $\ast$pcm, int frame\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Decode an opus custom frame with floating point output. \end{DoxyCompactList}\item 
+int \hyperlink{group__opus__custom_gafb6d3b90eed41b938009f4a32d633363}{opus\+\_\+custom\+\_\+decode} (\hyperlink{group__opus__custom_gacae60f89c5ce7aeea69503451b9e2e6f}{Opus\+Custom\+Decoder} $\ast$st, const unsigned char $\ast$data, int len, \hyperlink{opus__types_8h_acc9ed7cf60479eb81f9648c6ec27dc26}{opus\+\_\+int16} $\ast$pcm, int frame\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Decode an opus custom frame. \end{DoxyCompactList}\item 
+int \hyperlink{group__opus__custom_ga88b9248e497f3c1b894f035011c569a9}{opus\+\_\+custom\+\_\+decoder\+\_\+ctl} (\hyperlink{group__opus__custom_gacae60f89c5ce7aeea69503451b9e2e6f}{Opus\+Custom\+Decoder} $\ast$O\+P\+U\+S\+\_\+\+R\+E\+S\+T\+R\+I\+CT st, int request,...)
+\begin{DoxyCompactList}\small\item\em Perform a C\+TL function on an Opus custom decoder. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Opus-\/\+Custom reference implementation A\+PI. 
+
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{opus__custom_8h_a92c66b86b701421b674984559e79bbf0}\label{opus__custom_8h_a92c66b86b701421b674984559e79bbf0}} 
+\index{opus\+\_\+custom.\+h@{opus\+\_\+custom.\+h}!O\+P\+U\+S\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+E\+X\+P\+O\+RT@{O\+P\+U\+S\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+E\+X\+P\+O\+RT}}
+\index{O\+P\+U\+S\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+E\+X\+P\+O\+RT@{O\+P\+U\+S\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+E\+X\+P\+O\+RT}!opus\+\_\+custom.\+h@{opus\+\_\+custom.\+h}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+E\+X\+P\+O\+RT}{OPUS\_CUSTOM\_EXPORT}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+E\+X\+P\+O\+RT}
+
+\mbox{\Hypertarget{opus__custom_8h_a83ea1aac7766a02abc5c666516b2e622}\label{opus__custom_8h_a83ea1aac7766a02abc5c666516b2e622}} 
+\index{opus\+\_\+custom.\+h@{opus\+\_\+custom.\+h}!O\+P\+U\+S\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+IC@{O\+P\+U\+S\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+IC}}
+\index{O\+P\+U\+S\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+IC@{O\+P\+U\+S\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+IC}!opus\+\_\+custom.\+h@{opus\+\_\+custom.\+h}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+IC}{OPUS\_CUSTOM\_EXPORT\_STATIC}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+C\+U\+S\+T\+O\+M\+\_\+\+E\+X\+P\+O\+R\+T\+\_\+\+S\+T\+A\+T\+IC}
+

@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/dylanmarcus/git/ffmpeg-static/build/soxr-0.1.2-Source/src/lsr.c
+assert.h
+-
+stdlib.h
+-
+soxr.h
+/Users/dylanmarcus/git/ffmpeg-static/build/soxr-0.1.2-Source/src/soxr.h
+soxr-lsr.h
+/Users/dylanmarcus/git/ffmpeg-static/build/soxr-0.1.2-Source/src/soxr-lsr.h
+rint.h
+/Users/dylanmarcus/git/ffmpeg-static/build/soxr-0.1.2-Source/src/rint.h
+
+/Users/dylanmarcus/git/ffmpeg-static/build/soxr-0.1.2-Source/src/rint.h
+soxr-config.h
+/Users/dylanmarcus/git/ffmpeg-static/build/soxr-0.1.2-Source/src/soxr-config.h
+math.h
+-
+
+/Users/dylanmarcus/git/ffmpeg-static/build/soxr-0.1.2-Source/src/soxr-lsr.h
+
+/Users/dylanmarcus/git/ffmpeg-static/build/soxr-0.1.2-Source/src/soxr.h
+cstddef
+-
+stddef.h
+-
+
+soxr-config.h
+limits.h
+-
+

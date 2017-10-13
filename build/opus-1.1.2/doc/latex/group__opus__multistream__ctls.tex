@@ -1,0 +1,66 @@
+\hypertarget{group__opus__multistream__ctls}{}\section{Multistream specific encoder and decoder C\+T\+Ls}
+\label{group__opus__multistream__ctls}\index{Multistream specific encoder and decoder C\+T\+Ls@{Multistream specific encoder and decoder C\+T\+Ls}}
+
+
+These are convenience macros that are specific to the \hyperlink{group__opus__multistream_gae14328330c548dede66c494f51e33707}{opus\+\_\+multistream\+\_\+encoder\+\_\+ctl()} and \hyperlink{group__opus__multistream_ga4b3dca8d46e5868cc133f3f6d2b57688}{opus\+\_\+multistream\+\_\+decoder\+\_\+ctl()} interface.  
+
+
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__opus__multistream__ctls_ga4e67607eb691c4314a5de90d8c58aff0}{O\+P\+U\+S\+\_\+\+M\+U\+L\+T\+I\+S\+T\+R\+E\+A\+M\+\_\+\+G\+E\+T\+\_\+\+E\+N\+C\+O\+D\+E\+R\+\_\+\+S\+T\+A\+TE}(x,  y)
+\begin{DoxyCompactList}\small\item\em Gets the encoder state for an individual stream of a multistream encoder. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__multistream__ctls_gaf0843831519b4d9b9d73391afef04a53}{O\+P\+U\+S\+\_\+\+M\+U\+L\+T\+I\+S\+T\+R\+E\+A\+M\+\_\+\+G\+E\+T\+\_\+\+D\+E\+C\+O\+D\+E\+R\+\_\+\+S\+T\+A\+TE}(x,  y)
+\begin{DoxyCompactList}\small\item\em Gets the decoder state for an individual stream of a multistream decoder. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+These are convenience macros that are specific to the \hyperlink{group__opus__multistream_gae14328330c548dede66c494f51e33707}{opus\+\_\+multistream\+\_\+encoder\+\_\+ctl()} and \hyperlink{group__opus__multistream_ga4b3dca8d46e5868cc133f3f6d2b57688}{opus\+\_\+multistream\+\_\+decoder\+\_\+ctl()} interface. 
+
+The C\+T\+Ls from \hyperlink{group__opus__genericctls}{Generic C\+T\+Ls}, \hyperlink{group__opus__encoderctls}{Encoder related C\+T\+Ls}, and \hyperlink{group__opus__decoderctls}{Decoder related C\+T\+Ls} may be applied to a multistream encoder or decoder as well. In addition, you may retrieve the encoder or decoder state for an specific stream via \hyperlink{group__opus__multistream__ctls_ga4e67607eb691c4314a5de90d8c58aff0}{O\+P\+U\+S\+\_\+\+M\+U\+L\+T\+I\+S\+T\+R\+E\+A\+M\+\_\+\+G\+E\+T\+\_\+\+E\+N\+C\+O\+D\+E\+R\+\_\+\+S\+T\+A\+TE} or \hyperlink{group__opus__multistream__ctls_gaf0843831519b4d9b9d73391afef04a53}{O\+P\+U\+S\+\_\+\+M\+U\+L\+T\+I\+S\+T\+R\+E\+A\+M\+\_\+\+G\+E\+T\+\_\+\+D\+E\+C\+O\+D\+E\+R\+\_\+\+S\+T\+A\+TE} and apply C\+T\+Ls to it individually. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__opus__multistream__ctls_gaf0843831519b4d9b9d73391afef04a53}\label{group__opus__multistream__ctls_gaf0843831519b4d9b9d73391afef04a53}} 
+\index{Multistream specific encoder and decoder C\+T\+Ls@{Multistream specific encoder and decoder C\+T\+Ls}!O\+P\+U\+S\+\_\+\+M\+U\+L\+T\+I\+S\+T\+R\+E\+A\+M\+\_\+\+G\+E\+T\+\_\+\+D\+E\+C\+O\+D\+E\+R\+\_\+\+S\+T\+A\+TE@{O\+P\+U\+S\+\_\+\+M\+U\+L\+T\+I\+S\+T\+R\+E\+A\+M\+\_\+\+G\+E\+T\+\_\+\+D\+E\+C\+O\+D\+E\+R\+\_\+\+S\+T\+A\+TE}}
+\index{O\+P\+U\+S\+\_\+\+M\+U\+L\+T\+I\+S\+T\+R\+E\+A\+M\+\_\+\+G\+E\+T\+\_\+\+D\+E\+C\+O\+D\+E\+R\+\_\+\+S\+T\+A\+TE@{O\+P\+U\+S\+\_\+\+M\+U\+L\+T\+I\+S\+T\+R\+E\+A\+M\+\_\+\+G\+E\+T\+\_\+\+D\+E\+C\+O\+D\+E\+R\+\_\+\+S\+T\+A\+TE}!Multistream specific encoder and decoder C\+T\+Ls@{Multistream specific encoder and decoder C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+M\+U\+L\+T\+I\+S\+T\+R\+E\+A\+M\+\_\+\+G\+E\+T\+\_\+\+D\+E\+C\+O\+D\+E\+R\+\_\+\+S\+T\+A\+TE}{OPUS\_MULTISTREAM\_GET\_DECODER\_STATE}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+M\+U\+L\+T\+I\+S\+T\+R\+E\+A\+M\+\_\+\+G\+E\+T\+\_\+\+D\+E\+C\+O\+D\+E\+R\+\_\+\+S\+T\+A\+TE(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})}
+
+
+
+Gets the decoder state for an individual stream of a multistream decoder. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & {\ttfamily opus\+\_\+int32}\+: The index of the stream whose decoder you wish to retrieve. This must be non-\/negative and less than the {\ttfamily streams} parameter used to initialize the decoder. \\
+\hline
+\mbox{\tt out}  & {\em y} & {\ttfamily Opus\+Decoder$\ast$$\ast$}\+: Returns a pointer to the given decoder state. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em O\+P\+U\+S\+\_\+\+B\+A\+D\+\_\+\+A\+RG} & The index of the requested stream was out of range. \\
+\hline
+\end{DoxyRetVals}
+\mbox{\Hypertarget{group__opus__multistream__ctls_ga4e67607eb691c4314a5de90d8c58aff0}\label{group__opus__multistream__ctls_ga4e67607eb691c4314a5de90d8c58aff0}} 
+\index{Multistream specific encoder and decoder C\+T\+Ls@{Multistream specific encoder and decoder C\+T\+Ls}!O\+P\+U\+S\+\_\+\+M\+U\+L\+T\+I\+S\+T\+R\+E\+A\+M\+\_\+\+G\+E\+T\+\_\+\+E\+N\+C\+O\+D\+E\+R\+\_\+\+S\+T\+A\+TE@{O\+P\+U\+S\+\_\+\+M\+U\+L\+T\+I\+S\+T\+R\+E\+A\+M\+\_\+\+G\+E\+T\+\_\+\+E\+N\+C\+O\+D\+E\+R\+\_\+\+S\+T\+A\+TE}}
+\index{O\+P\+U\+S\+\_\+\+M\+U\+L\+T\+I\+S\+T\+R\+E\+A\+M\+\_\+\+G\+E\+T\+\_\+\+E\+N\+C\+O\+D\+E\+R\+\_\+\+S\+T\+A\+TE@{O\+P\+U\+S\+\_\+\+M\+U\+L\+T\+I\+S\+T\+R\+E\+A\+M\+\_\+\+G\+E\+T\+\_\+\+E\+N\+C\+O\+D\+E\+R\+\_\+\+S\+T\+A\+TE}!Multistream specific encoder and decoder C\+T\+Ls@{Multistream specific encoder and decoder C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+M\+U\+L\+T\+I\+S\+T\+R\+E\+A\+M\+\_\+\+G\+E\+T\+\_\+\+E\+N\+C\+O\+D\+E\+R\+\_\+\+S\+T\+A\+TE}{OPUS\_MULTISTREAM\_GET\_ENCODER\_STATE}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+M\+U\+L\+T\+I\+S\+T\+R\+E\+A\+M\+\_\+\+G\+E\+T\+\_\+\+E\+N\+C\+O\+D\+E\+R\+\_\+\+S\+T\+A\+TE(\begin{DoxyParamCaption}\item[{}]{x,  }\item[{}]{y }\end{DoxyParamCaption})}
+
+
+
+Gets the encoder state for an individual stream of a multistream encoder. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & {\ttfamily opus\+\_\+int32}\+: The index of the stream whose encoder you wish to retrieve. This must be non-\/negative and less than the {\ttfamily streams} parameter used to initialize the encoder. \\
+\hline
+\mbox{\tt out}  & {\em y} & {\ttfamily Opus\+Encoder$\ast$$\ast$}\+: Returns a pointer to the given encoder state. \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyRetVals}{Return values}
+{\em O\+P\+U\+S\+\_\+\+B\+A\+D\+\_\+\+A\+RG} & The index of the requested stream was out of range. \\
+\hline
+\end{DoxyRetVals}

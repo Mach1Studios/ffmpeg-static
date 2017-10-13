@@ -1,0 +1,2 @@
+set(TARGET_HEADERS "/Users/dylanmarcus/git/ffmpeg-static/build/soxr-0.1.2-Source/src/soxr.h;/Users/dylanmarcus/git/ffmpeg-static/build/soxr-0.1.2-Source/src/soxr-lsr.h")
+set(TARGET_PCS "/Users/dylanmarcus/git/ffmpeg-static/build/soxr-0.1.2-Source/src/soxr.pc /Users/dylanmarcus/git/ffmpeg-static/build/soxr-0.1.2-Source/src/soxr-lsr.pc")

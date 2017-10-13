@@ -1,0 +1,1 @@
+set(TARGET_LIBS "/Users/dylanmarcus/git/ffmpeg-static/build/soxr-0.1.2-Source/src/libsoxr.a;/Users/dylanmarcus/git/ffmpeg-static/build/soxr-0.1.2-Source/src/libsoxr-lsr.a")

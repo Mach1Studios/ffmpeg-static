@@ -1,0 +1,48 @@
+\hypertarget{group__opus__libinfo}{}\section{Opus library information functions}
+\label{group__opus__libinfo}\index{Opus library information functions@{Opus library information functions}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+const char $\ast$ \hyperlink{group__opus__libinfo_gafad3bac5a05dc7c3477a5765eb5e1873}{opus\+\_\+strerror} (int error)
+\begin{DoxyCompactList}\small\item\em Converts an opus error code into a human readable string. \end{DoxyCompactList}\item 
+const char $\ast$ \hyperlink{group__opus__libinfo_ga3cd7aa16259a46f37a44d2e823b131e5}{opus\+\_\+get\+\_\+version\+\_\+string} (void)
+\begin{DoxyCompactList}\small\item\em Gets the libopus version string. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__opus__libinfo_ga3cd7aa16259a46f37a44d2e823b131e5}\label{group__opus__libinfo_ga3cd7aa16259a46f37a44d2e823b131e5}} 
+\index{Opus library information functions@{Opus library information functions}!opus\+\_\+get\+\_\+version\+\_\+string@{opus\+\_\+get\+\_\+version\+\_\+string}}
+\index{opus\+\_\+get\+\_\+version\+\_\+string@{opus\+\_\+get\+\_\+version\+\_\+string}!Opus library information functions@{Opus library information functions}}
+\subsubsection{\texorpdfstring{opus\+\_\+get\+\_\+version\+\_\+string()}{opus\_get\_version\_string()}}
+{\footnotesize\ttfamily const char$\ast$ opus\+\_\+get\+\_\+version\+\_\+string (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Gets the libopus version string. 
+
+Applications may look for the substring \char`\"{}-\/fixed\char`\"{} in the version string to determine whether they have a fixed-\/point or floating-\/point build at runtime.
+
+\begin{DoxyReturn}{Returns}
+Version string 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__opus__libinfo_gafad3bac5a05dc7c3477a5765eb5e1873}\label{group__opus__libinfo_gafad3bac5a05dc7c3477a5765eb5e1873}} 
+\index{Opus library information functions@{Opus library information functions}!opus\+\_\+strerror@{opus\+\_\+strerror}}
+\index{opus\+\_\+strerror@{opus\+\_\+strerror}!Opus library information functions@{Opus library information functions}}
+\subsubsection{\texorpdfstring{opus\+\_\+strerror()}{opus\_strerror()}}
+{\footnotesize\ttfamily const char$\ast$ opus\+\_\+strerror (\begin{DoxyParamCaption}\item[{int}]{error }\end{DoxyParamCaption})}
+
+
+
+Converts an opus error code into a human readable string. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em error} & {\ttfamily int}\+: Error number \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Error string 
+\end{DoxyReturn}

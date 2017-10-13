@@ -1,0 +1,5 @@
+/Users/dylanmarcus/git/ffmpeg-static/target/lib/libx265.a
+/Users/dylanmarcus/git/ffmpeg-static/target/include/x265.h
+/Users/dylanmarcus/git/ffmpeg-static/target/include/x265_config.h
+/Users/dylanmarcus/git/ffmpeg-static/target/lib/pkgconfig/x265.pc
+/Users/dylanmarcus/git/ffmpeg-static/target/bin/x265

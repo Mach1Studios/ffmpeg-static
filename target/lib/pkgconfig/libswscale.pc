@@ -1,0 +1,14 @@
+prefix=/Users/dylanmarcus/git/ffmpeg-static/target
+exec_prefix=${prefix}
+libdir=/Users/dylanmarcus/git/ffmpeg-static/target/lib
+includedir=/Users/dylanmarcus/git/ffmpeg-static/target/include
+
+Name: libswscale
+Description: FFmpeg image rescaling library
+Version: 4.7.103
+Requires: libavutil >= 55.77.101
+Requires.private: 
+Conflicts:
+Libs: -L${libdir}  -lswscale -lm
+Libs.private: 
+Cflags: -I${includedir}

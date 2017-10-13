@@ -1,0 +1,402 @@
+\hypertarget{group__opus__custom}{}\section{Opus Custom}
+\label{group__opus__custom}\index{Opus Custom@{Opus Custom}}
+
+
+Opus Custom is an optional part of the Opus specification and reference implementation which uses a distinct A\+PI from the regular A\+PI and supports frame sizes that are not normally supported. Use of Opus Custom is discouraged for all but very special applications for which a frame size different from 2.\+5, 5, 10, or 20 ms is needed (for either complexity or latency reasons) and where interoperability is less important.  
+
+
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef struct \hyperlink{group__opus__custom_ga7abe6a7afc599667950251c987feb439}{Opus\+Custom\+Encoder} \hyperlink{group__opus__custom_ga7abe6a7afc599667950251c987feb439}{Opus\+Custom\+Encoder}
+\begin{DoxyCompactList}\small\item\em Contains the state of an encoder. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{group__opus__custom_gacae60f89c5ce7aeea69503451b9e2e6f}{Opus\+Custom\+Decoder} \hyperlink{group__opus__custom_gacae60f89c5ce7aeea69503451b9e2e6f}{Opus\+Custom\+Decoder}
+\begin{DoxyCompactList}\small\item\em State of the decoder. \end{DoxyCompactList}\item 
+typedef struct \hyperlink{group__opus__custom_gaf33847c711195b9edef896b73c96ec4f}{Opus\+Custom\+Mode} \hyperlink{group__opus__custom_gaf33847c711195b9edef896b73c96ec4f}{Opus\+Custom\+Mode}
+\begin{DoxyCompactList}\small\item\em The mode contains all the information necessary to create an encoder. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{group__opus__custom_gaf33847c711195b9edef896b73c96ec4f}{Opus\+Custom\+Mode} $\ast$ \hyperlink{group__opus__custom_ga8d6683d0b9f2990a8f54d8bafe4f4027}{opus\+\_\+custom\+\_\+mode\+\_\+create} (\hyperlink{opus__types_8h_aa4d309d6f80b99dbabebc8f98879ab9a}{opus\+\_\+int32} Fs, int frame\+\_\+size, int $\ast$error)
+\begin{DoxyCompactList}\small\item\em Creates a new mode struct. \end{DoxyCompactList}\item 
+void \hyperlink{group__opus__custom_ga1333ad19db2acd8edf558ac6365741de}{opus\+\_\+custom\+\_\+mode\+\_\+destroy} (\hyperlink{group__opus__custom_gaf33847c711195b9edef896b73c96ec4f}{Opus\+Custom\+Mode} $\ast$mode)
+\begin{DoxyCompactList}\small\item\em Destroys a mode struct. \end{DoxyCompactList}\item 
+int \hyperlink{group__opus__custom_ga42f50e7f2942144c18c321f00f358ba0}{opus\+\_\+custom\+\_\+encoder\+\_\+get\+\_\+size} (const \hyperlink{group__opus__custom_gaf33847c711195b9edef896b73c96ec4f}{Opus\+Custom\+Mode} $\ast$mode, int channels)
+\begin{DoxyCompactList}\small\item\em Gets the size of an Opus\+Custom\+Encoder structure. \end{DoxyCompactList}\item 
+\hyperlink{group__opus__custom_ga7abe6a7afc599667950251c987feb439}{Opus\+Custom\+Encoder} $\ast$ \hyperlink{group__opus__custom_ga5aa778f7b0d93b397c1c0fb04b59eb02}{opus\+\_\+custom\+\_\+encoder\+\_\+create} (const \hyperlink{group__opus__custom_gaf33847c711195b9edef896b73c96ec4f}{Opus\+Custom\+Mode} $\ast$mode, int channels, int $\ast$error)
+\begin{DoxyCompactList}\small\item\em Creates a new encoder state. \end{DoxyCompactList}\item 
+void \hyperlink{group__opus__custom_ga5ed5b55bccdc141632d8ba65b8228e7d}{opus\+\_\+custom\+\_\+encoder\+\_\+destroy} (\hyperlink{group__opus__custom_ga7abe6a7afc599667950251c987feb439}{Opus\+Custom\+Encoder} $\ast$st)
+\begin{DoxyCompactList}\small\item\em Destroys a an encoder state. \end{DoxyCompactList}\item 
+int \hyperlink{group__opus__custom_ga9403d7a1fc09a0e49692a7f93decee21}{opus\+\_\+custom\+\_\+encode\+\_\+float} (\hyperlink{group__opus__custom_ga7abe6a7afc599667950251c987feb439}{Opus\+Custom\+Encoder} $\ast$st, const float $\ast$pcm, int frame\+\_\+size, unsigned char $\ast$compressed, int max\+Compressed\+Bytes)
+\begin{DoxyCompactList}\small\item\em Encodes a frame of audio. \end{DoxyCompactList}\item 
+int \hyperlink{group__opus__custom_ga21d6b0c4106ed5777a8632eed97d4cdc}{opus\+\_\+custom\+\_\+encode} (\hyperlink{group__opus__custom_ga7abe6a7afc599667950251c987feb439}{Opus\+Custom\+Encoder} $\ast$st, const \hyperlink{opus__types_8h_acc9ed7cf60479eb81f9648c6ec27dc26}{opus\+\_\+int16} $\ast$pcm, int frame\+\_\+size, unsigned char $\ast$compressed, int max\+Compressed\+Bytes)
+\begin{DoxyCompactList}\small\item\em Encodes a frame of audio. \end{DoxyCompactList}\item 
+int \hyperlink{group__opus__custom_gacf3d854e681cae3b693ee56b54459226}{opus\+\_\+custom\+\_\+encoder\+\_\+ctl} (\hyperlink{group__opus__custom_ga7abe6a7afc599667950251c987feb439}{Opus\+Custom\+Encoder} $\ast$O\+P\+U\+S\+\_\+\+R\+E\+S\+T\+R\+I\+CT st, int request,...)
+\begin{DoxyCompactList}\small\item\em Perform a C\+TL function on an Opus custom encoder. \end{DoxyCompactList}\item 
+int \hyperlink{group__opus__custom_gabe5d6f5f85dcad3ce8b88fe4b2642d2b}{opus\+\_\+custom\+\_\+decoder\+\_\+get\+\_\+size} (const \hyperlink{group__opus__custom_gaf33847c711195b9edef896b73c96ec4f}{Opus\+Custom\+Mode} $\ast$mode, int channels)
+\begin{DoxyCompactList}\small\item\em Gets the size of an Opus\+Custom\+Decoder structure. \end{DoxyCompactList}\item 
+int \hyperlink{group__opus__custom_gad4cb362035313c8f77c24cd29dd0932b}{opus\+\_\+custom\+\_\+decoder\+\_\+init} (\hyperlink{group__opus__custom_gacae60f89c5ce7aeea69503451b9e2e6f}{Opus\+Custom\+Decoder} $\ast$st, const \hyperlink{group__opus__custom_gaf33847c711195b9edef896b73c96ec4f}{Opus\+Custom\+Mode} $\ast$mode, int channels)
+\begin{DoxyCompactList}\small\item\em Initializes a previously allocated decoder state The memory pointed to by st must be the size returned by opus\+\_\+custom\+\_\+decoder\+\_\+get\+\_\+size. \end{DoxyCompactList}\item 
+\hyperlink{group__opus__custom_gacae60f89c5ce7aeea69503451b9e2e6f}{Opus\+Custom\+Decoder} $\ast$ \hyperlink{group__opus__custom_ga16e5e655999536285638cac5e80673db}{opus\+\_\+custom\+\_\+decoder\+\_\+create} (const \hyperlink{group__opus__custom_gaf33847c711195b9edef896b73c96ec4f}{Opus\+Custom\+Mode} $\ast$mode, int channels, int $\ast$error)
+\begin{DoxyCompactList}\small\item\em Creates a new decoder state. \end{DoxyCompactList}\item 
+void \hyperlink{group__opus__custom_ga0e59e6389bd6478e9c3be48aff4459e1}{opus\+\_\+custom\+\_\+decoder\+\_\+destroy} (\hyperlink{group__opus__custom_gacae60f89c5ce7aeea69503451b9e2e6f}{Opus\+Custom\+Decoder} $\ast$st)
+\begin{DoxyCompactList}\small\item\em Destroys a an decoder state. \end{DoxyCompactList}\item 
+int \hyperlink{group__opus__custom_gac2c34002d4f546a535125e2780c81656}{opus\+\_\+custom\+\_\+decode\+\_\+float} (\hyperlink{group__opus__custom_gacae60f89c5ce7aeea69503451b9e2e6f}{Opus\+Custom\+Decoder} $\ast$st, const unsigned char $\ast$data, int len, float $\ast$pcm, int frame\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Decode an opus custom frame with floating point output. \end{DoxyCompactList}\item 
+int \hyperlink{group__opus__custom_gafb6d3b90eed41b938009f4a32d633363}{opus\+\_\+custom\+\_\+decode} (\hyperlink{group__opus__custom_gacae60f89c5ce7aeea69503451b9e2e6f}{Opus\+Custom\+Decoder} $\ast$st, const unsigned char $\ast$data, int len, \hyperlink{opus__types_8h_acc9ed7cf60479eb81f9648c6ec27dc26}{opus\+\_\+int16} $\ast$pcm, int frame\+\_\+size)
+\begin{DoxyCompactList}\small\item\em Decode an opus custom frame. \end{DoxyCompactList}\item 
+int \hyperlink{group__opus__custom_ga88b9248e497f3c1b894f035011c569a9}{opus\+\_\+custom\+\_\+decoder\+\_\+ctl} (\hyperlink{group__opus__custom_gacae60f89c5ce7aeea69503451b9e2e6f}{Opus\+Custom\+Decoder} $\ast$O\+P\+U\+S\+\_\+\+R\+E\+S\+T\+R\+I\+CT st, int request,...)
+\begin{DoxyCompactList}\small\item\em Perform a C\+TL function on an Opus custom decoder. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Opus Custom is an optional part of the Opus specification and reference implementation which uses a distinct A\+PI from the regular A\+PI and supports frame sizes that are not normally supported. Use of Opus Custom is discouraged for all but very special applications for which a frame size different from 2.\+5, 5, 10, or 20 ms is needed (for either complexity or latency reasons) and where interoperability is less important. 
+
+In addition to the interoperability limitations the use of Opus custom disables a substantial chunk of the codec and generally lowers the quality available at a given bitrate. Normally when an application needs a different frame size from the codec it should buffer to match the sizes but this adds a small amount of delay which may be important in some very low latency applications. Some transports (especially constant rate RF transports) may also work best with frames of particular durations.
+
+Libopus only supports custom modes if they are enabled at compile time.
+
+The Opus Custom A\+PI is similar to the regular A\+PI but the \hyperlink{group__opus__encoder_gaa89264fd93c9da70362a0c9b96b9ca88}{opus\+\_\+encoder\+\_\+create} and \hyperlink{group__opus__decoder_ga753f6fe0b699c81cfd47d70c8e15a0bd}{opus\+\_\+decoder\+\_\+create} calls take an additional mode parameter which is a structure produced by a call to \hyperlink{group__opus__custom_ga8d6683d0b9f2990a8f54d8bafe4f4027}{opus\+\_\+custom\+\_\+mode\+\_\+create}. Both the encoder and decoder must create a mode using the same sample rate (fs) and frame size (frame size) so these parameters must either be signaled out of band or fixed in a particular implementation.
+
+Similar to regular Opus the custom modes support on the fly frame size switching, but the sizes available depend on the particular frame size in use. For some initial frame sizes on a single on the fly size is available. 
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{group__opus__custom_gacae60f89c5ce7aeea69503451b9e2e6f}\label{group__opus__custom_gacae60f89c5ce7aeea69503451b9e2e6f}} 
+\index{Opus Custom@{Opus Custom}!Opus\+Custom\+Decoder@{Opus\+Custom\+Decoder}}
+\index{Opus\+Custom\+Decoder@{Opus\+Custom\+Decoder}!Opus Custom@{Opus Custom}}
+\subsubsection{\texorpdfstring{Opus\+Custom\+Decoder}{OpusCustomDecoder}}
+{\footnotesize\ttfamily typedef struct \hyperlink{group__opus__custom_gacae60f89c5ce7aeea69503451b9e2e6f}{Opus\+Custom\+Decoder} \hyperlink{group__opus__custom_gacae60f89c5ce7aeea69503451b9e2e6f}{Opus\+Custom\+Decoder}}
+
+
+
+State of the decoder. 
+
+One decoder state is needed for each stream. It is initialized once at the beginning of the stream. Do {\itshape not} re-\/initialize the state for every frame. Decoder state \mbox{\Hypertarget{group__opus__custom_ga7abe6a7afc599667950251c987feb439}\label{group__opus__custom_ga7abe6a7afc599667950251c987feb439}} 
+\index{Opus Custom@{Opus Custom}!Opus\+Custom\+Encoder@{Opus\+Custom\+Encoder}}
+\index{Opus\+Custom\+Encoder@{Opus\+Custom\+Encoder}!Opus Custom@{Opus Custom}}
+\subsubsection{\texorpdfstring{Opus\+Custom\+Encoder}{OpusCustomEncoder}}
+{\footnotesize\ttfamily typedef struct \hyperlink{group__opus__custom_ga7abe6a7afc599667950251c987feb439}{Opus\+Custom\+Encoder} \hyperlink{group__opus__custom_ga7abe6a7afc599667950251c987feb439}{Opus\+Custom\+Encoder}}
+
+
+
+Contains the state of an encoder. 
+
+One encoder state is needed for each stream. It is initialized once at the beginning of the stream. Do {\itshape not} re-\/initialize the state for every frame. Encoder state \mbox{\Hypertarget{group__opus__custom_gaf33847c711195b9edef896b73c96ec4f}\label{group__opus__custom_gaf33847c711195b9edef896b73c96ec4f}} 
+\index{Opus Custom@{Opus Custom}!Opus\+Custom\+Mode@{Opus\+Custom\+Mode}}
+\index{Opus\+Custom\+Mode@{Opus\+Custom\+Mode}!Opus Custom@{Opus Custom}}
+\subsubsection{\texorpdfstring{Opus\+Custom\+Mode}{OpusCustomMode}}
+{\footnotesize\ttfamily typedef struct \hyperlink{group__opus__custom_gaf33847c711195b9edef896b73c96ec4f}{Opus\+Custom\+Mode} \hyperlink{group__opus__custom_gaf33847c711195b9edef896b73c96ec4f}{Opus\+Custom\+Mode}}
+
+
+
+The mode contains all the information necessary to create an encoder. 
+
+Both the encoder and decoder need to be initialized with exactly the same mode, otherwise the output will be corrupted. Mode configuration 
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__opus__custom_gafb6d3b90eed41b938009f4a32d633363}\label{group__opus__custom_gafb6d3b90eed41b938009f4a32d633363}} 
+\index{Opus Custom@{Opus Custom}!opus\+\_\+custom\+\_\+decode@{opus\+\_\+custom\+\_\+decode}}
+\index{opus\+\_\+custom\+\_\+decode@{opus\+\_\+custom\+\_\+decode}!Opus Custom@{Opus Custom}}
+\subsubsection{\texorpdfstring{opus\+\_\+custom\+\_\+decode()}{opus\_custom\_decode()}}
+{\footnotesize\ttfamily int opus\+\_\+custom\+\_\+decode (\begin{DoxyParamCaption}\item[{\hyperlink{group__opus__custom_gacae60f89c5ce7aeea69503451b9e2e6f}{Opus\+Custom\+Decoder} $\ast$}]{st,  }\item[{const unsigned char $\ast$}]{data,  }\item[{int}]{len,  }\item[{\hyperlink{opus__types_8h_acc9ed7cf60479eb81f9648c6ec27dc26}{opus\+\_\+int16} $\ast$}]{pcm,  }\item[{int}]{frame\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Decode an opus custom frame. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em st} & {\ttfamily Opus\+Custom\+Decoder$\ast$}\+: Decoder state \\
+\hline
+\mbox{\tt in}  & {\em data} & {\ttfamily char$\ast$}\+: Input payload. Use a N\+U\+LL pointer to indicate packet loss \\
+\hline
+\mbox{\tt in}  & {\em len} & {\ttfamily int}\+: Number of bytes in payload \\
+\hline
+\mbox{\tt out}  & {\em pcm} & {\ttfamily opus\+\_\+int16$\ast$}\+: Output signal (interleaved if 2 channels). length is frame\+\_\+size$\ast$channels$\ast$sizeof(opus\+\_\+int16) \\
+\hline
+\mbox{\tt in}  & {\em frame\+\_\+size} & Number of samples per channel of available space in $\ast$pcm. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of decoded samples or \hyperlink{group__opus__errorcodes}{Error codes} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__opus__custom_gac2c34002d4f546a535125e2780c81656}\label{group__opus__custom_gac2c34002d4f546a535125e2780c81656}} 
+\index{Opus Custom@{Opus Custom}!opus\+\_\+custom\+\_\+decode\+\_\+float@{opus\+\_\+custom\+\_\+decode\+\_\+float}}
+\index{opus\+\_\+custom\+\_\+decode\+\_\+float@{opus\+\_\+custom\+\_\+decode\+\_\+float}!Opus Custom@{Opus Custom}}
+\subsubsection{\texorpdfstring{opus\+\_\+custom\+\_\+decode\+\_\+float()}{opus\_custom\_decode\_float()}}
+{\footnotesize\ttfamily int opus\+\_\+custom\+\_\+decode\+\_\+float (\begin{DoxyParamCaption}\item[{\hyperlink{group__opus__custom_gacae60f89c5ce7aeea69503451b9e2e6f}{Opus\+Custom\+Decoder} $\ast$}]{st,  }\item[{const unsigned char $\ast$}]{data,  }\item[{int}]{len,  }\item[{float $\ast$}]{pcm,  }\item[{int}]{frame\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Decode an opus custom frame with floating point output. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em st} & {\ttfamily Opus\+Custom\+Decoder$\ast$}\+: Decoder state \\
+\hline
+\mbox{\tt in}  & {\em data} & {\ttfamily char$\ast$}\+: Input payload. Use a N\+U\+LL pointer to indicate packet loss \\
+\hline
+\mbox{\tt in}  & {\em len} & {\ttfamily int}\+: Number of bytes in payload \\
+\hline
+\mbox{\tt out}  & {\em pcm} & {\ttfamily float$\ast$}\+: Output signal (interleaved if 2 channels). length is frame\+\_\+size$\ast$channels$\ast$sizeof(float) \\
+\hline
+\mbox{\tt in}  & {\em frame\+\_\+size} & Number of samples per channel of available space in $\ast$pcm. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of decoded samples or \hyperlink{group__opus__errorcodes}{Error codes} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__opus__custom_ga16e5e655999536285638cac5e80673db}\label{group__opus__custom_ga16e5e655999536285638cac5e80673db}} 
+\index{Opus Custom@{Opus Custom}!opus\+\_\+custom\+\_\+decoder\+\_\+create@{opus\+\_\+custom\+\_\+decoder\+\_\+create}}
+\index{opus\+\_\+custom\+\_\+decoder\+\_\+create@{opus\+\_\+custom\+\_\+decoder\+\_\+create}!Opus Custom@{Opus Custom}}
+\subsubsection{\texorpdfstring{opus\+\_\+custom\+\_\+decoder\+\_\+create()}{opus\_custom\_decoder\_create()}}
+{\footnotesize\ttfamily \hyperlink{group__opus__custom_gacae60f89c5ce7aeea69503451b9e2e6f}{Opus\+Custom\+Decoder}$\ast$ opus\+\_\+custom\+\_\+decoder\+\_\+create (\begin{DoxyParamCaption}\item[{const \hyperlink{group__opus__custom_gaf33847c711195b9edef896b73c96ec4f}{Opus\+Custom\+Mode} $\ast$}]{mode,  }\item[{int}]{channels,  }\item[{int $\ast$}]{error }\end{DoxyParamCaption})}
+
+
+
+Creates a new decoder state. 
+
+Each stream needs its own decoder state (can\textquotesingle{}t be shared across simultaneous streams). 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em mode} & {\ttfamily Opus\+Custom\+Mode}\+: Contains all the information about the characteristics of the stream (must be the same characteristics as used for the encoder) \\
+\hline
+\mbox{\tt in}  & {\em channels} & {\ttfamily int}\+: Number of channels \\
+\hline
+\mbox{\tt out}  & {\em error} & {\ttfamily int$\ast$}\+: Returns an error code \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Newly created decoder state. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__opus__custom_ga88b9248e497f3c1b894f035011c569a9}\label{group__opus__custom_ga88b9248e497f3c1b894f035011c569a9}} 
+\index{Opus Custom@{Opus Custom}!opus\+\_\+custom\+\_\+decoder\+\_\+ctl@{opus\+\_\+custom\+\_\+decoder\+\_\+ctl}}
+\index{opus\+\_\+custom\+\_\+decoder\+\_\+ctl@{opus\+\_\+custom\+\_\+decoder\+\_\+ctl}!Opus Custom@{Opus Custom}}
+\subsubsection{\texorpdfstring{opus\+\_\+custom\+\_\+decoder\+\_\+ctl()}{opus\_custom\_decoder\_ctl()}}
+{\footnotesize\ttfamily int opus\+\_\+custom\+\_\+decoder\+\_\+ctl (\begin{DoxyParamCaption}\item[{\hyperlink{group__opus__custom_gacae60f89c5ce7aeea69503451b9e2e6f}{Opus\+Custom\+Decoder} $\ast$O\+P\+U\+S\+\_\+\+R\+E\+S\+T\+R\+I\+CT}]{st,  }\item[{int}]{request,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Perform a C\+TL function on an Opus custom decoder. 
+
+Generally the request and subsequent arguments are generated by a convenience macro. \begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__genericctls}{Generic C\+T\+Ls} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__opus__custom_ga0e59e6389bd6478e9c3be48aff4459e1}\label{group__opus__custom_ga0e59e6389bd6478e9c3be48aff4459e1}} 
+\index{Opus Custom@{Opus Custom}!opus\+\_\+custom\+\_\+decoder\+\_\+destroy@{opus\+\_\+custom\+\_\+decoder\+\_\+destroy}}
+\index{opus\+\_\+custom\+\_\+decoder\+\_\+destroy@{opus\+\_\+custom\+\_\+decoder\+\_\+destroy}!Opus Custom@{Opus Custom}}
+\subsubsection{\texorpdfstring{opus\+\_\+custom\+\_\+decoder\+\_\+destroy()}{opus\_custom\_decoder\_destroy()}}
+{\footnotesize\ttfamily void opus\+\_\+custom\+\_\+decoder\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{group__opus__custom_gacae60f89c5ce7aeea69503451b9e2e6f}{Opus\+Custom\+Decoder} $\ast$}]{st }\end{DoxyParamCaption})}
+
+
+
+Destroys a an decoder state. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em st} & {\ttfamily Opus\+Custom\+Decoder$\ast$}\+: State to be freed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__custom_gabe5d6f5f85dcad3ce8b88fe4b2642d2b}\label{group__opus__custom_gabe5d6f5f85dcad3ce8b88fe4b2642d2b}} 
+\index{Opus Custom@{Opus Custom}!opus\+\_\+custom\+\_\+decoder\+\_\+get\+\_\+size@{opus\+\_\+custom\+\_\+decoder\+\_\+get\+\_\+size}}
+\index{opus\+\_\+custom\+\_\+decoder\+\_\+get\+\_\+size@{opus\+\_\+custom\+\_\+decoder\+\_\+get\+\_\+size}!Opus Custom@{Opus Custom}}
+\subsubsection{\texorpdfstring{opus\+\_\+custom\+\_\+decoder\+\_\+get\+\_\+size()}{opus\_custom\_decoder\_get\_size()}}
+{\footnotesize\ttfamily int opus\+\_\+custom\+\_\+decoder\+\_\+get\+\_\+size (\begin{DoxyParamCaption}\item[{const \hyperlink{group__opus__custom_gaf33847c711195b9edef896b73c96ec4f}{Opus\+Custom\+Mode} $\ast$}]{mode,  }\item[{int}]{channels }\end{DoxyParamCaption})}
+
+
+
+Gets the size of an Opus\+Custom\+Decoder structure. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em mode} & {\ttfamily Opus\+Custom\+Mode $\ast$}\+: Mode configuration \\
+\hline
+\mbox{\tt in}  & {\em channels} & {\ttfamily int}\+: Number of channels \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+size 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__opus__custom_gad4cb362035313c8f77c24cd29dd0932b}\label{group__opus__custom_gad4cb362035313c8f77c24cd29dd0932b}} 
+\index{Opus Custom@{Opus Custom}!opus\+\_\+custom\+\_\+decoder\+\_\+init@{opus\+\_\+custom\+\_\+decoder\+\_\+init}}
+\index{opus\+\_\+custom\+\_\+decoder\+\_\+init@{opus\+\_\+custom\+\_\+decoder\+\_\+init}!Opus Custom@{Opus Custom}}
+\subsubsection{\texorpdfstring{opus\+\_\+custom\+\_\+decoder\+\_\+init()}{opus\_custom\_decoder\_init()}}
+{\footnotesize\ttfamily int opus\+\_\+custom\+\_\+decoder\+\_\+init (\begin{DoxyParamCaption}\item[{\hyperlink{group__opus__custom_gacae60f89c5ce7aeea69503451b9e2e6f}{Opus\+Custom\+Decoder} $\ast$}]{st,  }\item[{const \hyperlink{group__opus__custom_gaf33847c711195b9edef896b73c96ec4f}{Opus\+Custom\+Mode} $\ast$}]{mode,  }\item[{int}]{channels }\end{DoxyParamCaption})}
+
+
+
+Initializes a previously allocated decoder state The memory pointed to by st must be the size returned by opus\+\_\+custom\+\_\+decoder\+\_\+get\+\_\+size. 
+
+This is intended for applications which use their own allocator instead of malloc. \begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__custom_ga16e5e655999536285638cac5e80673db}{opus\+\_\+custom\+\_\+decoder\+\_\+create()},\hyperlink{group__opus__custom_gabe5d6f5f85dcad3ce8b88fe4b2642d2b}{opus\+\_\+custom\+\_\+decoder\+\_\+get\+\_\+size()} To reset a previously initialized state use the \hyperlink{group__opus__genericctls_gadc74e4fa8bcdf9994187d52d92207337}{O\+P\+U\+S\+\_\+\+R\+E\+S\+E\+T\+\_\+\+S\+T\+A\+TE} C\+TL. 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em st} & {\ttfamily Opus\+Custom\+Decoder$\ast$}\+: Decoder state \\
+\hline
+\mbox{\tt in}  & {\em mode} & {\ttfamily Opus\+Custom\+Mode $\ast$}\+: Contains all the information about the characteristics of the stream (must be the same characteristics as used for the encoder) \\
+\hline
+\mbox{\tt in}  & {\em channels} & {\ttfamily int}\+: Number of channels \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+O\+P\+U\+S\+\_\+\+OK Success or \hyperlink{group__opus__errorcodes}{Error codes} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__opus__custom_ga21d6b0c4106ed5777a8632eed97d4cdc}\label{group__opus__custom_ga21d6b0c4106ed5777a8632eed97d4cdc}} 
+\index{Opus Custom@{Opus Custom}!opus\+\_\+custom\+\_\+encode@{opus\+\_\+custom\+\_\+encode}}
+\index{opus\+\_\+custom\+\_\+encode@{opus\+\_\+custom\+\_\+encode}!Opus Custom@{Opus Custom}}
+\subsubsection{\texorpdfstring{opus\+\_\+custom\+\_\+encode()}{opus\_custom\_encode()}}
+{\footnotesize\ttfamily int opus\+\_\+custom\+\_\+encode (\begin{DoxyParamCaption}\item[{\hyperlink{group__opus__custom_ga7abe6a7afc599667950251c987feb439}{Opus\+Custom\+Encoder} $\ast$}]{st,  }\item[{const \hyperlink{opus__types_8h_acc9ed7cf60479eb81f9648c6ec27dc26}{opus\+\_\+int16} $\ast$}]{pcm,  }\item[{int}]{frame\+\_\+size,  }\item[{unsigned char $\ast$}]{compressed,  }\item[{int}]{max\+Compressed\+Bytes }\end{DoxyParamCaption})}
+
+
+
+Encodes a frame of audio. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em st} & {\ttfamily Opus\+Custom\+Encoder$\ast$}\+: Encoder state \\
+\hline
+\mbox{\tt in}  & {\em pcm} & {\ttfamily opus\+\_\+int16$\ast$}\+: P\+CM audio in signed 16-\/bit format (native endian). There must be exactly frame\+\_\+size samples per channel. \\
+\hline
+\mbox{\tt in}  & {\em frame\+\_\+size} & {\ttfamily int}\+: Number of samples per frame of input signal \\
+\hline
+\mbox{\tt out}  & {\em compressed} & {\ttfamily char $\ast$}\+: The compressed data is written here. This may not alias pcm and must be at least max\+Compressed\+Bytes long. \\
+\hline
+\mbox{\tt in}  & {\em max\+Compressed\+Bytes} & {\ttfamily int}\+: Maximum number of bytes to use for compressing the frame (can change from one frame to another) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of bytes written to \char`\"{}compressed\char`\"{}. If negative, an error has occurred (see error codes). It is I\+M\+P\+O\+R\+T\+A\+NT that the length returned be somehow transmitted to the decoder. Otherwise, no decoding is possible. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__opus__custom_ga9403d7a1fc09a0e49692a7f93decee21}\label{group__opus__custom_ga9403d7a1fc09a0e49692a7f93decee21}} 
+\index{Opus Custom@{Opus Custom}!opus\+\_\+custom\+\_\+encode\+\_\+float@{opus\+\_\+custom\+\_\+encode\+\_\+float}}
+\index{opus\+\_\+custom\+\_\+encode\+\_\+float@{opus\+\_\+custom\+\_\+encode\+\_\+float}!Opus Custom@{Opus Custom}}
+\subsubsection{\texorpdfstring{opus\+\_\+custom\+\_\+encode\+\_\+float()}{opus\_custom\_encode\_float()}}
+{\footnotesize\ttfamily int opus\+\_\+custom\+\_\+encode\+\_\+float (\begin{DoxyParamCaption}\item[{\hyperlink{group__opus__custom_ga7abe6a7afc599667950251c987feb439}{Opus\+Custom\+Encoder} $\ast$}]{st,  }\item[{const float $\ast$}]{pcm,  }\item[{int}]{frame\+\_\+size,  }\item[{unsigned char $\ast$}]{compressed,  }\item[{int}]{max\+Compressed\+Bytes }\end{DoxyParamCaption})}
+
+
+
+Encodes a frame of audio. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em st} & {\ttfamily Opus\+Custom\+Encoder$\ast$}\+: Encoder state \\
+\hline
+\mbox{\tt in}  & {\em pcm} & {\ttfamily float$\ast$}\+: P\+CM audio in float format, with a normal range of +/-\/1.0. Samples with a range beyond +/-\/1.0 are supported but will be clipped by decoders using the integer A\+PI and should only be used if it is known that the far end supports extended dynamic range. There must be exactly frame\+\_\+size samples per channel. \\
+\hline
+\mbox{\tt in}  & {\em frame\+\_\+size} & {\ttfamily int}\+: Number of samples per frame of input signal \\
+\hline
+\mbox{\tt out}  & {\em compressed} & {\ttfamily char $\ast$}\+: The compressed data is written here. This may not alias pcm and must be at least max\+Compressed\+Bytes long. \\
+\hline
+\mbox{\tt in}  & {\em max\+Compressed\+Bytes} & {\ttfamily int}\+: Maximum number of bytes to use for compressing the frame (can change from one frame to another) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Number of bytes written to \char`\"{}compressed\char`\"{}. If negative, an error has occurred (see error codes). It is I\+M\+P\+O\+R\+T\+A\+NT that the length returned be somehow transmitted to the decoder. Otherwise, no decoding is possible. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__opus__custom_ga5aa778f7b0d93b397c1c0fb04b59eb02}\label{group__opus__custom_ga5aa778f7b0d93b397c1c0fb04b59eb02}} 
+\index{Opus Custom@{Opus Custom}!opus\+\_\+custom\+\_\+encoder\+\_\+create@{opus\+\_\+custom\+\_\+encoder\+\_\+create}}
+\index{opus\+\_\+custom\+\_\+encoder\+\_\+create@{opus\+\_\+custom\+\_\+encoder\+\_\+create}!Opus Custom@{Opus Custom}}
+\subsubsection{\texorpdfstring{opus\+\_\+custom\+\_\+encoder\+\_\+create()}{opus\_custom\_encoder\_create()}}
+{\footnotesize\ttfamily \hyperlink{group__opus__custom_ga7abe6a7afc599667950251c987feb439}{Opus\+Custom\+Encoder}$\ast$ opus\+\_\+custom\+\_\+encoder\+\_\+create (\begin{DoxyParamCaption}\item[{const \hyperlink{group__opus__custom_gaf33847c711195b9edef896b73c96ec4f}{Opus\+Custom\+Mode} $\ast$}]{mode,  }\item[{int}]{channels,  }\item[{int $\ast$}]{error }\end{DoxyParamCaption})}
+
+
+
+Creates a new encoder state. 
+
+Each stream needs its own encoder state (can\textquotesingle{}t be shared across simultaneous streams). 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em mode} & {\ttfamily Opus\+Custom\+Mode$\ast$}\+: Contains all the information about the characteristics of the stream (must be the same characteristics as used for the decoder) \\
+\hline
+\mbox{\tt in}  & {\em channels} & {\ttfamily int}\+: Number of channels \\
+\hline
+\mbox{\tt out}  & {\em error} & {\ttfamily int$\ast$}\+: Returns an error code \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Newly created encoder state. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__opus__custom_gacf3d854e681cae3b693ee56b54459226}\label{group__opus__custom_gacf3d854e681cae3b693ee56b54459226}} 
+\index{Opus Custom@{Opus Custom}!opus\+\_\+custom\+\_\+encoder\+\_\+ctl@{opus\+\_\+custom\+\_\+encoder\+\_\+ctl}}
+\index{opus\+\_\+custom\+\_\+encoder\+\_\+ctl@{opus\+\_\+custom\+\_\+encoder\+\_\+ctl}!Opus Custom@{Opus Custom}}
+\subsubsection{\texorpdfstring{opus\+\_\+custom\+\_\+encoder\+\_\+ctl()}{opus\_custom\_encoder\_ctl()}}
+{\footnotesize\ttfamily int opus\+\_\+custom\+\_\+encoder\+\_\+ctl (\begin{DoxyParamCaption}\item[{\hyperlink{group__opus__custom_ga7abe6a7afc599667950251c987feb439}{Opus\+Custom\+Encoder} $\ast$O\+P\+U\+S\+\_\+\+R\+E\+S\+T\+R\+I\+CT}]{st,  }\item[{int}]{request,  }\item[{}]{... }\end{DoxyParamCaption})}
+
+
+
+Perform a C\+TL function on an Opus custom encoder. 
+
+Generally the request and subsequent arguments are generated by a convenience macro. \begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__encoderctls}{Encoder related C\+T\+Ls} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__opus__custom_ga5ed5b55bccdc141632d8ba65b8228e7d}\label{group__opus__custom_ga5ed5b55bccdc141632d8ba65b8228e7d}} 
+\index{Opus Custom@{Opus Custom}!opus\+\_\+custom\+\_\+encoder\+\_\+destroy@{opus\+\_\+custom\+\_\+encoder\+\_\+destroy}}
+\index{opus\+\_\+custom\+\_\+encoder\+\_\+destroy@{opus\+\_\+custom\+\_\+encoder\+\_\+destroy}!Opus Custom@{Opus Custom}}
+\subsubsection{\texorpdfstring{opus\+\_\+custom\+\_\+encoder\+\_\+destroy()}{opus\_custom\_encoder\_destroy()}}
+{\footnotesize\ttfamily void opus\+\_\+custom\+\_\+encoder\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{group__opus__custom_ga7abe6a7afc599667950251c987feb439}{Opus\+Custom\+Encoder} $\ast$}]{st }\end{DoxyParamCaption})}
+
+
+
+Destroys a an encoder state. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em st} & {\ttfamily Opus\+Custom\+Encoder$\ast$}\+: State to be freed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__custom_ga42f50e7f2942144c18c321f00f358ba0}\label{group__opus__custom_ga42f50e7f2942144c18c321f00f358ba0}} 
+\index{Opus Custom@{Opus Custom}!opus\+\_\+custom\+\_\+encoder\+\_\+get\+\_\+size@{opus\+\_\+custom\+\_\+encoder\+\_\+get\+\_\+size}}
+\index{opus\+\_\+custom\+\_\+encoder\+\_\+get\+\_\+size@{opus\+\_\+custom\+\_\+encoder\+\_\+get\+\_\+size}!Opus Custom@{Opus Custom}}
+\subsubsection{\texorpdfstring{opus\+\_\+custom\+\_\+encoder\+\_\+get\+\_\+size()}{opus\_custom\_encoder\_get\_size()}}
+{\footnotesize\ttfamily int opus\+\_\+custom\+\_\+encoder\+\_\+get\+\_\+size (\begin{DoxyParamCaption}\item[{const \hyperlink{group__opus__custom_gaf33847c711195b9edef896b73c96ec4f}{Opus\+Custom\+Mode} $\ast$}]{mode,  }\item[{int}]{channels }\end{DoxyParamCaption})}
+
+
+
+Gets the size of an Opus\+Custom\+Encoder structure. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em mode} & {\ttfamily Opus\+Custom\+Mode $\ast$}\+: Mode configuration \\
+\hline
+\mbox{\tt in}  & {\em channels} & {\ttfamily int}\+: Number of channels \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+size 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__opus__custom_ga8d6683d0b9f2990a8f54d8bafe4f4027}\label{group__opus__custom_ga8d6683d0b9f2990a8f54d8bafe4f4027}} 
+\index{Opus Custom@{Opus Custom}!opus\+\_\+custom\+\_\+mode\+\_\+create@{opus\+\_\+custom\+\_\+mode\+\_\+create}}
+\index{opus\+\_\+custom\+\_\+mode\+\_\+create@{opus\+\_\+custom\+\_\+mode\+\_\+create}!Opus Custom@{Opus Custom}}
+\subsubsection{\texorpdfstring{opus\+\_\+custom\+\_\+mode\+\_\+create()}{opus\_custom\_mode\_create()}}
+{\footnotesize\ttfamily \hyperlink{group__opus__custom_gaf33847c711195b9edef896b73c96ec4f}{Opus\+Custom\+Mode}$\ast$ opus\+\_\+custom\+\_\+mode\+\_\+create (\begin{DoxyParamCaption}\item[{\hyperlink{opus__types_8h_aa4d309d6f80b99dbabebc8f98879ab9a}{opus\+\_\+int32}}]{Fs,  }\item[{int}]{frame\+\_\+size,  }\item[{int $\ast$}]{error }\end{DoxyParamCaption})}
+
+
+
+Creates a new mode struct. 
+
+This will be passed to an encoder or decoder. The mode M\+U\+ST N\+OT BE D\+E\+S\+T\+R\+O\+Y\+ED until the encoders and decoders that use it are destroyed as well. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em Fs} & {\ttfamily int}\+: Sampling rate (8000 to 96000 Hz) \\
+\hline
+\mbox{\tt in}  & {\em frame\+\_\+size} & {\ttfamily int}\+: Number of samples (per channel) to encode in each packet (64 -\/ 1024, prime factorization must contain zero or more 2s, 3s, or 5s and no other primes) \\
+\hline
+\mbox{\tt out}  & {\em error} & {\ttfamily int$\ast$}\+: Returned error code (if N\+U\+LL, no error will be returned) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A newly created mode 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__opus__custom_ga1333ad19db2acd8edf558ac6365741de}\label{group__opus__custom_ga1333ad19db2acd8edf558ac6365741de}} 
+\index{Opus Custom@{Opus Custom}!opus\+\_\+custom\+\_\+mode\+\_\+destroy@{opus\+\_\+custom\+\_\+mode\+\_\+destroy}}
+\index{opus\+\_\+custom\+\_\+mode\+\_\+destroy@{opus\+\_\+custom\+\_\+mode\+\_\+destroy}!Opus Custom@{Opus Custom}}
+\subsubsection{\texorpdfstring{opus\+\_\+custom\+\_\+mode\+\_\+destroy()}{opus\_custom\_mode\_destroy()}}
+{\footnotesize\ttfamily void opus\+\_\+custom\+\_\+mode\+\_\+destroy (\begin{DoxyParamCaption}\item[{\hyperlink{group__opus__custom_gaf33847c711195b9edef896b73c96ec4f}{Opus\+Custom\+Mode} $\ast$}]{mode }\end{DoxyParamCaption})}
+
+
+
+Destroys a mode struct. 
+
+Only call this after all encoders and decoders using this mode are destroyed as well. 
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em mode} & {\ttfamily Opus\+Custom\+Mode$\ast$}\+: Mode to be freed. \\
+\hline
+\end{DoxyParams}

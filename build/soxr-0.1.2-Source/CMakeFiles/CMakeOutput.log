@@ -1,0 +1,252 @@
+The system is: Darwin - 16.7.0 - x86_64
+Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+Compiler: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc 
+Build flags: -I/Users/dylanmarcus/git/ffmpeg-static/target/include;-L/Users/dylanmarcus/git/ffmpeg-static/target/lib
+Id flags:  
+
+The output was:
+0
+
+
+Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "a.out"
+
+The C compiler identification is AppleClang, found in "/Users/dylanmarcus/git/ffmpeg-static/build/soxr-0.1.2-Source/CMakeFiles/3.9.1/CompilerIdC/a.out"
+
+Determining if the C compiler works passed with the following output:
+Change Dir: /Users/dylanmarcus/git/ffmpeg-static/build/soxr-0.1.2-Source/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4da5d/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_4da5d.dir/build.make CMakeFiles/cmTC_4da5d.dir/build
+Building C object CMakeFiles/cmTC_4da5d.dir/testCCompiler.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -I/Users/dylanmarcus/git/ffmpeg-static/target/include -L/Users/dylanmarcus/git/ffmpeg-static/target/lib    -o CMakeFiles/cmTC_4da5d.dir/testCCompiler.c.o   -c /Users/dylanmarcus/git/ffmpeg-static/build/soxr-0.1.2-Source/CMakeFiles/CMakeTmp/testCCompiler.c
+clang: warning: argument unused during compilation: '-L/Users/dylanmarcus/git/ffmpeg-static/target/lib' [-Wunused-command-line-argument]
+Linking C executable cmTC_4da5d
+/usr/local/Cellar/cmake/3.9.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4da5d.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -I/Users/dylanmarcus/git/ffmpeg-static/target/include -L/Users/dylanmarcus/git/ffmpeg-static/target/lib  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/Users/dylanmarcus/git/ffmpeg-static/target/lib  CMakeFiles/cmTC_4da5d.dir/testCCompiler.c.o  -o cmTC_4da5d 
+
+
+Detecting C compiler ABI info compiled with the following output:
+Change Dir: /Users/dylanmarcus/git/ffmpeg-static/build/soxr-0.1.2-Source/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_29d4e/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_29d4e.dir/build.make CMakeFiles/cmTC_29d4e.dir/build
+Building C object CMakeFiles/cmTC_29d4e.dir/CMakeCCompilerABI.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -I/Users/dylanmarcus/git/ffmpeg-static/target/include -L/Users/dylanmarcus/git/ffmpeg-static/target/lib    -o CMakeFiles/cmTC_29d4e.dir/CMakeCCompilerABI.c.o   -c /usr/local/Cellar/cmake/3.9.1/share/cmake/Modules/CMakeCCompilerABI.c
+clang: warning: argument unused during compilation: '-L/Users/dylanmarcus/git/ffmpeg-static/target/lib' [-Wunused-command-line-argument]
+Linking C executable cmTC_29d4e
+/usr/local/Cellar/cmake/3.9.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_29d4e.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -I/Users/dylanmarcus/git/ffmpeg-static/target/include -L/Users/dylanmarcus/git/ffmpeg-static/target/lib  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/Users/dylanmarcus/git/ffmpeg-static/target/lib -v -Wl,-v CMakeFiles/cmTC_29d4e.dir/CMakeCCompilerABI.c.o  -o cmTC_29d4e 
+Apple LLVM version 9.0.0 (clang-900.0.37)
+Target: x86_64-apple-darwin16.7.0
+Thread model: posix
+InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
+ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.12.0 -o cmTC_29d4e -L/Users/dylanmarcus/git/ffmpeg-static/target/lib -L/Users/dylanmarcus/git/ffmpeg-static/target/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_29d4e.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.osx.a
+@(#)PROGRAM:ld  PROJECT:ld64-302.3
+configured to support archs: armv6 armv7 armv7s arm64 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em (tvOS)
+Library search paths:
+	/Users/dylanmarcus/git/ffmpeg-static/target/lib
+	/Users/dylanmarcus/git/ffmpeg-static/target/lib
+	/usr/lib
+	/usr/local/lib
+Framework search paths:
+	/Library/Frameworks/
+	/System/Library/Frameworks/
+
+
+Parsed C implicit link information from above output:
+  link line regex: [^( *|.*[/\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\]+-)?ld|collect2)[^/\]*( |$)]
+  ignore line: [Change Dir: /Users/dylanmarcus/git/ffmpeg-static/build/soxr-0.1.2-Source/CMakeFiles/CMakeTmp]
+  ignore line: []
+  ignore line: [Run Build Command:"/usr/bin/make" "cmTC_29d4e/fast"]
+  ignore line: [/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_29d4e.dir/build.make CMakeFiles/cmTC_29d4e.dir/build]
+  ignore line: [Building C object CMakeFiles/cmTC_29d4e.dir/CMakeCCompilerABI.c.o]
+  ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -I/Users/dylanmarcus/git/ffmpeg-static/target/include -L/Users/dylanmarcus/git/ffmpeg-static/target/lib    -o CMakeFiles/cmTC_29d4e.dir/CMakeCCompilerABI.c.o   -c /usr/local/Cellar/cmake/3.9.1/share/cmake/Modules/CMakeCCompilerABI.c]
+  ignore line: [clang: warning: argument unused during compilation: '-L/Users/dylanmarcus/git/ffmpeg-static/target/lib' [-Wunused-command-line-argument]]
+  ignore line: [Linking C executable cmTC_29d4e]
+  ignore line: [/usr/local/Cellar/cmake/3.9.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_29d4e.dir/link.txt --verbose=1]
+  ignore line: [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -I/Users/dylanmarcus/git/ffmpeg-static/target/include -L/Users/dylanmarcus/git/ffmpeg-static/target/lib  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/Users/dylanmarcus/git/ffmpeg-static/target/lib -v -Wl,-v CMakeFiles/cmTC_29d4e.dir/CMakeCCompilerABI.c.o  -o cmTC_29d4e ]
+  ignore line: [Apple LLVM version 9.0.0 (clang-900.0.37)]
+  ignore line: [Target: x86_64-apple-darwin16.7.0]
+  ignore line: [Thread model: posix]
+  ignore line: [InstalledDir: /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
+  link line: [ "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -macosx_version_min 10.12.0 -o cmTC_29d4e -L/Users/dylanmarcus/git/ffmpeg-static/target/lib -L/Users/dylanmarcus/git/ffmpeg-static/target/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_29d4e.dir/CMakeCCompilerABI.c.o -lSystem /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.osx.a]
+    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
+    arg [-demangle] ==> ignore
+    arg [-lto_library] ==> ignore, skip following value
+    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib] ==> skip value of -lto_library
+    arg [-dynamic] ==> ignore
+    arg [-arch] ==> ignore
+    arg [x86_64] ==> ignore
+    arg [-macosx_version_min] ==> ignore
+    arg [10.12.0] ==> ignore
+    arg [-o] ==> ignore
+    arg [cmTC_29d4e] ==> ignore
+    arg [-L/Users/dylanmarcus/git/ffmpeg-static/target/lib] ==> dir [/Users/dylanmarcus/git/ffmpeg-static/target/lib]
+    arg [-L/Users/dylanmarcus/git/ffmpeg-static/target/lib] ==> dir [/Users/dylanmarcus/git/ffmpeg-static/target/lib]
+    arg [-search_paths_first] ==> ignore
+    arg [-headerpad_max_install_names] ==> ignore
+    arg [-v] ==> ignore
+    arg [CMakeFiles/cmTC_29d4e.dir/CMakeCCompilerABI.c.o] ==> ignore
+    arg [-lSystem] ==> lib [System]
+    arg [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.osx.a] ==> lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.osx.a]
+  Library search paths: [;/Users/dylanmarcus/git/ffmpeg-static/target/lib;/Users/dylanmarcus/git/ffmpeg-static/target/lib;/usr/lib;/usr/local/lib]
+  Framework search paths: [;/Library/Frameworks/;/System/Library/Frameworks/]
+  remove lib [System]
+  remove lib [/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/9.0.0/lib/darwin/libclang_rt.osx.a]
+  collapse library dir [/Users/dylanmarcus/git/ffmpeg-static/target/lib] ==> [/Users/dylanmarcus/git/ffmpeg-static/target/lib]
+  collapse library dir [/Users/dylanmarcus/git/ffmpeg-static/target/lib] ==> [/Users/dylanmarcus/git/ffmpeg-static/target/lib]
+  collapse library dir [/Users/dylanmarcus/git/ffmpeg-static/target/lib] ==> [/Users/dylanmarcus/git/ffmpeg-static/target/lib]
+  collapse library dir [/Users/dylanmarcus/git/ffmpeg-static/target/lib] ==> [/Users/dylanmarcus/git/ffmpeg-static/target/lib]
+  collapse library dir [/usr/lib] ==> [/usr/lib]
+  collapse library dir [/usr/local/lib] ==> [/usr/local/lib]
+  collapse framework dir [/Library/Frameworks/] ==> [/Library/Frameworks]
+  collapse framework dir [/System/Library/Frameworks/] ==> [/System/Library/Frameworks]
+  implicit libs: []
+  implicit dirs: [/Users/dylanmarcus/git/ffmpeg-static/target/lib;/usr/lib;/usr/local/lib]
+  implicit fwks: [/Library/Frameworks;/System/Library/Frameworks]
+
+
+
+
+Detecting C [-std=c11] compiler features compiled with the following output:
+Change Dir: /Users/dylanmarcus/git/ffmpeg-static/build/soxr-0.1.2-Source/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_5cff1/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_5cff1.dir/build.make CMakeFiles/cmTC_5cff1.dir/build
+Building C object CMakeFiles/cmTC_5cff1.dir/feature_tests.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -I/Users/dylanmarcus/git/ffmpeg-static/target/include -L/Users/dylanmarcus/git/ffmpeg-static/target/lib    -std=c11 -o CMakeFiles/cmTC_5cff1.dir/feature_tests.c.o   -c /Users/dylanmarcus/git/ffmpeg-static/build/soxr-0.1.2-Source/CMakeFiles/feature_tests.c
+clang: warning: argument unused during compilation: '-L/Users/dylanmarcus/git/ffmpeg-static/target/lib' [-Wunused-command-line-argument]
+Linking C executable cmTC_5cff1
+/usr/local/Cellar/cmake/3.9.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_5cff1.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -I/Users/dylanmarcus/git/ffmpeg-static/target/include -L/Users/dylanmarcus/git/ffmpeg-static/target/lib  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/Users/dylanmarcus/git/ffmpeg-static/target/lib  CMakeFiles/cmTC_5cff1.dir/feature_tests.c.o  -o cmTC_5cff1 
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:1c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c99] compiler features compiled with the following output:
+Change Dir: /Users/dylanmarcus/git/ffmpeg-static/build/soxr-0.1.2-Source/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e312c/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_e312c.dir/build.make CMakeFiles/cmTC_e312c.dir/build
+Building C object CMakeFiles/cmTC_e312c.dir/feature_tests.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -I/Users/dylanmarcus/git/ffmpeg-static/target/include -L/Users/dylanmarcus/git/ffmpeg-static/target/lib    -std=c99 -o CMakeFiles/cmTC_e312c.dir/feature_tests.c.o   -c /Users/dylanmarcus/git/ffmpeg-static/build/soxr-0.1.2-Source/CMakeFiles/feature_tests.c
+clang: warning: argument unused during compilation: '-L/Users/dylanmarcus/git/ffmpeg-static/target/lib' [-Wunused-command-line-argument]
+Linking C executable cmTC_e312c
+/usr/local/Cellar/cmake/3.9.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e312c.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -I/Users/dylanmarcus/git/ffmpeg-static/target/include -L/Users/dylanmarcus/git/ffmpeg-static/target/lib  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/Users/dylanmarcus/git/ffmpeg-static/target/lib  CMakeFiles/cmTC_e312c.dir/feature_tests.c.o  -o cmTC_e312c 
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:1c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:1c_variadic_macros
+
+
+Detecting C [-std=c90] compiler features compiled with the following output:
+Change Dir: /Users/dylanmarcus/git/ffmpeg-static/build/soxr-0.1.2-Source/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_bdcd6/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_bdcd6.dir/build.make CMakeFiles/cmTC_bdcd6.dir/build
+Building C object CMakeFiles/cmTC_bdcd6.dir/feature_tests.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -I/Users/dylanmarcus/git/ffmpeg-static/target/include -L/Users/dylanmarcus/git/ffmpeg-static/target/lib    -std=c90 -o CMakeFiles/cmTC_bdcd6.dir/feature_tests.c.o   -c /Users/dylanmarcus/git/ffmpeg-static/build/soxr-0.1.2-Source/CMakeFiles/feature_tests.c
+clang: warning: argument unused during compilation: '-L/Users/dylanmarcus/git/ffmpeg-static/target/lib' [-Wunused-command-line-argument]
+Linking C executable cmTC_bdcd6
+/usr/local/Cellar/cmake/3.9.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bdcd6.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -I/Users/dylanmarcus/git/ffmpeg-static/target/include -L/Users/dylanmarcus/git/ffmpeg-static/target/lib  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/Users/dylanmarcus/git/ffmpeg-static/target/lib  CMakeFiles/cmTC_bdcd6.dir/feature_tests.c.o  -o cmTC_bdcd6 
+
+
+    Feature record: C_FEATURE:1c_function_prototypes
+    Feature record: C_FEATURE:0c_restrict
+    Feature record: C_FEATURE:0c_static_assert
+    Feature record: C_FEATURE:0c_variadic_macros
+Determining if the function pow exists in the m passed with the following output:
+Change Dir: /Users/dylanmarcus/git/ffmpeg-static/build/soxr-0.1.2-Source/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_7a567/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_7a567.dir/build.make CMakeFiles/cmTC_7a567.dir/build
+Building C object CMakeFiles/cmTC_7a567.dir/CheckFunctionExists.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -I/Users/dylanmarcus/git/ffmpeg-static/target/include -L/Users/dylanmarcus/git/ffmpeg-static/target/lib -DCHECK_FUNCTION_EXISTS=pow   -o CMakeFiles/cmTC_7a567.dir/CheckFunctionExists.c.o   -c /usr/local/Cellar/cmake/3.9.1/share/cmake/Modules/CheckFunctionExists.c
+clang: warning: argument unused during compilation: '-L/Users/dylanmarcus/git/ffmpeg-static/target/lib' [-Wunused-command-line-argument]
+/usr/local/Cellar/cmake/3.9.1/share/cmake/Modules/CheckFunctionExists.c:7:3: warning: incompatible redeclaration of library function 'pow' [-Wincompatible-library-redeclaration]
+  CHECK_FUNCTION_EXISTS(void);
+  ^
+<command line>:1:31: note: expanded from here
+#define CHECK_FUNCTION_EXISTS pow
+                              ^
+/usr/local/Cellar/cmake/3.9.1/share/cmake/Modules/CheckFunctionExists.c:7:3: note: 'pow' is a builtin with type 'double (double, double)'
+<command line>:1:31: note: expanded from here
+#define CHECK_FUNCTION_EXISTS pow
+                              ^
+1 warning generated.
+Linking C executable cmTC_7a567
+/usr/local/Cellar/cmake/3.9.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_7a567.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -I/Users/dylanmarcus/git/ffmpeg-static/target/include -L/Users/dylanmarcus/git/ffmpeg-static/target/lib -DCHECK_FUNCTION_EXISTS=pow -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/Users/dylanmarcus/git/ffmpeg-static/target/lib  CMakeFiles/cmTC_7a567.dir/CheckFunctionExists.c.o  -o cmTC_7a567 -lm 
+
+
+Performing C SOURCE FILE Test SIMD_FLAG_DETECTED succeeded with the following output:
+Change Dir: /Users/dylanmarcus/git/ffmpeg-static/build/soxr-0.1.2-Source/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b2480/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_b2480.dir/build.make CMakeFiles/cmTC_b2480.dir/build
+Building C object CMakeFiles/cmTC_b2480.dir/src.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -I/Users/dylanmarcus/git/ffmpeg-static/target/include -L/Users/dylanmarcus/git/ffmpeg-static/target/lib -DSIMD_FLAG_DETECTED   -o CMakeFiles/cmTC_b2480.dir/src.c.o   -c /Users/dylanmarcus/git/ffmpeg-static/build/soxr-0.1.2-Source/CMakeFiles/CMakeTmp/src.c
+clang: warning: argument unused during compilation: '-L/Users/dylanmarcus/git/ffmpeg-static/target/lib' [-Wunused-command-line-argument]
+Linking C executable cmTC_b2480
+/usr/local/Cellar/cmake/3.9.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_b2480.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -I/Users/dylanmarcus/git/ffmpeg-static/target/include -L/Users/dylanmarcus/git/ffmpeg-static/target/lib -DSIMD_FLAG_DETECTED -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/Users/dylanmarcus/git/ffmpeg-static/target/lib  CMakeFiles/cmTC_b2480.dir/src.c.o  -o cmTC_b2480 -lm 
+
+Source file was:
+
+#include <xmmintrin.h>
+int main()
+{
+  __m128 a, b;
+  float vals[4] = {0};
+  a = _mm_loadu_ps (vals);
+  b = a;
+  b = _mm_add_ps (a,b);
+  _mm_storeu_ps (vals,b);
+  return 0;
+}
+
+Determining if the function lrint exists passed with the following output:
+Change Dir: /Users/dylanmarcus/git/ffmpeg-static/build/soxr-0.1.2-Source/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_1bbc7/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_1bbc7.dir/build.make CMakeFiles/cmTC_1bbc7.dir/build
+Building C object CMakeFiles/cmTC_1bbc7.dir/CheckFunctionExists.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -I/Users/dylanmarcus/git/ffmpeg-static/target/include -L/Users/dylanmarcus/git/ffmpeg-static/target/lib -DCHECK_FUNCTION_EXISTS=lrint   -o CMakeFiles/cmTC_1bbc7.dir/CheckFunctionExists.c.o   -c /usr/local/Cellar/cmake/3.9.1/share/cmake/Modules/CheckFunctionExists.c
+clang: warning: argument unused during compilation: '-L/Users/dylanmarcus/git/ffmpeg-static/target/lib' [-Wunused-command-line-argument]
+/usr/local/Cellar/cmake/3.9.1/share/cmake/Modules/CheckFunctionExists.c:7:3: warning: incompatible redeclaration of library function 'lrint' [-Wincompatible-library-redeclaration]
+  CHECK_FUNCTION_EXISTS(void);
+  ^
+<command line>:1:31: note: expanded from here
+#define CHECK_FUNCTION_EXISTS lrint
+                              ^
+/usr/local/Cellar/cmake/3.9.1/share/cmake/Modules/CheckFunctionExists.c:7:3: note: 'lrint' is a builtin with type 'long (double)'
+<command line>:1:31: note: expanded from here
+#define CHECK_FUNCTION_EXISTS lrint
+                              ^
+1 warning generated.
+Linking C executable cmTC_1bbc7
+/usr/local/Cellar/cmake/3.9.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_1bbc7.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -I/Users/dylanmarcus/git/ffmpeg-static/target/include -L/Users/dylanmarcus/git/ffmpeg-static/target/lib -DCHECK_FUNCTION_EXISTS=lrint -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/Users/dylanmarcus/git/ffmpeg-static/target/lib  CMakeFiles/cmTC_1bbc7.dir/CheckFunctionExists.c.o  -o cmTC_1bbc7 -lm 
+
+
+Determining if files fenv.h exist passed with the following output:
+Change Dir: /Users/dylanmarcus/git/ffmpeg-static/build/soxr-0.1.2-Source/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_aaf5d/fast"
+/Applications/Xcode.app/Contents/Developer/usr/bin/make -f CMakeFiles/cmTC_aaf5d.dir/build.make CMakeFiles/cmTC_aaf5d.dir/build
+Building C object CMakeFiles/cmTC_aaf5d.dir/CheckIncludeFiles.c.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc   -I/Users/dylanmarcus/git/ffmpeg-static/target/include -L/Users/dylanmarcus/git/ffmpeg-static/target/lib    -o CMakeFiles/cmTC_aaf5d.dir/CheckIncludeFiles.c.o   -c /Users/dylanmarcus/git/ffmpeg-static/build/soxr-0.1.2-Source/CMakeFiles/CMakeTmp/CheckIncludeFiles.c
+clang: warning: argument unused during compilation: '-L/Users/dylanmarcus/git/ffmpeg-static/target/lib' [-Wunused-command-line-argument]
+Linking C executable cmTC_aaf5d
+/usr/local/Cellar/cmake/3.9.1/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aaf5d.dir/link.txt --verbose=1
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc -I/Users/dylanmarcus/git/ffmpeg-static/target/include -L/Users/dylanmarcus/git/ffmpeg-static/target/lib  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -L/Users/dylanmarcus/git/ffmpeg-static/target/lib  CMakeFiles/cmTC_aaf5d.dir/CheckIncludeFiles.c.o  -o cmTC_aaf5d 
+
+

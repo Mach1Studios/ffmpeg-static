@@ -1,0 +1,93 @@
+\hypertarget{group__opus__decoderctls}{}\section{Decoder related C\+T\+Ls}
+\label{group__opus__decoderctls}\index{Decoder related C\+T\+Ls@{Decoder related C\+T\+Ls}}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{group__opus__decoderctls_ga8ddb6fa694efa2c7e95ef51addc70dac}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+G\+A\+IN}(x)
+\begin{DoxyCompactList}\small\item\em Configures decoder gain adjustment. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__decoderctls_ga00ca8b4bd753a837f143ebd8ed63d247}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+G\+A\+IN}(x)
+\begin{DoxyCompactList}\small\item\em Gets the decoder\textquotesingle{}s configured gain adjustment. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__decoderctls_ga8f3d070f56b75f2a7af54e5776b387fa}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+L\+A\+S\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+D\+U\+R\+A\+T\+I\+ON}(x)
+\begin{DoxyCompactList}\small\item\em Gets the duration (in samples) of the last packet successfully decoded or concealed. \end{DoxyCompactList}\item 
+\#define \hyperlink{group__opus__decoderctls_gaa89fc25eb35fc31a02b508562dd83820}{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+P\+I\+T\+CH}(x)
+\begin{DoxyCompactList}\small\item\em Gets the pitch of the last decoded frame, if available. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__genericctls}{Generic C\+T\+Ls}, \hyperlink{group__opus__encoderctls}{Encoder related C\+T\+Ls}, \hyperlink{group__opus__decoder}{Opus Decoder} 
+\end{DoxySeeAlso}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{group__opus__decoderctls_ga00ca8b4bd753a837f143ebd8ed63d247}\label{group__opus__decoderctls_ga00ca8b4bd753a837f143ebd8ed63d247}} 
+\index{Decoder related C\+T\+Ls@{Decoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+G\+A\+IN@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+G\+A\+IN}}
+\index{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+G\+A\+IN@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+G\+A\+IN}!Decoder related C\+T\+Ls@{Decoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+G\+A\+IN}{OPUS\_GET\_GAIN}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+G\+A\+IN(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Gets the decoder\textquotesingle{}s configured gain adjustment. 
+
+\begin{DoxySeeAlso}{See also}
+\hyperlink{group__opus__decoderctls_ga8ddb6fa694efa2c7e95ef51addc70dac}{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+G\+A\+IN}
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em x} & {\ttfamily opus\+\_\+int32 $\ast$}\+: Amount to scale P\+CM signal by in Q8 dB units. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__decoderctls_ga8f3d070f56b75f2a7af54e5776b387fa}\label{group__opus__decoderctls_ga8f3d070f56b75f2a7af54e5776b387fa}} 
+\index{Decoder related C\+T\+Ls@{Decoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+L\+A\+S\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+D\+U\+R\+A\+T\+I\+ON@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+L\+A\+S\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+D\+U\+R\+A\+T\+I\+ON}}
+\index{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+L\+A\+S\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+D\+U\+R\+A\+T\+I\+ON@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+L\+A\+S\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+D\+U\+R\+A\+T\+I\+ON}!Decoder related C\+T\+Ls@{Decoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+L\+A\+S\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+D\+U\+R\+A\+T\+I\+ON}{OPUS\_GET\_LAST\_PACKET\_DURATION}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+L\+A\+S\+T\+\_\+\+P\+A\+C\+K\+E\+T\+\_\+\+D\+U\+R\+A\+T\+I\+ON(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Gets the duration (in samples) of the last packet successfully decoded or concealed. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em x} & {\ttfamily opus\+\_\+int32 $\ast$}\+: Number of samples (at current sampling rate). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__decoderctls_gaa89fc25eb35fc31a02b508562dd83820}\label{group__opus__decoderctls_gaa89fc25eb35fc31a02b508562dd83820}} 
+\index{Decoder related C\+T\+Ls@{Decoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+P\+I\+T\+CH@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+P\+I\+T\+CH}}
+\index{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+P\+I\+T\+CH@{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+P\+I\+T\+CH}!Decoder related C\+T\+Ls@{Decoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+P\+I\+T\+CH}{OPUS\_GET\_PITCH}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+G\+E\+T\+\_\+\+P\+I\+T\+CH(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Gets the pitch of the last decoded frame, if available. 
+
+This can be used for any post-\/processing algorithm requiring the use of pitch, e.\+g. time stretching/shortening. If the last frame was not voiced, or if the pitch was not coded in the frame, then zero is returned.
+
+This C\+TL is only implemented for decoder instances.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt out}  & {\em x} & {\ttfamily opus\+\_\+int32 $\ast$}\+: pitch period at 48 k\+Hz (or 0 if not available) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__opus__decoderctls_ga8ddb6fa694efa2c7e95ef51addc70dac}\label{group__opus__decoderctls_ga8ddb6fa694efa2c7e95ef51addc70dac}} 
+\index{Decoder related C\+T\+Ls@{Decoder related C\+T\+Ls}!O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+G\+A\+IN@{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+G\+A\+IN}}
+\index{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+G\+A\+IN@{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+G\+A\+IN}!Decoder related C\+T\+Ls@{Decoder related C\+T\+Ls}}
+\subsubsection{\texorpdfstring{O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+G\+A\+IN}{OPUS\_SET\_GAIN}}
+{\footnotesize\ttfamily \#define O\+P\+U\+S\+\_\+\+S\+E\+T\+\_\+\+G\+A\+IN(\begin{DoxyParamCaption}\item[{}]{x }\end{DoxyParamCaption})}
+
+
+
+Configures decoder gain adjustment. 
+
+Scales the decoded output by a factor specified in Q8 dB units. This has a maximum range of -\/32768 to 32767 inclusive, and returns O\+P\+U\+S\+\_\+\+B\+A\+D\+\_\+\+A\+RG otherwise. The default is zero indicating no adjustment. This setting survives decoder reset.
+
+gain = pow(10, x/(20.\+0$\ast$256))
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em x} & {\ttfamily opus\+\_\+int32}\+: Amount to scale P\+CM signal by in Q8 dB units. \\
+\hline
+\end{DoxyParams}
