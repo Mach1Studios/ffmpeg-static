@@ -272,10 +272,10 @@ PKG_CONFIG_PATH="$TARGET_DIR/lib/pkgconfig" ./configure \
   --extra-cflags="-I$TARGET_DIR/include" \
   --extra-ldflags="-L$TARGET_DIR/lib" \
   --extra-ldexeflags="" \
+  --extra-cflags="/Developer/MacOSX10.9.sdk -mmacosx-version-min=10.9" \
   --bindir="$BIN_DIR" \
+  --disable-autodetect \
   --enable-pic \
-  --enable-ffplay \
-  --enable-ffserver \
   --enable-gpl \
   --enable-version3 \
   --enable-libass \
@@ -285,7 +285,8 @@ PKG_CONFIG_PATH="$TARGET_DIR/lib/pkgconfig" ./configure \
   --enable-libsoxr \
   --enable-libvorbis \
   --enable-libvpx \
-  --enable-libx264
+  --enable-libx264 \
+  --enable-libx265
 PATH="$BIN_DIR:$PATH" make -j $jval
 make install
 make distclean
